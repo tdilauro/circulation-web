@@ -121,7 +121,11 @@ export default class EditableInput extends React.Component<EditableInputProps, E
 
   validateNumber(e) {
     const validChars = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ".", "Enter"];
-    if (validChars.indexOf(e.key) < 0) {
+
+    // An admin might want to type a dollar sign at the beginning of the "maximum amount in fines" field.
+    let allowDollar = ((e.currentTarget.name === "max_outstanding_fines") && (e.target.selectionStart === 0));
+
+    if ((validChars.indexOf(e.key) < 0) && !allowDollar) {
       e.preventDefault();
     }
   }

@@ -76,7 +76,6 @@ export abstract class GenericEditableConfigList<T, U, V extends EditableConfigLi
     let EditForm = this.EditForm;
     let AdditionalContent = this.AdditionalContent || null;
     let headers = this.getHeaders();
-
     return (
       <div className={this.getClassName()}>
         <h2>{headers["h2"]}</h2>
