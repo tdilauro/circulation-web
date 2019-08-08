@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>components/Classifications.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#AccountPage">AccountPage</a></li><li><a href="global.html#ActionCreator">ActionCreator</a></li><li><a href="global.html#adapter">adapter</a></li><li><a href="global.html#AdminAuthServices">AdminAuthServices</a></li><li><a href="global.html#AnalyticsServices">AnalyticsServices</a></li><li><a href="global.html#BookCoverEditor">BookCoverEditor</a></li><li><a href="global.html#BookDetailsContainer">BookDetailsContainer</a></li><li><a href="global.html#BookDetailsEditor">BookDetailsEditor</a></li><li><a href="global.html#BookDetailsTabContainer">BookDetailsTabContainer</a></li><li><a href="global.html#BookEditForm">BookEditForm</a></li><li><a href="global.html#buildStore">buildStore</a></li><li><a href="global.html#CatalogPage">CatalogPage</a></li><li><a href="global.html#CatalogServices">CatalogServices</a></li><li><a href="global.html#CDNServices">CDNServices</a></li><li><a href="global.html#CirculationEvents">CirculationEvents</a></li><li><a href="global.html#CirculationEventsDownloadForm">CirculationEventsDownloadForm</a></li><li><a href="global.html#CirculationWeb">CirculationWeb</a></li><li><a href="global.html#Classifications">Classifications</a></li><li><a href="global.html#ClassificationsForm">ClassificationsForm</a></li><li><a href="global.html#ClassificationsTable">ClassificationsTable</a></li><li><a href="global.html#Collections">Collections</a></li><li><a href="global.html#ComplaintForm">ComplaintForm</a></li><li><a href="global.html#Complaints">Complaints</a></li><li><a href="global.html#ConfigPage">ConfigPage</a></li><li><a href="global.html#ConfigTabContainer">ConfigTabContainer</a></li><li><a href="global.html#ContextProvider">ContextProvider</a></li><li><a href="global.html#CustomListEditor">CustomListEditor</a></li><li><a href="global.html#CustomListEntriesEditor">CustomListEntriesEditor</a></li><li><a href="global.html#CustomListPage">CustomListPage</a></li><li><a href="global.html#CustomLists">CustomLists</a></li><li><a href="global.html#CustomListsForBook">CustomListsForBook</a></li><li><a href="global.html#DashboardPage">DashboardPage</a></li><li><a href="global.html#default">default</a></li><li><a href="global.html#DiscoveryServices">DiscoveryServices</a></li><li><a href="global.html#doc">doc</a></li><li><a href="global.html#EditableInput">EditableInput</a></li><li><a href="global.html#EntryPointsContainer">EntryPointsContainer</a></li><li><a href="global.html#EntryPointsTabs">EntryPointsTabs</a></li><li><a href="global.html#ErrorMessage">ErrorMessage</a></li><li><a href="global.html#GenericEditableConfigList">GenericEditableConfigList</a></li><li><a href="global.html#GenreForm">GenreForm</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#HeaderWithStore">HeaderWithStore</a></li><li><a href="global.html#IndividualAdminEditForm">IndividualAdminEditForm</a></li><li><a href="global.html#IndividualAdmins">IndividualAdmins</a></li><li><a href="global.html#isProblemDetail">isProblemDetail</a></li><li><a href="global.html#LaneCustomListsEditor">LaneCustomListsEditor</a></li><li><a href="global.html#LaneEditor">LaneEditor</a></li><li><a href="global.html#Lanes">Lanes</a></li><li><a href="global.html#LibraryEditForm">LibraryEditForm</a></li><li><a href="global.html#LibraryStats">LibraryStats</a></li><li><a href="global.html#LoggingServices">LoggingServices</a></li><li><a href="global.html#ManagePatronsTabContainer">ManagePatronsTabContainer</a></li><li><a href="global.html#MetadataServices">MetadataServices</a></li><li><a href="global.html#PatronAuthServices">PatronAuthServices</a></li><li><a href="global.html#ProtocolFormField">ProtocolFormField</a></li><li><a href="global.html#SearchServices">SearchServices</a></li><li><a href="global.html#ServiceEditForm">ServiceEditForm</a></li><li><a href="global.html#ServiceWithRegistrationsEditForm">ServiceWithRegistrationsEditForm</a></li><li><a href="global.html#SetupPage">SetupPage</a></li><li><a href="global.html#SitewideSettingEditForm">SitewideSettingEditForm</a></li><li><a href="global.html#SitewideSettings">SitewideSettings</a></li><li><a href="global.html#Stats">Stats</a></li><li><a href="global.html#StorageServices">StorageServices</a></li><li><a href="global.html#TabContainer">TabContainer</a></li><li><a href="global.html#TextWithEditMode">TextWithEditMode</a></li><li><a href="global.html#WithEditButton">WithEditButton</a></li><li><a href="global.html#WithRemoveButton">WithRemoveButton</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">components/Classifications.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>"use strict";
+var __extends = (this &amp;&amp; this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array &amp;&amp; function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = require("react");
+var react_redux_1 = require("react-redux");
+var editorAdapter_1 = require("../editorAdapter");
+var DataFetcher_1 = require("opds-web-client/lib/DataFetcher");
+var actions_1 = require("../actions");
+var ErrorMessage_1 = require("./ErrorMessage");
+var ClassificationsForm_1 = require("./ClassificationsForm");
+var ClassificationsTable_1 = require("./ClassificationsTable");
+;
+/** Tab on the book details page with a table of a book's current classifications and
+    a form for editing them. */
+var Classifications = /** @class */ (function (_super) {
+    __extends(Classifications, _super);
+    function Classifications(props) {
+        var _this = _super.call(this, props) || this;
+        _this.refresh = _this.refresh.bind(_this);
+        _this.editClassifications = _this.editClassifications.bind(_this);
+        return _this;
+    }
+    Classifications.prototype.render = function () {
+        return (React.createElement("div", { className: "classifications" },
+            this.props.book &amp;&amp;
+                React.createElement(React.Fragment, null,
+                    React.createElement("h2", null, this.props.book.title),
+                    React.createElement("div", { className: "classifications-fetching-container" }, this.props.isFetching &amp;&amp;
+                        React.createElement("h4", null,
+                            "Updating",
+                            React.createElement("i", { className: "fa fa-spinner fa-spin" })))),
+            this.props.fetchError &amp;&amp;
+                React.createElement(ErrorMessage_1.default, { error: this.props.fetchError }),
+            this.props.book &amp;&amp; this.props.genreTree &amp;&amp;
+                React.createElement(ClassificationsForm_1.default, { book: this.props.book, genreTree: this.props.genreTree, disabled: this.props.isFetching, editClassifications: this.editClassifications }),
+            this.props.classifications &amp;&amp; this.props.classifications.length > 0 &amp;&amp;
+                React.createElement(ClassificationsTable_1.default, { classifications: this.props.classifications })));
+    };
+    Classifications.prototype.componentWillMount = function () {
+        if (this.props.bookUrl) {
+            this.props.fetchGenreTree("/admin/genres");
+            this.props.fetchClassifications(this.classificationsUrl());
+        }
+    };
+    Classifications.prototype.classificationsUrl = function () {
+        return this.props.bookUrl.replace("works", "admin/works") + "/classifications";
+    };
+    Classifications.prototype.editClassificationsUrl = function () {
+        return this.props.bookUrl.replace("works", "admin/works") + "/edit_classifications";
+    };
+    Classifications.prototype.refresh = function () {
+        this.props.fetchBook(this.props.bookAdminUrl);
+        this.props.fetchClassifications(this.classificationsUrl());
+        this.props.refreshCatalog();
+    };
+    Classifications.prototype.editClassifications = function (data) {
+        var _this = this;
+        return this.props.editClassifications(this.editClassificationsUrl(), data).then(function (response) {
+            _this.refresh();
+        });
+    };
+    return Classifications;
+}(React.Component));
+exports.Classifications = Classifications;
+function mapStateToProps(state, ownProps) {
+    return {
+        bookAdminUrl: state.editor.book.url,
+        genreTree: state.editor.classifications.genreTree,
+        classifications: state.editor.classifications.classifications,
+        isFetching: state.editor.classifications.isFetchingGenreTree ||
+            state.editor.classifications.isEditingClassifications ||
+            state.editor.classifications.isFetchingClassifications ||
+            state.editor.book.isFetching,
+        fetchError: state.editor.classifications.fetchError
+    };
+}
+function mapDispatchToProps(dispatch, ownProps) {
+    var fetcher = new DataFetcher_1.default({ adapter: editorAdapter_1.default });
+    var actions = new actions_1.default(fetcher, ownProps.csrfToken);
+    return {
+        fetchBook: function (url) { return dispatch(actions.fetchBookAdmin(url)); },
+        fetchGenreTree: function (url) { return dispatch(actions.fetchGenreTree(url)); },
+        fetchClassifications: function (url) { return dispatch(actions.fetchClassifications(url)); },
+        editClassifications: function (url, data) { return dispatch(actions.editClassifications(url, data)); }
+    };
+}
+var ConnectedClassifications = react_redux_1.connect(mapStateToProps, mapDispatchToProps)(Classifications);
+exports.default = ConnectedClassifications;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Thu Aug 08 2019 12:59:53 GMT-0400 (EDT) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

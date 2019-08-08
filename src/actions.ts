@@ -20,6 +20,7 @@ import BaseActionCreator from "opds-web-client/lib/actions";
 /** Create redux actions to be dispatched by connected components, mostly
     to make requests to the server. */
 export default class ActionCreator extends BaseActionCreator {
+  /** @property EDITBOOK */
   static readonly EDIT_BOOK = "EDIT_BOOK";
   static readonly BOOK_ADMIN = "BOOK_ADMIN";
   static readonly ROLES = "ROLES";

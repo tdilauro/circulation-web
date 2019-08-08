@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>components/ServiceEditForm.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#AccountPage">AccountPage</a></li><li><a href="global.html#ActionCreator">ActionCreator</a></li><li><a href="global.html#adapter">adapter</a></li><li><a href="global.html#AdminAuthServices">AdminAuthServices</a></li><li><a href="global.html#AnalyticsServices">AnalyticsServices</a></li><li><a href="global.html#BookCoverEditor">BookCoverEditor</a></li><li><a href="global.html#BookDetailsContainer">BookDetailsContainer</a></li><li><a href="global.html#BookDetailsEditor">BookDetailsEditor</a></li><li><a href="global.html#BookDetailsTabContainer">BookDetailsTabContainer</a></li><li><a href="global.html#BookEditForm">BookEditForm</a></li><li><a href="global.html#buildStore">buildStore</a></li><li><a href="global.html#CatalogPage">CatalogPage</a></li><li><a href="global.html#CatalogServices">CatalogServices</a></li><li><a href="global.html#CDNServices">CDNServices</a></li><li><a href="global.html#CirculationEvents">CirculationEvents</a></li><li><a href="global.html#CirculationEventsDownloadForm">CirculationEventsDownloadForm</a></li><li><a href="global.html#CirculationWeb">CirculationWeb</a></li><li><a href="global.html#Classifications">Classifications</a></li><li><a href="global.html#ClassificationsForm">ClassificationsForm</a></li><li><a href="global.html#ClassificationsTable">ClassificationsTable</a></li><li><a href="global.html#Collections">Collections</a></li><li><a href="global.html#ComplaintForm">ComplaintForm</a></li><li><a href="global.html#Complaints">Complaints</a></li><li><a href="global.html#ConfigPage">ConfigPage</a></li><li><a href="global.html#ConfigTabContainer">ConfigTabContainer</a></li><li><a href="global.html#ContextProvider">ContextProvider</a></li><li><a href="global.html#CustomListEditor">CustomListEditor</a></li><li><a href="global.html#CustomListEntriesEditor">CustomListEntriesEditor</a></li><li><a href="global.html#CustomListPage">CustomListPage</a></li><li><a href="global.html#CustomLists">CustomLists</a></li><li><a href="global.html#CustomListsForBook">CustomListsForBook</a></li><li><a href="global.html#DashboardPage">DashboardPage</a></li><li><a href="global.html#default">default</a></li><li><a href="global.html#DiscoveryServices">DiscoveryServices</a></li><li><a href="global.html#doc">doc</a></li><li><a href="global.html#EditableInput">EditableInput</a></li><li><a href="global.html#EntryPointsContainer">EntryPointsContainer</a></li><li><a href="global.html#EntryPointsTabs">EntryPointsTabs</a></li><li><a href="global.html#ErrorMessage">ErrorMessage</a></li><li><a href="global.html#GenericEditableConfigList">GenericEditableConfigList</a></li><li><a href="global.html#GenreForm">GenreForm</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#HeaderWithStore">HeaderWithStore</a></li><li><a href="global.html#IndividualAdminEditForm">IndividualAdminEditForm</a></li><li><a href="global.html#IndividualAdmins">IndividualAdmins</a></li><li><a href="global.html#isProblemDetail">isProblemDetail</a></li><li><a href="global.html#LaneCustomListsEditor">LaneCustomListsEditor</a></li><li><a href="global.html#LaneEditor">LaneEditor</a></li><li><a href="global.html#Lanes">Lanes</a></li><li><a href="global.html#LibraryEditForm">LibraryEditForm</a></li><li><a href="global.html#LibraryStats">LibraryStats</a></li><li><a href="global.html#LoggingServices">LoggingServices</a></li><li><a href="global.html#ManagePatronsTabContainer">ManagePatronsTabContainer</a></li><li><a href="global.html#MetadataServices">MetadataServices</a></li><li><a href="global.html#PatronAuthServices">PatronAuthServices</a></li><li><a href="global.html#ProtocolFormField">ProtocolFormField</a></li><li><a href="global.html#SearchServices">SearchServices</a></li><li><a href="global.html#ServiceEditForm">ServiceEditForm</a></li><li><a href="global.html#ServiceWithRegistrationsEditForm">ServiceWithRegistrationsEditForm</a></li><li><a href="global.html#SetupPage">SetupPage</a></li><li><a href="global.html#SitewideSettingEditForm">SitewideSettingEditForm</a></li><li><a href="global.html#SitewideSettings">SitewideSettings</a></li><li><a href="global.html#Stats">Stats</a></li><li><a href="global.html#StorageServices">StorageServices</a></li><li><a href="global.html#TabContainer">TabContainer</a></li><li><a href="global.html#TextWithEditMode">TextWithEditMode</a></li><li><a href="global.html#WithEditButton">WithEditButton</a></li><li><a href="global.html#WithRemoveButton">WithRemoveButton</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">components/ServiceEditForm.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>"use strict";
+var __extends = (this &amp;&amp; this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array &amp;&amp; function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __awaiter = (this &amp;&amp; this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this &amp;&amp; this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] &amp; 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" &amp;&amp; (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y &amp;&amp; (t = y[op[0] &amp; 2 ? "return" : op[0] ? "throw" : "next"]) &amp;&amp; !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 &amp;&amp; t[t.length - 1]) &amp;&amp; (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 &amp;&amp; (!t || (op[1] > t[0] &amp;&amp; op[1] &lt; t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 &amp;&amp; _.label &lt; t[1]) { _.label = t[1]; t = op; break; }
+                    if (t &amp;&amp; _.label &lt; t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] &amp; 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = require("react");
+var EditableInput_1 = require("./EditableInput");
+var ProtocolFormField_1 = require("./ProtocolFormField");
+var library_simplified_reusable_components_1 = require("library-simplified-reusable-components");
+var WithEditButton_1 = require("./WithEditButton");
+var WithRemoveButton_1 = require("./WithRemoveButton");
+var sharedFunctions_1 = require("./sharedFunctions");
+/** Form for editing service configuration based on protocol information from the server.
+    Used on most tabs on the system configuration page. */
+var ServiceEditForm = /** @class */ (function (_super) {
+    __extends(ServiceEditForm, _super);
+    function ServiceEditForm(props) {
+        var _this = _super.call(this, props) || this;
+        var defaultProtocol;
+        if (_this.availableProtocols().length) {
+            defaultProtocol = _this.availableProtocols()[0].name;
+        }
+        _this.state = {
+            protocol: (_this.props.item &amp;&amp; _this.props.item.protocol) || defaultProtocol,
+            parentId: (_this.props.item &amp;&amp; _this.props.item.parent_id &amp;&amp; String(_this.props.item.parent_id)) || null,
+            libraries: (_this.props.item &amp;&amp; _this.props.item.libraries) || [],
+            expandedLibraries: [],
+            selectedLibrary: null
+        };
+        _this.handleProtocolChange = _this.handleProtocolChange.bind(_this);
+        _this.handleParentChange = _this.handleParentChange.bind(_this);
+        _this.selectLibrary = _this.selectLibrary.bind(_this);
+        _this.addLibrary = _this.addLibrary.bind(_this);
+        _this.editLibrary = _this.editLibrary.bind(_this);
+        _this.expandLibrary = _this.expandLibrary.bind(_this);
+        _this.removeLibrary = _this.removeLibrary.bind(_this);
+        _this.handleData = _this.handleData.bind(_this);
+        _this.submit = _this.submit.bind(_this);
+        _this.renderRequiredFields = _this.renderRequiredFields.bind(_this);
+        _this.renderOptionalFields = _this.renderOptionalFields.bind(_this);
+        _this.renderLibrariesForm = _this.renderLibrariesForm.bind(_this);
+        return _this;
+    }
+    ServiceEditForm.prototype.componentWillReceiveProps = function (newProps) {
+        var protocol = this.state.protocol;
+        var parentId = this.state.parentId;
+        var libraries = this.state.libraries;
+        if (newProps.item &amp;&amp; newProps.item.protocol) {
+            if (!this.props.item || !this.props.item.protocol || (this.props.item.protocol !== newProps.item.protocol)) {
+                protocol = newProps.item.protocol;
+            }
+        }
+        if (!protocol &amp;&amp; this.availableProtocols(newProps).length > 0) {
+            protocol = this.availableProtocols(newProps)[0].name;
+        }
+        if (newProps.item &amp;&amp; newProps.item.parent_id) {
+            if (!this.props.item || !this.props.item.parent_id || (this.props.item.parent_id !== newProps.item.parent_id)) {
+                parentId = newProps.item.parent_id;
+            }
+        }
+        if (newProps.item &amp;&amp; newProps.item.libraries) {
+            if (!this.props.item || !this.props.item.libraries || (this.props.item.libraries !== newProps.item.libraries)) {
+                libraries = newProps.item.libraries;
+            }
+        }
+        var newState = Object.assign({}, this.state, { protocol: protocol, parentId: parentId, libraries: libraries });
+        this.setState(newState);
+        if (newProps.responseBody &amp;&amp; !newProps.fetchError) {
+            sharedFunctions_1.clearForm(this.refs);
+        }
+    };
+    ServiceEditForm.prototype.render = function () {
+        var _a = this.protocolSettings(), requiredFields = _a.requiredFields, nonRequiredFields = _a.nonRequiredFields;
+        var showLibrariesForm = (!this.sitewide() || this.protocolLibrarySettings().length > 0);
+        var hasNonRequiredFields = nonRequiredFields.length > 0;
+        var hasInstructions = this.props.data &amp;&amp; this.protocolInstructions();
+        var instructions = hasInstructions &amp;&amp; (React.createElement("div", { className: "form-group", key: "instructions" },
+            React.createElement("label", { className: "control-label" }, "Instructions"),
+            React.createElement(library_simplified_reusable_components_1.Panel, { headerText: this.protocolDescription(), style: "instruction", onEnter: this.submit, content: this.protocolInstructions() })));
+        var requiredFieldsPanel = (React.createElement(library_simplified_reusable_components_1.Panel, { key: "required", headerText: "Required Fields", openByDefault: true, collapsible: hasNonRequiredFields || showLibrariesForm, content: this.renderRequiredFields(requiredFields) }));
+        var optionalFieldsPanel = hasNonRequiredFields &amp;&amp; (React.createElement(library_simplified_reusable_components_1.Panel, { key: "optional", headerText: "Optional Fields", content: this.renderOptionalFields(nonRequiredFields) }));
+        var librariesForm = showLibrariesForm &amp;&amp; (React.createElement(library_simplified_reusable_components_1.Panel, { key: "libraries", headerText: "Libraries", content: this.renderLibrariesForm() }));
+        return (React.createElement(library_simplified_reusable_components_1.Form, { onSubmit: this.submit, className: "no-border edit-form", hiddenName: this.props.item &amp;&amp; this.props.item.id &amp;&amp; "id", hiddenValue: this.props.item &amp;&amp; this.props.item.id &amp;&amp; String(this.props.item.id), disableButton: this.props.disabled, content: [instructions, requiredFieldsPanel, optionalFieldsPanel, librariesForm] }));
+    };
+    ServiceEditForm.prototype.renderRequiredFields = function (requiredFields) {
+        var _this = this;
+        return (React.createElement("fieldset", null,
+            React.createElement("legend", { className: "visuallyHidden" },
+                React.createElement("h4", null, "Required Fields")),
+            React.createElement(EditableInput_1.default, { elementType: "input", type: "text", disabled: this.props.disabled, required: true, name: "name", ref: "name", label: "Name", value: this.props.item &amp;&amp; this.props.item.name, error: this.props.error }),
+            React.createElement(EditableInput_1.default, { elementType: "select", disabled: this.props.disabled, readOnly: !!(this.props.item &amp;&amp; this.props.item.protocol), name: "protocol", label: "Protocol", value: this.state.protocol, ref: "protocol", onChange: this.handleProtocolChange, description: !this.protocolInstructions() &amp;&amp; this.protocolDescription() }, this.availableProtocols().map(function (protocol) {
+                return React.createElement("option", { key: protocol.name, value: protocol.name, "aria-selected": _this.state.protocol === protocol.name }, protocol.label || protocol.name);
+            })),
+            this.props.data &amp;&amp; this.allowsParent() &amp;&amp; (this.availableParents().length > 0) &amp;&amp;
+                React.createElement(EditableInput_1.default, { elementType: "select", disabled: this.props.disabled, name: "parent_id", label: "Parent", value: this.state.parentId, ref: "parent", onChange: this.handleParentChange },
+                    React.createElement("option", { value: "", "aria-selected": this.state.parentId === "" }, "None"),
+                    this.availableParents().map(function (parent) {
+                        return React.createElement("option", { key: parent.id, value: parent.id, "aria-selected": _this.state.parentId === parent.id }, parent.name || parent.id);
+                    })),
+            requiredFields.map(function (setting) {
+                return React.createElement(ProtocolFormField_1.default, { key: setting.key, ref: setting.key, setting: setting, disabled: _this.props.disabled, value: _this.props.item &amp;&amp; _this.props.item.settings &amp;&amp; _this.props.item.settings[setting.key], error: _this.props.error });
+            })));
+    };
+    ServiceEditForm.prototype.renderOptionalFields = function (optionalFields) {
+        var _this = this;
+        return (React.createElement("fieldset", null,
+            React.createElement("legend", { className: "visuallyHidden" }, "Additional Fields"),
+            optionalFields.map(function (setting) {
+                return React.createElement(ProtocolFormField_1.default, { key: setting.key, ref: setting.key, setting: setting, disabled: _this.props.disabled, value: _this.props.item &amp;&amp; _this.props.item.settings &amp;&amp; _this.props.item.settings[setting.key], error: _this.props.error });
+            })));
+    };
+    ServiceEditForm.prototype.renderLibrariesForm = function () {
+        var _this = this;
+        return (React.createElement("fieldset", { className: "update-libraries" },
+            React.createElement("legend", { className: "visuallyHidden" }, "Libraries"),
+            React.createElement("div", { className: "form-group" }, this.state.libraries.map(function (library) {
+                return React.createElement("div", { key: library.short_name },
+                    React.createElement(WithRemoveButton_1.default, { disabled: _this.props.disabled, onRemove: function () { return _this.removeLibrary(library); }, ref: library.short_name },
+                        _this.props.data &amp;&amp; _this.props.data.protocols &amp;&amp; _this.protocolLibrarySettings() &amp;&amp; _this.protocolLibrarySettings().length > 0 &amp;&amp;
+                            React.createElement(WithEditButton_1.default, { disabled: _this.props.disabled, onEdit: function () { return _this.expandLibrary(library); } }, _this.getLibrary(library.short_name) &amp;&amp; _this.getLibrary(library.short_name).name),
+                        !(_this.props.data &amp;&amp; _this.props.data.protocols &amp;&amp; _this.protocolLibrarySettings() &amp;&amp; _this.protocolLibrarySettings().length > 0) &amp;&amp;
+                            _this.getLibrary(library.short_name) &amp;&amp; _this.getLibrary(library.short_name).name),
+                    _this.isExpanded(library) &amp;&amp;
+                        React.createElement("div", { className: "edit-library-settings" },
+                            _this.props.data &amp;&amp; _this.props.data.protocols &amp;&amp; _this.protocolLibrarySettings() &amp;&amp; _this.protocolLibrarySettings().map(function (setting) {
+                                return React.createElement(ProtocolFormField_1.default, { key: setting.key, setting: setting, disabled: _this.props.disabled, value: library[setting.key], ref: library.short_name + "_" + setting.key });
+                            }),
+                            React.createElement(library_simplified_reusable_components_1.Button, { type: "button", className: "edit-library", disabled: _this.props.disabled, callback: function () { return _this.editLibrary(library); }, content: "Save" })));
+            })),
+            (this.availableLibraries().length > 0) &amp;&amp;
+                React.createElement("div", { className: "form-group" },
+                    React.createElement(EditableInput_1.default, { elementType: "select", disabled: this.props.disabled, name: "add-library", label: "Add Library", ref: "addLibrary", value: this.state.selectedLibrary, onChange: this.selectLibrary },
+                        React.createElement("option", { value: "none", "aria-selected": this.state.selectedLibrary === "none" }, "Select a library"),
+                        this.availableLibraries().map(function (library) {
+                            return React.createElement("option", { key: library.short_name, value: library.short_name, "aria-selected": _this.state.selectedLibrary === "library.short_name" }, library.name);
+                        })),
+                    this.state.selectedLibrary &amp;&amp;
+                        React.createElement("div", null,
+                            this.props.data &amp;&amp; this.props.data.protocols &amp;&amp; this.protocolLibrarySettings() &amp;&amp; this.protocolLibrarySettings().map(function (setting) {
+                                return React.createElement(ProtocolFormField_1.default, { key: setting.key, setting: setting, disabled: _this.props.disabled, ref: setting.key });
+                            }),
+                            React.createElement(library_simplified_reusable_components_1.Button, { type: "button", disabled: this.props.disabled, callback: this.addLibrary, content: "Add Library" })))));
+    };
+    ServiceEditForm.prototype.availableProtocols = function (props) {
+        props = props || this.props;
+        var allProtocols = props.data &amp;&amp; props.data.protocols || [];
+        // If we're editing an existing service, the protocol can't be changed,
+        // so there's only one available protocol.
+        if (props.item) {
+            for (var _i = 0, allProtocols_1 = allProtocols; _i &lt; allProtocols_1.length; _i++) {
+                var protocol = allProtocols_1[_i];
+                if (protocol.name === props.item.protocol) {
+                    return [protocol];
+                }
+            }
+        }
+        return allProtocols;
+    };
+    ServiceEditForm.prototype.handleProtocolChange = function () {
+        var protocol = this.refs["protocol"].getValue();
+        var newState = Object.assign({}, this.state, { protocol: protocol });
+        this.setState(newState);
+    };
+    ServiceEditForm.prototype.allowsParent = function () {
+        if (this.state.protocol &amp;&amp; this.props.data &amp;&amp; this.props.data.protocols) {
+            for (var _i = 0, _a = this.props.data.protocols; _i &lt; _a.length; _i++) {
+                var protocol = _a[_i];
+                if (protocol.name === this.state.protocol) {
+                    return !!protocol.child_settings;
+                }
+            }
+        }
+        return false;
+    };
+    ServiceEditForm.prototype.availableParents = function () {
+        var allServices = this.props.data &amp;&amp; this.props.data[this.props.listDataKey] || [];
+        var availableParents = [];
+        for (var _i = 0, allServices_1 = allServices; _i &lt; allServices_1.length; _i++) {
+            var service = allServices_1[_i];
+            if (service.protocol === this.state.protocol &amp;&amp; service.id !== (this.props.item &amp;&amp; this.props.item.id)) {
+                availableParents.push(service);
+            }
+        }
+        return availableParents;
+    };
+    ServiceEditForm.prototype.handleParentChange = function () {
+        var parentId = this.refs["parent"].getValue();
+        if (parentId === "") {
+            parentId = null;
+        }
+        var newState = Object.assign({}, this.state, { parentId: parentId });
+        this.setState(newState);
+    };
+    ServiceEditForm.prototype.protocolSettings = function () {
+        var requiredFields = [];
+        var nonRequiredFields = [];
+        if (this.state.protocol &amp;&amp; this.props.data &amp;&amp; this.props.data.protocols) {
+            for (var _i = 0, _a = this.props.data.protocols; _i &lt; _a.length; _i++) {
+                var protocol = _a[_i];
+                if (protocol.name === this.state.protocol) {
+                    var settings = [];
+                    if (this.state.parentId) {
+                        settings = protocol.child_settings;
+                    }
+                    else {
+                        settings = protocol.settings;
+                    }
+                    nonRequiredFields = settings.filter(function (setting) { return !setting.required; });
+                    requiredFields = settings.filter(function (setting) { return setting.required; });
+                }
+            }
+        }
+        return {
+            requiredFields: requiredFields,
+            nonRequiredFields: nonRequiredFields,
+        };
+    };
+    ServiceEditForm.prototype.protocolDescription = function () {
+        if (this.state.protocol &amp;&amp; this.props.data &amp;&amp; this.props.data.protocols) {
+            for (var _i = 0, _a = this.props.data.protocols; _i &lt; _a.length; _i++) {
+                var protocol = _a[_i];
+                if (protocol.name === this.state.protocol) {
+                    return protocol.description;
+                }
+            }
+        }
+        return "";
+    };
+    ServiceEditForm.prototype.protocolInstructions = function () {
+        if (this.state.protocol &amp;&amp; this.props.data.protocols) {
+            for (var _i = 0, _a = this.props.data.protocols; _i &lt; _a.length; _i++) {
+                var protocol = _a[_i];
+                if (protocol.name === this.state.protocol) {
+                    return protocol.instructions;
+                }
+            }
+        }
+        return "";
+    };
+    ServiceEditForm.prototype.protocolLibrarySettings = function () {
+        if (this.state.protocol &amp;&amp; this.props.data &amp;&amp; this.props.data.protocols) {
+            for (var _i = 0, _a = this.props.data.protocols; _i &lt; _a.length; _i++) {
+                var protocol = _a[_i];
+                if (protocol.name === this.state.protocol) {
+                    return protocol.library_settings || [];
+                }
+            }
+        }
+        return [];
+    };
+    ServiceEditForm.prototype.sitewide = function () {
+        if (this.state.protocol &amp;&amp; this.props.data &amp;&amp; this.props.data.protocols) {
+            for (var _i = 0, _a = this.props.data.protocols; _i &lt; _a.length; _i++) {
+                var protocol = _a[_i];
+                if (protocol.name === this.state.protocol) {
+                    return protocol.sitewide;
+                }
+            }
+        }
+        return false;
+    };
+    ServiceEditForm.prototype.getLibrary = function (shortName) {
+        var libraries = this.props.data &amp;&amp; this.props.data.allLibraries || [];
+        for (var _i = 0, libraries_1 = libraries; _i &lt; libraries_1.length; _i++) {
+            var library = libraries_1[_i];
+            if (library.short_name === shortName) {
+                return library;
+            }
+        }
+        return null;
+    };
+    ServiceEditForm.prototype.availableLibraries = function () {
+        var _this = this;
+        var libraries = this.props.data &amp;&amp; this.props.data.allLibraries || [];
+        return libraries.filter(function (library) {
+            for (var _i = 0, _a = _this.state.libraries; _i &lt; _a.length; _i++) {
+                var stateLibrary = _a[_i];
+                if (stateLibrary.short_name === library.short_name) {
+                    return false;
+                }
+            }
+            return true;
+        });
+    };
+    ServiceEditForm.prototype.selectLibrary = function () {
+        var name = this.refs["addLibrary"].getValue();
+        if (name === "none") {
+            name = null;
+        }
+        var newState = Object.assign({}, this.state, { selectedLibrary: name });
+        this.setState(newState);
+    };
+    ServiceEditForm.prototype.isExpanded = function (library) {
+        return this.state.expandedLibraries.indexOf(library.short_name) !== -1;
+    };
+    ServiceEditForm.prototype.removeLibrary = function (library) {
+        var libraries = this.state.libraries.filter(function (stateLibrary) { return stateLibrary.short_name !== library.short_name; });
+        var expandedLibraries = this.state.expandedLibraries.filter(function (shortName) { return shortName !== library.short_name; });
+        var newState = Object.assign({}, this.state, { libraries: libraries, expandedLibraries: expandedLibraries });
+        this.setState(newState);
+    };
+    ServiceEditForm.prototype.expandLibrary = function (library) {
+        if (!this.isExpanded(library)) {
+            var expandedLibraries = this.state.expandedLibraries;
+            expandedLibraries.push(library.short_name);
+            var newState = Object.assign({}, this.state, { expandedLibraries: expandedLibraries });
+            this.setState(newState);
+        }
+        else {
+            var expandedLibraries = this.state.expandedLibraries.filter(function (shortName) { return shortName !== library.short_name; });
+            var newState = Object.assign({}, this.state, { expandedLibraries: expandedLibraries });
+            this.setState(newState);
+        }
+    };
+    ServiceEditForm.prototype.editLibrary = function (library) {
+        var libraries = this.state.libraries.filter(function (stateLibrary) { return stateLibrary.short_name !== library.short_name; });
+        var expandedLibraries = this.state.expandedLibraries.filter(function (shortName) { return shortName !== library.short_name; });
+        var newLibrary = { short_name: library.short_name };
+        for (var _i = 0, _a = this.protocolLibrarySettings(); _i &lt; _a.length; _i++) {
+            var setting = _a[_i];
+            var value = this.refs[library.short_name + "_" + setting.key].getValue();
+            if (value) {
+                newLibrary[setting.key] = value;
+            }
+        }
+        libraries.push(newLibrary);
+        var newState = Object.assign({}, this.state, { libraries: libraries, expandedLibraries: expandedLibraries });
+        this.setState(newState);
+    };
+    ServiceEditForm.prototype.addLibrary = function () {
+        var name = this.state.selectedLibrary;
+        var newLibrary = { short_name: name };
+        for (var _i = 0, _a = this.protocolLibrarySettings(); _i &lt; _a.length; _i++) {
+            var setting = _a[_i];
+            var value = this.refs[setting.key].getValue();
+            if (value) {
+                newLibrary[setting.key] = value;
+            }
+            this.refs[setting.key].clear();
+        }
+        var libraries = this.state.libraries.concat(newLibrary);
+        var newState = Object.assign({}, this.state, { libraries: libraries, selectedLibrary: null });
+        this.setState(newState);
+    };
+    ServiceEditForm.prototype.handleData = function (data) {
+        data &amp;&amp; data.append("libraries", JSON.stringify(this.state.libraries));
+        return data;
+    };
+    ServiceEditForm.prototype.submit = function (data) {
+        return __awaiter(this, void 0, void 0, function () {
+            var modifiedData;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        modifiedData = this.handleData(data);
+                        return [4 /*yield*/, this.props.save(modifiedData)];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    return ServiceEditForm;
+}(React.Component));
+exports.default = ServiceEditForm;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Thu Aug 08 2019 12:59:53 GMT-0400 (EDT) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

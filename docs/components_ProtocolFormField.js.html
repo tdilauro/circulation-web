@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>components/ProtocolFormField.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#AccountPage">AccountPage</a></li><li><a href="global.html#ActionCreator">ActionCreator</a></li><li><a href="global.html#adapter">adapter</a></li><li><a href="global.html#AdminAuthServices">AdminAuthServices</a></li><li><a href="global.html#AnalyticsServices">AnalyticsServices</a></li><li><a href="global.html#BookCoverEditor">BookCoverEditor</a></li><li><a href="global.html#BookDetailsContainer">BookDetailsContainer</a></li><li><a href="global.html#BookDetailsEditor">BookDetailsEditor</a></li><li><a href="global.html#BookDetailsTabContainer">BookDetailsTabContainer</a></li><li><a href="global.html#BookEditForm">BookEditForm</a></li><li><a href="global.html#buildStore">buildStore</a></li><li><a href="global.html#CatalogPage">CatalogPage</a></li><li><a href="global.html#CatalogServices">CatalogServices</a></li><li><a href="global.html#CDNServices">CDNServices</a></li><li><a href="global.html#CirculationEvents">CirculationEvents</a></li><li><a href="global.html#CirculationEventsDownloadForm">CirculationEventsDownloadForm</a></li><li><a href="global.html#CirculationWeb">CirculationWeb</a></li><li><a href="global.html#Classifications">Classifications</a></li><li><a href="global.html#ClassificationsForm">ClassificationsForm</a></li><li><a href="global.html#ClassificationsTable">ClassificationsTable</a></li><li><a href="global.html#Collections">Collections</a></li><li><a href="global.html#ComplaintForm">ComplaintForm</a></li><li><a href="global.html#Complaints">Complaints</a></li><li><a href="global.html#ConfigPage">ConfigPage</a></li><li><a href="global.html#ConfigTabContainer">ConfigTabContainer</a></li><li><a href="global.html#ContextProvider">ContextProvider</a></li><li><a href="global.html#CustomListEditor">CustomListEditor</a></li><li><a href="global.html#CustomListEntriesEditor">CustomListEntriesEditor</a></li><li><a href="global.html#CustomListPage">CustomListPage</a></li><li><a href="global.html#CustomLists">CustomLists</a></li><li><a href="global.html#CustomListsForBook">CustomListsForBook</a></li><li><a href="global.html#DashboardPage">DashboardPage</a></li><li><a href="global.html#default">default</a></li><li><a href="global.html#DiscoveryServices">DiscoveryServices</a></li><li><a href="global.html#doc">doc</a></li><li><a href="global.html#EditableInput">EditableInput</a></li><li><a href="global.html#EntryPointsContainer">EntryPointsContainer</a></li><li><a href="global.html#EntryPointsTabs">EntryPointsTabs</a></li><li><a href="global.html#ErrorMessage">ErrorMessage</a></li><li><a href="global.html#GenericEditableConfigList">GenericEditableConfigList</a></li><li><a href="global.html#GenreForm">GenreForm</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#HeaderWithStore">HeaderWithStore</a></li><li><a href="global.html#IndividualAdminEditForm">IndividualAdminEditForm</a></li><li><a href="global.html#IndividualAdmins">IndividualAdmins</a></li><li><a href="global.html#isProblemDetail">isProblemDetail</a></li><li><a href="global.html#LaneCustomListsEditor">LaneCustomListsEditor</a></li><li><a href="global.html#LaneEditor">LaneEditor</a></li><li><a href="global.html#Lanes">Lanes</a></li><li><a href="global.html#LibraryEditForm">LibraryEditForm</a></li><li><a href="global.html#LibraryStats">LibraryStats</a></li><li><a href="global.html#LoggingServices">LoggingServices</a></li><li><a href="global.html#ManagePatronsTabContainer">ManagePatronsTabContainer</a></li><li><a href="global.html#MetadataServices">MetadataServices</a></li><li><a href="global.html#PatronAuthServices">PatronAuthServices</a></li><li><a href="global.html#ProtocolFormField">ProtocolFormField</a></li><li><a href="global.html#SearchServices">SearchServices</a></li><li><a href="global.html#ServiceEditForm">ServiceEditForm</a></li><li><a href="global.html#ServiceWithRegistrationsEditForm">ServiceWithRegistrationsEditForm</a></li><li><a href="global.html#SetupPage">SetupPage</a></li><li><a href="global.html#SitewideSettingEditForm">SitewideSettingEditForm</a></li><li><a href="global.html#SitewideSettings">SitewideSettings</a></li><li><a href="global.html#Stats">Stats</a></li><li><a href="global.html#StorageServices">StorageServices</a></li><li><a href="global.html#TabContainer">TabContainer</a></li><li><a href="global.html#TextWithEditMode">TextWithEditMode</a></li><li><a href="global.html#WithEditButton">WithEditButton</a></li><li><a href="global.html#WithRemoveButton">WithRemoveButton</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">components/ProtocolFormField.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>"use strict";
+var __extends = (this &amp;&amp; this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array &amp;&amp; function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __assign = (this &amp;&amp; this.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i &lt; n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = require("react");
+var EditableInput_1 = require("./EditableInput");
+var ColorPicker_1 = require("./ColorPicker");
+var library_simplified_reusable_components_1 = require("library-simplified-reusable-components");
+var InputList_1 = require("./InputList");
+/** Shows a form field for editing a single setting, based on setting information
+    from the server. */
+var ProtocolFormField = /** @class */ (function (_super) {
+    __extends(ProtocolFormField, _super);
+    function ProtocolFormField(props) {
+        var _this = _super.call(this, props) || this;
+        _this.randomize = _this.randomize.bind(_this);
+        _this.isDefault = _this.isDefault.bind(_this);
+        _this.shouldBeChecked = _this.shouldBeChecked.bind(_this);
+        return _this;
+    }
+    ProtocolFormField.prototype.render = function () {
+        var setting = this.props.setting;
+        if (setting.type === "select") {
+            return this.renderSelectSetting(setting);
+        }
+        else if (setting.type === "list" &amp;&amp; setting.options) {
+            return this.renderListSettingWithOptions(setting);
+        }
+        else if (setting.type === "list") {
+            return this.renderListSetting(setting);
+        }
+        else if (setting.type === "color-picker") {
+            return this.renderColorPickerSetting(setting);
+        }
+        else {
+            return this.renderSetting(setting);
+        }
+    };
+    ProtocolFormField.prototype.renderSetting = function (setting, customProps) {
+        if (customProps === void 0) { customProps = null; }
+        return (React.createElement("div", { className: setting.randomizable ? "randomizable" : "" },
+            this.props.value &amp;&amp; setting.type === "image" &amp;&amp; React.createElement("img", { src: String(this.props.value), alt: "", role: "presentation" }),
+            this.createEditableInput(setting),
+            setting.randomizable &amp;&amp; !this.props.value &amp;&amp;
+                React.createElement("div", { className: "text-right" },
+                    React.createElement(library_simplified_reusable_components_1.Button, { disabled: this.props.disabled, callback: this.randomize, content: "Set to random value", type: "button" }))));
+    };
+    ProtocolFormField.prototype.createEditableInput = function (setting, customProps, children) {
+        if (customProps === void 0) { customProps = null; }
+        if (children === void 0) { children = null; }
+        var elementType = setting.type &amp;&amp; ["text", "textarea", "select"].includes(setting.type) ? setting.type : "input";
+        var extraProps = {
+            "image": {
+                accept: "image/*",
+                type: "file",
+                value: undefined
+            },
+            "number": {
+                validation: "number",
+                step: 1
+            }
+        };
+        var basicProps = {
+            key: setting.key,
+            elementType: elementType,
+            type: "text",
+            disabled: this.props &amp;&amp; this.props.disabled,
+            name: setting.key,
+            label: setting.label,
+            required: setting.required,
+            description: setting.description,
+            value: (this.props &amp;&amp; this.props.value) || setting.default,
+            error: this.props &amp;&amp; this.props.error,
+            ref: "element"
+        };
+        var props = extraProps[setting.type] ? __assign({}, basicProps, extraProps[setting.type]) : basicProps;
+        if (customProps) {
+            props = __assign({}, props, customProps);
+        }
+        return React.createElement(EditableInput_1.default, props, children);
+    };
+    ProtocolFormField.prototype.renderSelectSetting = function (setting) {
+        var children = setting.options &amp;&amp; setting.options.map(function (option) {
+            return React.createElement("option", { key: option.key, value: option.key, "aria-selected": false }, option.label);
+        });
+        return this.createEditableInput(setting, null, children);
+    };
+    ProtocolFormField.prototype.renderListSettingWithOptions = function (setting) {
+        var _this = this;
+        return (React.createElement("div", null,
+            this.labelAndDescription(setting),
+            setting.options.map(function (option) {
+                return _this.createEditableInput(option, {
+                    type: "checkbox",
+                    required: setting.required,
+                    name: setting.key + "_" + option.key,
+                    checked: _this.shouldBeChecked(option)
+                });
+            })));
+    };
+    ProtocolFormField.prototype.renderListSetting = function (setting) {
+        // Flatten an object in which the values are arrays
+        var value = Array.isArray(this.props.value) ?
+            this.props.value :
+            (this.props.value &amp;&amp; [].concat.apply([], Object.values(this.props.value)));
+        return (React.createElement(InputList_1.default, { ref: "element", setting: setting, createEditableInput: this.createEditableInput, labelAndDescription: this.labelAndDescription, disabled: this.props.disabled, value: value, additionalData: this.props.additionalData }));
+    };
+    ProtocolFormField.prototype.renderColorPickerSetting = function (setting) {
+        return (React.createElement("div", null,
+            this.labelAndDescription(setting),
+            React.createElement(ColorPicker_1.default, { value: String(this.props.value || setting.default), setting: setting, ref: "element" })));
+    };
+    ProtocolFormField.prototype.labelAndDescription = function (setting) {
+        var label = (React.createElement("label", { key: setting.label }, setting.label));
+        var description = setting.description &amp;&amp; (React.createElement("span", { key: setting.description, className: "description", dangerouslySetInnerHTML: { __html: setting.description } }));
+        var instructions = setting.instructions &amp;&amp; (React.createElement("div", { className: "well description", dangerouslySetInnerHTML: { __html: setting.instructions } }));
+        return [label, description, instructions];
+    };
+    ProtocolFormField.prototype.isDefault = function (option) {
+        if (this.props.default) {
+            return this.props.default.indexOf(option) >= 0 || this.props.default.indexOf(option.key) >= 0;
+        }
+    };
+    ProtocolFormField.prototype.shouldBeChecked = function (option) {
+        var isArray = this.props.value &amp;&amp; Array.isArray(this.props.value);
+        var isAllStrings = isArray &amp;&amp; this.props.value.every(function (x) { return typeof (x) === "string"; });
+        var hasKey = isArray &amp;&amp; this.props.value.includes(option.key);
+        var isValue = this.props.value &amp;&amp;
+            (typeof (this.props.value) === "string" || isAllStrings) &amp;&amp;
+            (this.props.value === option.key || hasKey);
+        var isDefault = (!this.props.value &amp;&amp; this.isDefault(option));
+        return isValue || isDefault;
+    };
+    ProtocolFormField.prototype.getValue = function () {
+        return this.refs["element"].getValue();
+    };
+    ProtocolFormField.prototype.randomize = function () {
+        var element = this.refs["element"];
+        var chars = "1234567890abcdefghijklmnopqrstuvwxyz!@#$%^&amp;*()";
+        var random = "";
+        for (var i = 0; i &lt; 32; i++) {
+            random += chars.charAt(Math.floor(Math.random() * chars.length));
+        }
+        element.setState({ value: random });
+    };
+    ProtocolFormField.prototype.clear = function () {
+        var element = this.refs["element"];
+        if (element &amp;&amp; element.clear) {
+            element.clear();
+        }
+    };
+    return ProtocolFormField;
+}(React.Component));
+exports.default = ProtocolFormField;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Thu Aug 08 2019 12:59:53 GMT-0400 (EDT) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

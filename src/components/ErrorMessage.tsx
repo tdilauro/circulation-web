@@ -9,8 +9,13 @@ export interface ErrorMessageProps {
   tryAgain?: () => any;
 }
 
-/** Shows a bootstrap error message at the top of the page when there's a bad
-    response from the server. */
+/**
+ * @name ErrorMessage
+ * @description Shows a bootstrap error message at the top of the page when there's a bad
+ *  response from the server.
+ * @example
+ *  <ErrorMessage error={} />
+ */
 export default class ErrorMessage extends React.Component<ErrorMessageProps, {}> {
   render(): JSX.Element {
     let status = this.props.error.status;
@@ -84,8 +89,14 @@ export default class ErrorMessage extends React.Component<ErrorMessageProps, {}>
     }
   }
 
+  /**
+   * @property method
+   * @name isProblemDetail
+   * @param {string} response - tests
+   * @return {string} something
+   */
   isProblemDetail(response, pdString) {
-    // Problem detail strings start with the phrase "Remote service returned a problem detail document";
+    // strings start with the phrase "Remote service returned a problem detail document";
     // checking for it is the easiest way to test whether this is a problem detail string.
     let pdRegExp = new RegExp(pdString);
     return pdRegExp.test(response);

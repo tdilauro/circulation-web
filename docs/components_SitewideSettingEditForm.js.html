@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>components/SitewideSettingEditForm.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#AccountPage">AccountPage</a></li><li><a href="global.html#ActionCreator">ActionCreator</a></li><li><a href="global.html#adapter">adapter</a></li><li><a href="global.html#AdminAuthServices">AdminAuthServices</a></li><li><a href="global.html#AnalyticsServices">AnalyticsServices</a></li><li><a href="global.html#BookCoverEditor">BookCoverEditor</a></li><li><a href="global.html#BookDetailsContainer">BookDetailsContainer</a></li><li><a href="global.html#BookDetailsEditor">BookDetailsEditor</a></li><li><a href="global.html#BookDetailsTabContainer">BookDetailsTabContainer</a></li><li><a href="global.html#BookEditForm">BookEditForm</a></li><li><a href="global.html#buildStore">buildStore</a></li><li><a href="global.html#CatalogPage">CatalogPage</a></li><li><a href="global.html#CatalogServices">CatalogServices</a></li><li><a href="global.html#CDNServices">CDNServices</a></li><li><a href="global.html#CirculationEvents">CirculationEvents</a></li><li><a href="global.html#CirculationEventsDownloadForm">CirculationEventsDownloadForm</a></li><li><a href="global.html#CirculationWeb">CirculationWeb</a></li><li><a href="global.html#Classifications">Classifications</a></li><li><a href="global.html#ClassificationsForm">ClassificationsForm</a></li><li><a href="global.html#ClassificationsTable">ClassificationsTable</a></li><li><a href="global.html#Collections">Collections</a></li><li><a href="global.html#ComplaintForm">ComplaintForm</a></li><li><a href="global.html#Complaints">Complaints</a></li><li><a href="global.html#ConfigPage">ConfigPage</a></li><li><a href="global.html#ConfigTabContainer">ConfigTabContainer</a></li><li><a href="global.html#ContextProvider">ContextProvider</a></li><li><a href="global.html#CustomListEditor">CustomListEditor</a></li><li><a href="global.html#CustomListEntriesEditor">CustomListEntriesEditor</a></li><li><a href="global.html#CustomListPage">CustomListPage</a></li><li><a href="global.html#CustomLists">CustomLists</a></li><li><a href="global.html#CustomListsForBook">CustomListsForBook</a></li><li><a href="global.html#DashboardPage">DashboardPage</a></li><li><a href="global.html#default">default</a></li><li><a href="global.html#DiscoveryServices">DiscoveryServices</a></li><li><a href="global.html#doc">doc</a></li><li><a href="global.html#EditableInput">EditableInput</a></li><li><a href="global.html#EntryPointsContainer">EntryPointsContainer</a></li><li><a href="global.html#EntryPointsTabs">EntryPointsTabs</a></li><li><a href="global.html#ErrorMessage">ErrorMessage</a></li><li><a href="global.html#GenericEditableConfigList">GenericEditableConfigList</a></li><li><a href="global.html#GenreForm">GenreForm</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#HeaderWithStore">HeaderWithStore</a></li><li><a href="global.html#IndividualAdminEditForm">IndividualAdminEditForm</a></li><li><a href="global.html#IndividualAdmins">IndividualAdmins</a></li><li><a href="global.html#isProblemDetail">isProblemDetail</a></li><li><a href="global.html#LaneCustomListsEditor">LaneCustomListsEditor</a></li><li><a href="global.html#LaneEditor">LaneEditor</a></li><li><a href="global.html#Lanes">Lanes</a></li><li><a href="global.html#LibraryEditForm">LibraryEditForm</a></li><li><a href="global.html#LibraryStats">LibraryStats</a></li><li><a href="global.html#LoggingServices">LoggingServices</a></li><li><a href="global.html#ManagePatronsTabContainer">ManagePatronsTabContainer</a></li><li><a href="global.html#MetadataServices">MetadataServices</a></li><li><a href="global.html#PatronAuthServices">PatronAuthServices</a></li><li><a href="global.html#ProtocolFormField">ProtocolFormField</a></li><li><a href="global.html#SearchServices">SearchServices</a></li><li><a href="global.html#ServiceEditForm">ServiceEditForm</a></li><li><a href="global.html#ServiceWithRegistrationsEditForm">ServiceWithRegistrationsEditForm</a></li><li><a href="global.html#SetupPage">SetupPage</a></li><li><a href="global.html#SitewideSettingEditForm">SitewideSettingEditForm</a></li><li><a href="global.html#SitewideSettings">SitewideSettings</a></li><li><a href="global.html#Stats">Stats</a></li><li><a href="global.html#StorageServices">StorageServices</a></li><li><a href="global.html#TabContainer">TabContainer</a></li><li><a href="global.html#TextWithEditMode">TextWithEditMode</a></li><li><a href="global.html#WithEditButton">WithEditButton</a></li><li><a href="global.html#WithRemoveButton">WithRemoveButton</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">components/SitewideSettingEditForm.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>"use strict";
+var __extends = (this &amp;&amp; this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array &amp;&amp; function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __awaiter = (this &amp;&amp; this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this &amp;&amp; this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] &amp; 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" &amp;&amp; (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y &amp;&amp; (t = y[op[0] &amp; 2 ? "return" : op[0] ? "throw" : "next"]) &amp;&amp; !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 &amp;&amp; t[t.length - 1]) &amp;&amp; (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 &amp;&amp; (!t || (op[1] > t[0] &amp;&amp; op[1] &lt; t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 &amp;&amp; _.label &lt; t[1]) { _.label = t[1]; t = op; break; }
+                    if (t &amp;&amp; _.label &lt; t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] &amp; 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = require("react");
+var EditableInput_1 = require("./EditableInput");
+var library_simplified_reusable_components_1 = require("library-simplified-reusable-components");
+var sharedFunctions_1 = require("./sharedFunctions");
+/** Form for editing a single sitewide setting. */
+var SitewideSettingEditForm = /** @class */ (function (_super) {
+    __extends(SitewideSettingEditForm, _super);
+    function SitewideSettingEditForm(props) {
+        var _this = _super.call(this, props) || this;
+        _this.onChange = _this.onChange.bind(_this);
+        _this.submit = _this.submit.bind(_this);
+        _this.state = {
+            inputKey: _this.availableSettings().length ? _this.availableSettings()[0].key : "",
+        };
+        return _this;
+    }
+    SitewideSettingEditForm.prototype.render = function () {
+        var inputKey = this.state.inputKey;
+        var availableSettings = this.availableSettings();
+        var settingToRender;
+        availableSettings.forEach(function (setting) {
+            if (setting.key === inputKey) {
+                settingToRender = setting;
+            }
+        });
+        var selectType = !!(settingToRender &amp;&amp; settingToRender.options &amp;&amp; settingToRender.options.length);
+        return (React.createElement("div", null,
+            availableSettings.length > 0 &amp;&amp;
+                React.createElement(library_simplified_reusable_components_1.Form, { onSubmit: this.submit, className: "no-border edit-form", disableButton: this.props.disabled, content: React.createElement("fieldset", { key: "sitewide-setting" },
+                        React.createElement("legend", { className: "visuallyHidden" }, "Enter or edit a value for the selected sitewide setting key"),
+                        React.createElement(EditableInput_1.default, { elementType: "select", disabled: this.props.disabled, readOnly: !!(this.props.item &amp;&amp; this.props.item.key), name: "key", ref: "key", label: "Key", value: this.props.item &amp;&amp; this.props.item.key, onChange: this.onChange }, availableSettings.map(function (setting) {
+                            return React.createElement("option", { key: setting.key, value: setting.key, "aria-selected": false }, setting.label);
+                        })),
+                        selectType ? (React.createElement(EditableInput_1.default, { elementType: "select", name: "value", ref: "value", label: "Value", value: this.props.item &amp;&amp; this.props.item.value }, availableSettings.map(function (setting) {
+                            if (setting.key === inputKey) {
+                                return setting.options.map(function (s) {
+                                    return React.createElement("option", { key: s.key, value: s.key, "aria-selected": false }, s.label);
+                                });
+                            }
+                        }))) : (React.createElement(EditableInput_1.default, { elementType: "input", type: "text", disabled: this.props.disabled, required: settingToRender &amp;&amp; settingToRender.required, name: "value", ref: "value", label: "Value", value: this.props.item &amp;&amp; this.props.item.value })),
+                        availableSettings.map(function (setting) {
+                            if (setting.key === inputKey &amp;&amp; setting.description) {
+                                return React.createElement("p", { className: "description", dangerouslySetInnerHTML: { __html: setting.description } });
+                            }
+                        })) }),
+            this.availableSettings().length === 0 &amp;&amp;
+                React.createElement("p", null, "All sitewide settings have already been created.")));
+    };
+    SitewideSettingEditForm.prototype.onChange = function (inputKey) {
+        this.setState({ inputKey: inputKey });
+    };
+    SitewideSettingEditForm.prototype.availableSettings = function () {
+        var allSettings = this.props.data &amp;&amp; this.props.data.all_settings || [];
+        if (this.props.item) {
+            for (var _i = 0, allSettings_1 = allSettings; _i &lt; allSettings_1.length; _i++) {
+                var setting = allSettings_1[_i];
+                if (setting.key === this.props.item.key) {
+                    return [setting];
+                }
+            }
+        }
+        else {
+            var availableSettings = [];
+            for (var _a = 0, allSettings_2 = allSettings; _a &lt; allSettings_2.length; _a++) {
+                var possibleSetting = allSettings_2[_a];
+                var hasSetting = false;
+                for (var _b = 0, _c = (this.props.data &amp;&amp; this.props.data.settings) || []; _b &lt; _c.length; _b++) {
+                    var actualSetting = _c[_b];
+                    if (actualSetting.key === possibleSetting.key) {
+                        hasSetting = true;
+                    }
+                }
+                if (!hasSetting) {
+                    availableSettings.push(possibleSetting);
+                }
+            }
+            return availableSettings;
+        }
+        return allSettings;
+    };
+    SitewideSettingEditForm.prototype.submit = function (data) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.props.save(data)];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    SitewideSettingEditForm.prototype.componentWillReceiveProps = function (nextProps) {
+        if (nextProps.responseBody &amp;&amp; !nextProps.fetchError) {
+            sharedFunctions_1.clearForm(this.refs);
+        }
+    };
+    return SitewideSettingEditForm;
+}(React.Component));
+exports.default = SitewideSettingEditForm;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Thu Aug 08 2019 12:59:53 GMT-0400 (EDT) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

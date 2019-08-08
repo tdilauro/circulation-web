@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>editorAdapter.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#AccountPage">AccountPage</a></li><li><a href="global.html#ActionCreator">ActionCreator</a></li><li><a href="global.html#adapter">adapter</a></li><li><a href="global.html#AdminAuthServices">AdminAuthServices</a></li><li><a href="global.html#AnalyticsServices">AnalyticsServices</a></li><li><a href="global.html#BookCoverEditor">BookCoverEditor</a></li><li><a href="global.html#BookDetailsContainer">BookDetailsContainer</a></li><li><a href="global.html#BookDetailsEditor">BookDetailsEditor</a></li><li><a href="global.html#BookDetailsTabContainer">BookDetailsTabContainer</a></li><li><a href="global.html#BookEditForm">BookEditForm</a></li><li><a href="global.html#buildStore">buildStore</a></li><li><a href="global.html#CatalogPage">CatalogPage</a></li><li><a href="global.html#CatalogServices">CatalogServices</a></li><li><a href="global.html#CDNServices">CDNServices</a></li><li><a href="global.html#CirculationEvents">CirculationEvents</a></li><li><a href="global.html#CirculationEventsDownloadForm">CirculationEventsDownloadForm</a></li><li><a href="global.html#CirculationWeb">CirculationWeb</a></li><li><a href="global.html#Classifications">Classifications</a></li><li><a href="global.html#ClassificationsForm">ClassificationsForm</a></li><li><a href="global.html#ClassificationsTable">ClassificationsTable</a></li><li><a href="global.html#Collections">Collections</a></li><li><a href="global.html#ComplaintForm">ComplaintForm</a></li><li><a href="global.html#Complaints">Complaints</a></li><li><a href="global.html#ConfigPage">ConfigPage</a></li><li><a href="global.html#ConfigTabContainer">ConfigTabContainer</a></li><li><a href="global.html#ContextProvider">ContextProvider</a></li><li><a href="global.html#CustomListEditor">CustomListEditor</a></li><li><a href="global.html#CustomListEntriesEditor">CustomListEntriesEditor</a></li><li><a href="global.html#CustomListPage">CustomListPage</a></li><li><a href="global.html#CustomLists">CustomLists</a></li><li><a href="global.html#CustomListsForBook">CustomListsForBook</a></li><li><a href="global.html#DashboardPage">DashboardPage</a></li><li><a href="global.html#default">default</a></li><li><a href="global.html#DiscoveryServices">DiscoveryServices</a></li><li><a href="global.html#doc">doc</a></li><li><a href="global.html#EditableInput">EditableInput</a></li><li><a href="global.html#EntryPointsContainer">EntryPointsContainer</a></li><li><a href="global.html#EntryPointsTabs">EntryPointsTabs</a></li><li><a href="global.html#ErrorMessage">ErrorMessage</a></li><li><a href="global.html#GenericEditableConfigList">GenericEditableConfigList</a></li><li><a href="global.html#GenreForm">GenreForm</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#HeaderWithStore">HeaderWithStore</a></li><li><a href="global.html#IndividualAdminEditForm">IndividualAdminEditForm</a></li><li><a href="global.html#IndividualAdmins">IndividualAdmins</a></li><li><a href="global.html#isProblemDetail">isProblemDetail</a></li><li><a href="global.html#LaneCustomListsEditor">LaneCustomListsEditor</a></li><li><a href="global.html#LaneEditor">LaneEditor</a></li><li><a href="global.html#Lanes">Lanes</a></li><li><a href="global.html#LibraryEditForm">LibraryEditForm</a></li><li><a href="global.html#LibraryStats">LibraryStats</a></li><li><a href="global.html#LoggingServices">LoggingServices</a></li><li><a href="global.html#ManagePatronsTabContainer">ManagePatronsTabContainer</a></li><li><a href="global.html#MetadataServices">MetadataServices</a></li><li><a href="global.html#PatronAuthServices">PatronAuthServices</a></li><li><a href="global.html#ProtocolFormField">ProtocolFormField</a></li><li><a href="global.html#SearchServices">SearchServices</a></li><li><a href="global.html#ServiceEditForm">ServiceEditForm</a></li><li><a href="global.html#ServiceWithRegistrationsEditForm">ServiceWithRegistrationsEditForm</a></li><li><a href="global.html#SetupPage">SetupPage</a></li><li><a href="global.html#SitewideSettingEditForm">SitewideSettingEditForm</a></li><li><a href="global.html#SitewideSettings">SitewideSettings</a></li><li><a href="global.html#Stats">Stats</a></li><li><a href="global.html#StorageServices">StorageServices</a></li><li><a href="global.html#TabContainer">TabContainer</a></li><li><a href="global.html#TextWithEditMode">TextWithEditMode</a></li><li><a href="global.html#WithEditButton">WithEditButton</a></li><li><a href="global.html#WithRemoveButton">WithRemoveButton</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">editorAdapter.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/** Extract metadata and links from an OPDS entry for use on the
+    book details page. */
+function adapter(data) {
+    var hideLink = data.links.find(function (link) {
+        return link.rel === "http://librarysimplified.org/terms/rel/hide";
+    });
+    var restoreLink = data.links.find(function (link) {
+        return link.rel === "http://librarysimplified.org/terms/rel/restore";
+    });
+    var refreshLink = data.links.find(function (link) {
+        return link.rel === "http://librarysimplified.org/terms/rel/refresh";
+    });
+    var editLink = data.links.find(function (link) {
+        return link.rel === "edit";
+    });
+    var issuesLink = data.links.find(function (link) {
+        return link.rel === "issues";
+    });
+    var changeCoverLink = data.links.find(function (link) {
+        return link.rel === "http://librarysimplified.org/terms/rel/change_cover";
+    });
+    var audience = data.categories.find(function (category) {
+        return category.scheme === "http://schema.org/audience";
+    });
+    var targetAgeCategory = data.categories.find(function (category) {
+        return category.scheme === "http://schema.org/typicalAgeRange";
+    });
+    var targetAgeRange = [];
+    if (targetAgeCategory &amp;&amp; /\d\d?-?\d?\d?/.test(targetAgeCategory.term)) {
+        targetAgeRange = targetAgeCategory.term.split("-");
+    }
+    var fictionCategory = data.categories.find(function (category) {
+        return category.scheme === "http://librarysimplified.org/terms/fiction/";
+    });
+    var fiction;
+    if (fictionCategory) {
+        fiction = (fictionCategory.label === "Fiction");
+    }
+    var categories = data.categories.map(function (category) { return category.label; });
+    var medium;
+    try {
+        medium = data.unparsed["$"]["schema:additionalType"]["value"];
+    }
+    catch (e) {
+        medium = null;
+    }
+    var imprint;
+    try {
+        imprint = data.unparsed["bib:publisherImprint"][0]["_"];
+    }
+    catch (e) {
+        imprint = null;
+    }
+    var authors = [];
+    for (var _i = 0, _a = data.authors; _i &lt; _a.length; _i++) {
+        var author = _a[_i];
+        authors.push(Object.assign({}, author, { role: "aut" }));
+    }
+    var rating;
+    try {
+        var ratings = data.unparsed["schema:Rating"];
+        for (var _b = 0, ratings_1 = ratings; _b &lt; ratings_1.length; _b++) {
+            var ratingTag = ratings_1[_b];
+            if (ratingTag["$"]["schema:additionalType"]["value"] === "http://schema.org/ratingValue") {
+                rating = ratingTag["$"]["schema:ratingValue"]["value"];
+                break;
+            }
+        }
+    }
+    catch (e) {
+        rating = null;
+    }
+    var imageLink = data.links.find(function (link) {
+        return link.rel === "http://opds-spec.org/image";
+    });
+    var coverUrl;
+    if (imageLink) {
+        coverUrl = imageLink.href;
+    }
+    return {
+        id: data.id,
+        title: data.title,
+        authors: authors,
+        contributors: data.contributors,
+        subtitle: data.subtitle,
+        summary: data.summary.content,
+        audience: audience &amp;&amp; audience.term,
+        targetAgeRange: targetAgeRange,
+        fiction: fiction,
+        categories: categories,
+        hideLink: hideLink,
+        restoreLink: restoreLink,
+        refreshLink: refreshLink,
+        editLink: editLink,
+        issuesLink: issuesLink,
+        changeCoverLink: changeCoverLink,
+        series: data.series &amp;&amp; data.series.name,
+        seriesPosition: data.series &amp;&amp; data.series.position,
+        medium: medium,
+        language: data.language,
+        publisher: data.publisher,
+        imprint: imprint,
+        issued: data.issued,
+        rating: rating,
+        coverUrl: coverUrl
+    };
+}
+exports.default = adapter;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Thu Aug 08 2019 12:59:53 GMT-0400 (EDT) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>components/ClassificationsForm.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#AccountPage">AccountPage</a></li><li><a href="global.html#ActionCreator">ActionCreator</a></li><li><a href="global.html#adapter">adapter</a></li><li><a href="global.html#AdminAuthServices">AdminAuthServices</a></li><li><a href="global.html#AnalyticsServices">AnalyticsServices</a></li><li><a href="global.html#BookCoverEditor">BookCoverEditor</a></li><li><a href="global.html#BookDetailsContainer">BookDetailsContainer</a></li><li><a href="global.html#BookDetailsEditor">BookDetailsEditor</a></li><li><a href="global.html#BookDetailsTabContainer">BookDetailsTabContainer</a></li><li><a href="global.html#BookEditForm">BookEditForm</a></li><li><a href="global.html#buildStore">buildStore</a></li><li><a href="global.html#CatalogPage">CatalogPage</a></li><li><a href="global.html#CatalogServices">CatalogServices</a></li><li><a href="global.html#CDNServices">CDNServices</a></li><li><a href="global.html#CirculationEvents">CirculationEvents</a></li><li><a href="global.html#CirculationEventsDownloadForm">CirculationEventsDownloadForm</a></li><li><a href="global.html#CirculationWeb">CirculationWeb</a></li><li><a href="global.html#Classifications">Classifications</a></li><li><a href="global.html#ClassificationsForm">ClassificationsForm</a></li><li><a href="global.html#ClassificationsTable">ClassificationsTable</a></li><li><a href="global.html#Collections">Collections</a></li><li><a href="global.html#ComplaintForm">ComplaintForm</a></li><li><a href="global.html#Complaints">Complaints</a></li><li><a href="global.html#ConfigPage">ConfigPage</a></li><li><a href="global.html#ConfigTabContainer">ConfigTabContainer</a></li><li><a href="global.html#ContextProvider">ContextProvider</a></li><li><a href="global.html#CustomListEditor">CustomListEditor</a></li><li><a href="global.html#CustomListEntriesEditor">CustomListEntriesEditor</a></li><li><a href="global.html#CustomListPage">CustomListPage</a></li><li><a href="global.html#CustomLists">CustomLists</a></li><li><a href="global.html#CustomListsForBook">CustomListsForBook</a></li><li><a href="global.html#DashboardPage">DashboardPage</a></li><li><a href="global.html#default">default</a></li><li><a href="global.html#DiscoveryServices">DiscoveryServices</a></li><li><a href="global.html#doc">doc</a></li><li><a href="global.html#EditableInput">EditableInput</a></li><li><a href="global.html#EntryPointsContainer">EntryPointsContainer</a></li><li><a href="global.html#EntryPointsTabs">EntryPointsTabs</a></li><li><a href="global.html#ErrorMessage">ErrorMessage</a></li><li><a href="global.html#GenericEditableConfigList">GenericEditableConfigList</a></li><li><a href="global.html#GenreForm">GenreForm</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#HeaderWithStore">HeaderWithStore</a></li><li><a href="global.html#IndividualAdminEditForm">IndividualAdminEditForm</a></li><li><a href="global.html#IndividualAdmins">IndividualAdmins</a></li><li><a href="global.html#isProblemDetail">isProblemDetail</a></li><li><a href="global.html#LaneCustomListsEditor">LaneCustomListsEditor</a></li><li><a href="global.html#LaneEditor">LaneEditor</a></li><li><a href="global.html#Lanes">Lanes</a></li><li><a href="global.html#LibraryEditForm">LibraryEditForm</a></li><li><a href="global.html#LibraryStats">LibraryStats</a></li><li><a href="global.html#LoggingServices">LoggingServices</a></li><li><a href="global.html#ManagePatronsTabContainer">ManagePatronsTabContainer</a></li><li><a href="global.html#MetadataServices">MetadataServices</a></li><li><a href="global.html#PatronAuthServices">PatronAuthServices</a></li><li><a href="global.html#ProtocolFormField">ProtocolFormField</a></li><li><a href="global.html#SearchServices">SearchServices</a></li><li><a href="global.html#ServiceEditForm">ServiceEditForm</a></li><li><a href="global.html#ServiceWithRegistrationsEditForm">ServiceWithRegistrationsEditForm</a></li><li><a href="global.html#SetupPage">SetupPage</a></li><li><a href="global.html#SitewideSettingEditForm">SitewideSettingEditForm</a></li><li><a href="global.html#SitewideSettings">SitewideSettings</a></li><li><a href="global.html#Stats">Stats</a></li><li><a href="global.html#StorageServices">StorageServices</a></li><li><a href="global.html#TabContainer">TabContainer</a></li><li><a href="global.html#TextWithEditMode">TextWithEditMode</a></li><li><a href="global.html#WithEditButton">WithEditButton</a></li><li><a href="global.html#WithRemoveButton">WithRemoveButton</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">components/ClassificationsForm.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>"use strict";
+var __extends = (this &amp;&amp; this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array &amp;&amp; function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = require("react");
+var ReactDOM = require("react-dom");
+var EditableInput_1 = require("./EditableInput");
+var WithRemoveButton_1 = require("./WithRemoveButton");
+var GenreForm_1 = require("./GenreForm");
+var library_simplified_reusable_components_1 = require("library-simplified-reusable-components");
+var react_bootstrap_1 = require("react-bootstrap");
+/** Form for editing a books classifications on the classifications tab of the
+    book detail page. */
+var ClassificationsForm = /** @class */ (function (_super) {
+    __extends(ClassificationsForm, _super);
+    function ClassificationsForm(props) {
+        var _this = _super.call(this, props) || this;
+        _this.state = {
+            audience: props.book &amp;&amp; props.book.audience ? props.book.audience : "None",
+            fiction: props.book ? props.book.fiction : undefined,
+            genres: [],
+            error: null,
+        };
+        _this.handleAudienceChange = _this.handleAudienceChange.bind(_this);
+        _this.handleFictionChange = _this.handleFictionChange.bind(_this);
+        _this.addGenre = _this.addGenre.bind(_this);
+        _this.removeGenre = _this.removeGenre.bind(_this);
+        _this.submit = _this.submit.bind(_this);
+        return _this;
+    }
+    ClassificationsForm.prototype.render = function () {
+        var _this = this;
+        var _a = this.state, audience = _a.audience, fiction = _a.fiction, error = _a.error, genres = _a.genres;
+        var genreOptions = this.genreOptions();
+        var hasAudienceError = (audience === "None") || (error &amp;&amp; error["audience"]);
+        var hasFictionError = (fiction === undefined) || (error &amp;&amp; error["fiction"]);
+        return (React.createElement("fieldset", { className: "classifications-form" },
+            React.createElement("legend", { className: "visuallyHidden" }, "Classifications"),
+            error &amp;&amp;
+                React.createElement(react_bootstrap_1.Alert, { bsStyle: "danger", ref: "errorMessage", tabIndex: -1 }, Object.keys(error).map(function (err) {
+                    return (React.createElement("p", null, error[err]));
+                })),
+            React.createElement(library_simplified_reusable_components_1.Panel, { headerText: "Classifications", collapsible: false, onEnter: this.submit, content: React.createElement("div", null,
+                    React.createElement(EditableInput_1.default, { elementType: "select", disabled: this.props.disabled, name: "audience", label: "Audience", ref: "audience", value: this.props.book.audience || "None", onChange: this.handleAudienceChange, clientError: hasAudienceError },
+                        (!audience || audience === "None") &amp;&amp;
+                            React.createElement("option", { value: "None", "aria-selected": audience === "None" }, "None"),
+                        React.createElement("option", { value: "Children", "aria-selected": audience === "Children" }, "Children"),
+                        React.createElement("option", { value: "Young Adult", "aria-selected": audience === "Young Adult" }, "Young Adult"),
+                        React.createElement("option", { value: "Adult", "aria-selected": audience === "Adult" }, "Adult"),
+                        React.createElement("option", { value: "Adults Only", "aria-selected": audience === "Adults Only" }, "Adults Only")),
+                    this.shouldShowTargetAge() &amp;&amp;
+                        React.createElement("div", { className: "form-group target-age" },
+                            React.createElement("p", null, "Target Age Range"),
+                            React.createElement("div", { className: "form-inline" },
+                                React.createElement(EditableInput_1.default, { elementType: "input", ref: "targetAgeMin", type: "text", disabled: this.props.disabled, name: "target_age_min", value: this.props.book.targetAgeRange[0] }),
+                                React.createElement("span", null, "\u00A0\u00A0-\u00A0\u00A0"),
+                                React.createElement(EditableInput_1.default, { elementType: "input", ref: "targetAgeMax", type: "text", disabled: this.props.disabled, name: "target_age_max", value: this.props.book.targetAgeRange[1] }))),
+                    React.createElement("div", { className: "form-group fiction-radio-input" },
+                        React.createElement("p", null, "Fiction Classification"),
+                        React.createElement("div", { className: "form-inline" },
+                            fiction === undefined &amp;&amp;
+                                React.createElement(EditableInput_1.default, { type: "radio", disabled: this.props.disabled, name: "fiction", value: "none", label: "None", ref: "noFictionSelected", checked: true, onChange: this.handleFictionChange, clientError: hasFictionError }),
+                            React.createElement(EditableInput_1.default, { type: "radio", disabled: this.props.disabled, name: "fiction", value: "fiction", label: "Fiction", ref: "fiction", checked: fiction !== undefined &amp;&amp; fiction, onChange: this.handleFictionChange, clientError: hasFictionError }),
+                            React.createElement(EditableInput_1.default, { type: "radio", disabled: this.props.disabled, name: "fiction", value: "nonfiction", label: "Nonfiction", ref: "nonfiction", checked: fiction !== undefined &amp;&amp; !fiction, onChange: this.handleFictionChange, clientError: hasFictionError }))),
+                    React.createElement("div", { className: "form-group genre-group-form" },
+                        React.createElement("p", null, "Genres"),
+                        genres.sort().map(function (category) {
+                            return React.createElement(WithRemoveButton_1.default, { key: category, disabled: _this.props.disabled, onRemove: function () { return _this.removeGenre(category); } }, _this.fullGenre(category));
+                        }),
+                        React.createElement("p", { className: "add-genre-form-title" }, "Add Genre"),
+                        React.createElement(GenreForm_1.default, { disabled: this.props.disabled, genreOptions: genreOptions, bookGenres: genres, addGenre: this.addGenre }))) }),
+            React.createElement(library_simplified_reusable_components_1.Button, { className: "left-align", callback: this.submit, content: "Save" })));
+    };
+    ClassificationsForm.prototype.componentWillMount = function () {
+        if (this.props.book) {
+            this.setState({ audience: this.props.book.audience || "None" });
+            this.setState({ fiction: this.props.book.fiction });
+            this.setState({ genres: this.bookGenres(this.props.book) });
+        }
+    };
+    ClassificationsForm.prototype.componentWillReceiveProps = function (newProps) {
+        if (this.bookChanged(newProps.book)) {
+            this.setState({ audience: newProps.book.audience });
+            this.setState({ fiction: newProps.book.fiction });
+            this.setState({ genres: this.bookGenres(newProps.book) });
+        }
+    };
+    ClassificationsForm.prototype.bookChanged = function (newBook) {
+        return newBook.audience !== this.props.book.audience ||
+            newBook.targetAgeRange[0] !== this.props.book.targetAgeRange[0] ||
+            newBook.targetAgeRange[1] !== this.props.book.targetAgeRange[1] ||
+            newBook.fiction !== this.props.book.fiction ||
+            newBook.categories.sort() !== this.props.book.categories.sort();
+    };
+    ClassificationsForm.prototype.bookGenres = function (book) {
+        var _this = this;
+        if (!book || !book.categories || !this.props.genreTree) {
+            return [];
+        }
+        return book.categories.filter(function (category) {
+            return !!_this.props.genreTree["Fiction"][category] ||
+                !!_this.props.genreTree["Nonfiction"][category];
+        });
+    };
+    ClassificationsForm.prototype.shouldShowTargetAge = function () {
+        return this.state.audience === "Children" ||
+            this.state.audience === "Young Adult";
+    };
+    ClassificationsForm.prototype.filterGenres = function (genres, fiction) {
+        var _this = this;
+        if (fiction === void 0) { fiction = true; }
+        var top = fiction ? "Fiction" : "Nonfiction";
+        if (!this.props.genreTree[top]) {
+            return [];
+        }
+        return genres.filter(function (genre) { return _this.props.genreTree[top][genre]; });
+    };
+    ClassificationsForm.prototype.genreOptions = function () {
+        var _this = this;
+        if (!this.props.book || !this.props.genreTree) {
+            return [];
+        }
+        var top = this.state.fiction ? "Fiction" : "Nonfiction";
+        if (!this.props.genreTree[top]) {
+            return [];
+        }
+        return Object.keys(this.props.genreTree[top])
+            .map(function (key) { return _this.props.genreTree[top][key]; });
+    };
+    ClassificationsForm.prototype.fullGenre = function (category) {
+        for (var _i = 0, _a = ["Fiction", "Nonfiction"]; _i &lt; _a.length; _i++) {
+            var top_1 = _a[_i];
+            var genre = this.props.genreTree[top_1][category];
+            if (genre) {
+                return genre.parents.concat([genre.name]).join(" > ");
+            }
+        }
+        return category;
+    };
+    ClassificationsForm.prototype.validateAudience = function (audience, genres) {
+        // fails if genres include Erotica but audience isn't Adults Only
+        if (genres.indexOf("Erotica") !== -1 &amp;&amp; audience !== "Adults Only") {
+            alert("Erotica genre requires Adults Only audience");
+            return false;
+        }
+        else {
+            return true;
+        }
+    };
+    ClassificationsForm.prototype.handleAudienceChange = function () {
+        var value = this.refs.audience.getValue();
+        if (this.validateAudience(value, this.state.genres)) {
+            this.setState({ audience: value });
+        }
+        else {
+            return false;
+        }
+        ;
+    };
+    ClassificationsForm.prototype.handleFictionChange = function () {
+        var value = this.refs.fiction.getChecked();
+        var clearedType = value ? "Nonfiction" : "Fiction";
+        var message = "Are you sure? This will clear any " +
+            clearedType +
+            " genres you have chosen!";
+        if (this.state.genres.length === 0 || window.confirm(message)) {
+            this.setState({
+                fiction: value,
+                genres: this.filterGenres(this.state.genres, value)
+            });
+        }
+    };
+    ClassificationsForm.prototype.addGenre = function (genre) {
+        if (this.validateAudience(this.state.audience, [genre])) {
+            this.setState({ genres: this.state.genres.concat([genre]) });
+        }
+        ;
+    };
+    ClassificationsForm.prototype.removeGenre = function (genreToRemove) {
+        this.setState({
+            genres: this.state.genres.filter(function (genre) { return genre !== genreToRemove; })
+        });
+    };
+    ClassificationsForm.prototype.submit = function () {
+        var _this = this;
+        var _a = this.state, audience = _a.audience, fiction = _a.fiction;
+        var data = new window.FormData();
+        var error = {};
+        if (!audience || audience === "None") {
+            error["audience"] = "No Audience classification selected.";
+        }
+        if (fiction === undefined) {
+            error["fiction"] = "No Fiction classification selected.";
+        }
+        if (error["audience"] || error["fiction"]) {
+            this.setState({ error: error });
+            setTimeout(function () {
+                if (_this.refs["errorMessage"]) {
+                    ReactDOM.findDOMNode(_this.refs["errorMessage"]).focus();
+                }
+            }, 500);
+            return;
+        }
+        data.append("audience", audience);
+        if (this.shouldShowTargetAge()) {
+            data.append("target_age_min", this.refs.targetAgeMin.getValue());
+            data.append("target_age_max", this.refs.targetAgeMax.getValue());
+        }
+        data.append("fiction", fiction ? "fiction" : "nonfiction");
+        this.state.genres.forEach(function (genre) { return data.append("genres", genre); });
+        this.setState({ error: null });
+        return this.props.editClassifications(data);
+    };
+    return ClassificationsForm;
+}(React.Component));
+exports.default = ClassificationsForm;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Thu Aug 08 2019 12:59:53 GMT-0400 (EDT) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

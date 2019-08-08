@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>actions.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#AccountPage">AccountPage</a></li><li><a href="global.html#ActionCreator">ActionCreator</a></li><li><a href="global.html#adapter">adapter</a></li><li><a href="global.html#AdminAuthServices">AdminAuthServices</a></li><li><a href="global.html#AnalyticsServices">AnalyticsServices</a></li><li><a href="global.html#BookCoverEditor">BookCoverEditor</a></li><li><a href="global.html#BookDetailsContainer">BookDetailsContainer</a></li><li><a href="global.html#BookDetailsEditor">BookDetailsEditor</a></li><li><a href="global.html#BookDetailsTabContainer">BookDetailsTabContainer</a></li><li><a href="global.html#BookEditForm">BookEditForm</a></li><li><a href="global.html#buildStore">buildStore</a></li><li><a href="global.html#CatalogPage">CatalogPage</a></li><li><a href="global.html#CatalogServices">CatalogServices</a></li><li><a href="global.html#CDNServices">CDNServices</a></li><li><a href="global.html#CirculationEvents">CirculationEvents</a></li><li><a href="global.html#CirculationEventsDownloadForm">CirculationEventsDownloadForm</a></li><li><a href="global.html#CirculationWeb">CirculationWeb</a></li><li><a href="global.html#Classifications">Classifications</a></li><li><a href="global.html#ClassificationsForm">ClassificationsForm</a></li><li><a href="global.html#ClassificationsTable">ClassificationsTable</a></li><li><a href="global.html#Collections">Collections</a></li><li><a href="global.html#ComplaintForm">ComplaintForm</a></li><li><a href="global.html#Complaints">Complaints</a></li><li><a href="global.html#ConfigPage">ConfigPage</a></li><li><a href="global.html#ConfigTabContainer">ConfigTabContainer</a></li><li><a href="global.html#ContextProvider">ContextProvider</a></li><li><a href="global.html#CustomListEditor">CustomListEditor</a></li><li><a href="global.html#CustomListEntriesEditor">CustomListEntriesEditor</a></li><li><a href="global.html#CustomListPage">CustomListPage</a></li><li><a href="global.html#CustomLists">CustomLists</a></li><li><a href="global.html#CustomListsForBook">CustomListsForBook</a></li><li><a href="global.html#DashboardPage">DashboardPage</a></li><li><a href="global.html#default">default</a></li><li><a href="global.html#DiscoveryServices">DiscoveryServices</a></li><li><a href="global.html#doc">doc</a></li><li><a href="global.html#EditableInput">EditableInput</a></li><li><a href="global.html#EntryPointsContainer">EntryPointsContainer</a></li><li><a href="global.html#EntryPointsTabs">EntryPointsTabs</a></li><li><a href="global.html#ErrorMessage">ErrorMessage</a></li><li><a href="global.html#GenericEditableConfigList">GenericEditableConfigList</a></li><li><a href="global.html#GenreForm">GenreForm</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#HeaderWithStore">HeaderWithStore</a></li><li><a href="global.html#IndividualAdminEditForm">IndividualAdminEditForm</a></li><li><a href="global.html#IndividualAdmins">IndividualAdmins</a></li><li><a href="global.html#isProblemDetail">isProblemDetail</a></li><li><a href="global.html#LaneCustomListsEditor">LaneCustomListsEditor</a></li><li><a href="global.html#LaneEditor">LaneEditor</a></li><li><a href="global.html#Lanes">Lanes</a></li><li><a href="global.html#LibraryEditForm">LibraryEditForm</a></li><li><a href="global.html#LibraryStats">LibraryStats</a></li><li><a href="global.html#LoggingServices">LoggingServices</a></li><li><a href="global.html#ManagePatronsTabContainer">ManagePatronsTabContainer</a></li><li><a href="global.html#MetadataServices">MetadataServices</a></li><li><a href="global.html#PatronAuthServices">PatronAuthServices</a></li><li><a href="global.html#ProtocolFormField">ProtocolFormField</a></li><li><a href="global.html#SearchServices">SearchServices</a></li><li><a href="global.html#ServiceEditForm">ServiceEditForm</a></li><li><a href="global.html#ServiceWithRegistrationsEditForm">ServiceWithRegistrationsEditForm</a></li><li><a href="global.html#SetupPage">SetupPage</a></li><li><a href="global.html#SitewideSettingEditForm">SitewideSettingEditForm</a></li><li><a href="global.html#SitewideSettings">SitewideSettings</a></li><li><a href="global.html#Stats">Stats</a></li><li><a href="global.html#StorageServices">StorageServices</a></li><li><a href="global.html#TabContainer">TabContainer</a></li><li><a href="global.html#TextWithEditMode">TextWithEditMode</a></li><li><a href="global.html#WithEditButton">WithEditButton</a></li><li><a href="global.html#WithRemoveButton">WithRemoveButton</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">actions.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>"use strict";
+var __extends = (this &amp;&amp; this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array &amp;&amp; function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var DataFetcher_1 = require("opds-web-client/lib/DataFetcher");
+var actions_1 = require("opds-web-client/lib/actions");
+/** Create redux actions to be dispatched by connected components, mostly
+    to make requests to the server. */
+var ActionCreator = /** @class */ (function (_super) {
+    __extends(ActionCreator, _super);
+    function ActionCreator(fetcher, csrfToken) {
+        var _this = this;
+        fetcher = fetcher || new DataFetcher_1.default();
+        _this = _super.call(this, fetcher) || this;
+        csrfToken = csrfToken || null;
+        _this.csrfToken = csrfToken;
+        return _this;
+    }
+    ActionCreator.prototype.postForm = function (type, url, data, method, defaultErrorMessage, returnType) {
+        var _this = this;
+        var err;
+        return (function (dispatch) {
+            return new Promise(function (resolve, reject) {
+                dispatch(_this.request(type));
+                var headers = new Headers();
+                if (_this.csrfToken) {
+                    headers.append("X-CSRF-Token", _this.csrfToken);
+                }
+                fetch(url, {
+                    method: method || "POST",
+                    headers: headers,
+                    body: data,
+                    credentials: "same-origin"
+                }).then(function (response) {
+                    if (response.status === 200 || response.status === 201) {
+                        dispatch(_this.success(type));
+                        if (response.json &amp;&amp; returnType === "JSON") {
+                            response.json().then(function (data) {
+                                dispatch(_this.load(type, data));
+                                resolve(response);
+                            });
+                        }
+                        else if (response.text) {
+                            response.text().then(function (text) {
+                                dispatch(_this.load(type, text));
+                                resolve(response);
+                            });
+                        }
+                        else {
+                            resolve(response);
+                        }
+                    }
+                    else {
+                        response.json().then(function (data) {
+                            err = {
+                                status: response.status,
+                                response: data.detail,
+                                url: url
+                            };
+                            dispatch(_this.failure(type, err));
+                            reject(err);
+                        }).catch(function (parseError) {
+                            err = {
+                                status: response.status,
+                                response: defaultErrorMessage || "Failed to save changes",
+                                url: url
+                            };
+                            dispatch(_this.failure(type, err));
+                            reject(err);
+                        });
+                    }
+                }).catch(function (err) {
+                    err = {
+                        status: null,
+                        response: err.message,
+                        url: url
+                    };
+                    dispatch(_this.failure(type, err));
+                    reject(err);
+                });
+            });
+        }).bind(this);
+    };
+    ActionCreator.prototype.postJSON = function (type, url, data) {
+        var _this = this;
+        var err;
+        return (function (dispatch) {
+            return new Promise(function (resolve, reject) {
+                dispatch(_this.request(type, url));
+                var headers = new Headers();
+                if (_this.csrfToken) {
+                    headers.append("X-CSRF-Token", _this.csrfToken);
+                }
+                headers.append("Accept", "application/json");
+                headers.append("Content-Type", "application/json");
+                fetch(url, {
+                    method: "POST",
+                    headers: headers,
+                    body: JSON.stringify(data),
+                    credentials: "same-origin"
+                }).then(function (response) {
+                    if (response.status === 200 || response.status === 201) {
+                        dispatch(_this.success(type));
+                        resolve(response);
+                    }
+                    else {
+                        response.json().then(function (data) {
+                            err = {
+                                status: response.status,
+                                response: data.detail,
+                                url: url
+                            };
+                            dispatch(_this.failure(type, err));
+                            reject(err);
+                        }).catch(function (parseError) {
+                            err = {
+                                status: response.status,
+                                response: "Request failed",
+                                url: url
+                            };
+                            dispatch(_this.failure(type, err));
+                            reject(err);
+                        });
+                    }
+                }).catch(function (err) {
+                    err = {
+                        status: null,
+                        response: err.message,
+                        url: url
+                    };
+                    dispatch(_this.failure(type, err));
+                    reject(err);
+                });
+            });
+        });
+    };
+    ActionCreator.prototype.fetchBookAdmin = function (url) {
+        return this.fetchOPDS(ActionCreator.BOOK_ADMIN, url).bind(this);
+    };
+    ActionCreator.prototype.editBook = function (url, data) {
+        return this.postForm(ActionCreator.EDIT_BOOK, url, data).bind(this);
+    };
+    ActionCreator.prototype.fetchRoles = function () {
+        var url = "/admin/roles";
+        return this.fetchJSON(ActionCreator.ROLES, url).bind(this);
+    };
+    ActionCreator.prototype.fetchMedia = function () {
+        var url = "/admin/media";
+        return this.fetchJSON(ActionCreator.MEDIA, url).bind(this);
+    };
+    ActionCreator.prototype.fetchLanguages = function () {
+        var url = "/admin/languages";
+        return this.fetchJSON(ActionCreator.LANGUAGES, url).bind(this);
+    };
+    ActionCreator.prototype.fetchRightsStatuses = function () {
+        var url = "/admin/rights_status";
+        return this.fetchJSON(ActionCreator.RIGHTS_STATUSES, url).bind(this);
+    };
+    ActionCreator.prototype.fetchComplaints = function (url) {
+        return this.fetchJSON(ActionCreator.COMPLAINTS, url).bind(this);
+    };
+    ActionCreator.prototype.postComplaint = function (url, data) {
+        return this.postJSON(ActionCreator.POST_COMPLAINT, url, data).bind(this);
+    };
+    ActionCreator.prototype.resolveComplaints = function (url, data) {
+        return this.postForm(ActionCreator.RESOLVE_COMPLAINTS, url, data).bind(this);
+    };
+    ActionCreator.prototype.fetchGenreTree = function (url) {
+        return this.fetchJSON(ActionCreator.GENRE_TREE, url).bind(this);
+    };
+    ActionCreator.prototype.editClassifications = function (url, data) {
+        return this.postForm(ActionCreator.EDIT_CLASSIFICATIONS, url, data).bind(this);
+    };
+    ActionCreator.prototype.fetchClassifications = function (url) {
+        return this.fetchJSON(ActionCreator.CLASSIFICATIONS, url).bind(this);
+    };
+    ActionCreator.prototype.editBookCover = function (url, data) {
+        return this.postForm(ActionCreator.EDIT_BOOK_COVER, url, data).bind(this);
+    };
+    ActionCreator.prototype.fetchBookCoverPreview = function (url, data) {
+        return this.postForm(ActionCreator.PREVIEW_BOOK_COVER, url, data, "POST", "Could not load preview").bind(this);
+    };
+    ActionCreator.prototype.clearBookCoverPreview = function () {
+        return this.clear(ActionCreator.PREVIEW_BOOK_COVER);
+    };
+    ActionCreator.prototype.fetchCustomListsForBook = function (url) {
+        return this.fetchJSON(ActionCreator.CUSTOM_LISTS_FOR_BOOK, url).bind(this);
+    };
+    ActionCreator.prototype.editCustomListsForBook = function (url, data) {
+        return this.postForm(ActionCreator.EDIT_CUSTOM_LISTS_FOR_BOOK, url, data).bind(this);
+    };
+    ActionCreator.prototype.fetchCirculationEvents = function () {
+        var url = "/admin/circulation_events";
+        return this.fetchJSON(ActionCreator.CIRCULATION_EVENTS, url).bind(this);
+    };
+    ActionCreator.prototype.fetchStats = function () {
+        var url = "/admin/stats";
+        return this.fetchJSON(ActionCreator.STATS, url).bind(this);
+    };
+    ActionCreator.prototype.fetchLibraries = function () {
+        var url = "/admin/libraries";
+        return this.fetchJSON(ActionCreator.LIBRARIES, url).bind(this);
+    };
+    ActionCreator.prototype.editLibrary = function (data) {
+        var url = "/admin/libraries";
+        return this.postForm(ActionCreator.EDIT_LIBRARY, url, data).bind(this);
+    };
+    ActionCreator.prototype.deleteLibrary = function (identifier) {
+        var url = "/admin/library/" + identifier;
+        return this.postForm(ActionCreator.DELETE_LIBRARY, url, null, "DELETE").bind(this);
+    };
+    ActionCreator.prototype.fetchCollections = function () {
+        var url = "/admin/collections";
+        return this.fetchJSON(ActionCreator.COLLECTIONS, url).bind(this);
+    };
+    ActionCreator.prototype.editCollection = function (data) {
+        var url = "/admin/collections";
+        return this.postForm(ActionCreator.EDIT_COLLECTION, url, data).bind(this);
+    };
+    ActionCreator.prototype.deleteCollection = function (identifier) {
+        var url = "/admin/collection/" + identifier;
+        return this.postForm(ActionCreator.DELETE_COLLECTION, url, null, "DELETE").bind(this);
+    };
+    ActionCreator.prototype.fetchAdminAuthServices = function () {
+        var url = "/admin/admin_auth_services";
+        return this.fetchJSON(ActionCreator.ADMIN_AUTH_SERVICES, url).bind(this);
+    };
+    ActionCreator.prototype.editAdminAuthService = function (data) {
+        var url = "/admin/admin_auth_services";
+        return this.postForm(ActionCreator.EDIT_ADMIN_AUTH_SERVICE, url, data).bind(this);
+    };
+    ActionCreator.prototype.deleteAdminAuthService = function (identifier) {
+        var url = "/admin/admin_auth_service/" + identifier;
+        return this.postForm(ActionCreator.DELETE_ADMIN_AUTH_SERVICE, url, null, "DELETE").bind(this);
+    };
+    ActionCreator.prototype.fetchIndividualAdmins = function () {
+        var url = "/admin/individual_admins";
+        return this.fetchJSON(ActionCreator.INDIVIDUAL_ADMINS, url).bind(this);
+    };
+    ActionCreator.prototype.editIndividualAdmin = function (data) {
+        var url = "/admin/individual_admins";
+        return this.postForm(ActionCreator.EDIT_INDIVIDUAL_ADMIN, url, data).bind(this);
+    };
+    ActionCreator.prototype.deleteIndividualAdmin = function (identifier) {
+        var url = "/admin/individual_admin/" + identifier;
+        return this.postForm(ActionCreator.DELETE_INDIVIDUAL_ADMIN, url, null, "DELETE").bind(this);
+    };
+    ActionCreator.prototype.fetchPatronAuthServices = function () {
+        var url = "/admin/patron_auth_services";
+        return this.fetchJSON(ActionCreator.PATRON_AUTH_SERVICES, url).bind(this);
+    };
+    ActionCreator.prototype.editPatronAuthService = function (data) {
+        var url = "/admin/patron_auth_services";
+        return this.postForm(ActionCreator.EDIT_PATRON_AUTH_SERVICE, url, data).bind(this);
+    };
+    ActionCreator.prototype.deletePatronAuthService = function (identifier) {
+        var url = "/admin/patron_auth_service/" + identifier;
+        return this.postForm(ActionCreator.DELETE_PATRON_AUTH_SERVICE, url, null, "DELETE").bind(this);
+    };
+    ActionCreator.prototype.fetchSitewideSettings = function () {
+        var url = "/admin/sitewide_settings";
+        return this.fetchJSON(ActionCreator.SITEWIDE_SETTINGS, url).bind(this);
+    };
+    ActionCreator.prototype.editSitewideSetting = function (data) {
+        var url = "/admin/sitewide_settings";
+        return this.postForm(ActionCreator.EDIT_SITEWIDE_SETTING, url, data).bind(this);
+    };
+    ActionCreator.prototype.deleteSitewideSetting = function (identifier) {
+        var url = "/admin/sitewide_setting/" + identifier;
+        return this.postForm(ActionCreator.DELETE_SITEWIDE_SETTING, url, null, "DELETE").bind(this);
+    };
+    ActionCreator.prototype.fetchLoggingServices = function () {
+        var url = "/admin/logging_services";
+        return this.fetchJSON(ActionCreator.LOGGING_SERVICES, url).bind(this);
+    };
+    ActionCreator.prototype.editLoggingService = function (data) {
+        var url = "/admin/logging_services";
+        return this.postForm(ActionCreator.EDIT_LOGGING_SERVICE, url, data).bind(this);
+    };
+    ActionCreator.prototype.deleteLoggingService = function (identifier) {
+        var url = "/admin/logging_service/" + identifier;
+        return this.postForm(ActionCreator.DELETE_LOGGING_SERVICE, url, null, "DELETE").bind(this);
+    };
+    ActionCreator.prototype.fetchMetadataServices = function () {
+        var url = "/admin/metadata_services";
+        return this.fetchJSON(ActionCreator.METADATA_SERVICES, url).bind(this);
+    };
+    ActionCreator.prototype.editMetadataService = function (data) {
+        var url = "/admin/metadata_services";
+        return this.postForm(ActionCreator.EDIT_METADATA_SERVICE, url, data).bind(this);
+    };
+    ActionCreator.prototype.deleteMetadataService = function (identifier) {
+        var url = "/admin/metadata_service/" + identifier;
+        return this.postForm(ActionCreator.DELETE_METADATA_SERVICE, url, null, "DELETE").bind(this);
+    };
+    ActionCreator.prototype.fetchAnalyticsServices = function () {
+        var url = "/admin/analytics_services";
+        return this.fetchJSON(ActionCreator.ANALYTICS_SERVICES, url).bind(this);
+    };
+    ActionCreator.prototype.editAnalyticsService = function (data) {
+        var url = "/admin/analytics_services";
+        return this.postForm(ActionCreator.EDIT_ANALYTICS_SERVICE, url, data).bind(this);
+    };
+    ActionCreator.prototype.deleteAnalyticsService = function (identifier) {
+        var url = "/admin/analytics_service/" + identifier;
+        return this.postForm(ActionCreator.DELETE_ANALYTICS_SERVICE, url, null, "DELETE").bind(this);
+    };
+    ActionCreator.prototype.fetchCDNServices = function () {
+        var url = "/admin/cdn_services";
+        return this.fetchJSON(ActionCreator.CDN_SERVICES, url).bind(this);
+    };
+    ActionCreator.prototype.editCDNService = function (data) {
+        var url = "/admin/cdn_services";
+        return this.postForm(ActionCreator.EDIT_CDN_SERVICE, url, data).bind(this);
+    };
+    ActionCreator.prototype.deleteCDNService = function (identifier) {
+        var url = "/admin/cdn_service/" + identifier;
+        return this.postForm(ActionCreator.DELETE_CDN_SERVICE, url, null, "DELETE").bind(this);
+    };
+    ActionCreator.prototype.fetchSearchServices = function () {
+        var url = "/admin/search_services";
+        return this.fetchJSON(ActionCreator.SEARCH_SERVICES, url).bind(this);
+    };
+    ActionCreator.prototype.editSearchService = function (data) {
+        var url = "/admin/search_services";
+        return this.postForm(ActionCreator.EDIT_SEARCH_SERVICE, url, data).bind(this);
+    };
+    ActionCreator.prototype.deleteSearchService = function (identifier) {
+        var url = "/admin/search_service/" + identifier;
+        return this.postForm(ActionCreator.DELETE_SEARCH_SERVICE, url, null, "DELETE").bind(this);
+    };
+    ActionCreator.prototype.fetchStorageServices = function () {
+        var url = "/admin/storage_services";
+        return this.fetchJSON(ActionCreator.STORAGE_SERVICES, url).bind(this);
+    };
+    ActionCreator.prototype.editStorageService = function (data) {
+        var url = "/admin/storage_services";
+        return this.postForm(ActionCreator.EDIT_STORAGE_SERVICE, url, data).bind(this);
+    };
+    ActionCreator.prototype.deleteStorageService = function (identifier) {
+        var url = "/admin/storage_service/" + identifier;
+        return this.postForm(ActionCreator.DELETE_STORAGE_SERVICE, url, null, "DELETE").bind(this);
+    };
+    ActionCreator.prototype.fetchCatalogServices = function () {
+        var url = "/admin/catalog_services";
+        return this.fetchJSON(ActionCreator.CATALOG_SERVICES, url).bind(this);
+    };
+    ActionCreator.prototype.editCatalogService = function (data) {
+        var url = "/admin/catalog_services";
+        return this.postForm(ActionCreator.EDIT_CATALOG_SERVICE, url, data).bind(this);
+    };
+    ActionCreator.prototype.deleteCatalogService = function (identifier) {
+        var url = "/admin/catalog_service/" + identifier;
+        return this.postForm(ActionCreator.DELETE_CATALOG_SERVICE, url, null, "DELETE").bind(this);
+    };
+    ActionCreator.prototype.fetchDiscoveryServices = function () {
+        var url = "/admin/discovery_services";
+        return this.fetchJSON(ActionCreator.DISCOVERY_SERVICES, url).bind(this);
+    };
+    ActionCreator.prototype.editDiscoveryService = function (data) {
+        var url = "/admin/discovery_services";
+        return this.postForm(ActionCreator.EDIT_DISCOVERY_SERVICE, url, data).bind(this);
+    };
+    ActionCreator.prototype.deleteDiscoveryService = function (identifier) {
+        var url = "/admin/discovery_service/" + identifier;
+        return this.postForm(ActionCreator.DELETE_DISCOVERY_SERVICE, url, null, "DELETE").bind(this);
+    };
+    ActionCreator.prototype.registerLibraryWithDiscoveryService = function (data) {
+        var url = "/admin/discovery_service_library_registrations";
+        return this.postForm(ActionCreator.REGISTER_LIBRARY_WITH_DISCOVERY_SERVICE, url, data).bind(this);
+    };
+    ActionCreator.prototype.fetchDiscoveryServiceLibraryRegistrations = function () {
+        var url = "/admin/discovery_service_library_registrations";
+        return this.fetchJSON(ActionCreator.DISCOVERY_SERVICE_LIBRARY_REGISTRATIONS, url).bind(this);
+    };
+    ActionCreator.prototype.registerLibraryWithCollection = function (data) {
+        var url = "/admin/collection_library_registrations";
+        return this.postForm(ActionCreator.REGISTER_LIBRARY_WITH_COLLECTION, url, data).bind(this);
+    };
+    ActionCreator.prototype.fetchCollectionLibraryRegistrations = function () {
+        var url = "/admin/collection_library_registrations";
+        return this.fetchJSON(ActionCreator.COLLECTION_LIBRARY_REGISTRATIONS, url).bind(this);
+    };
+    ActionCreator.prototype.fetchCustomLists = function (library) {
+        var url = "/" + library + "/admin/custom_lists";
+        return this.fetchJSON(ActionCreator.CUSTOM_LISTS, url).bind(this);
+    };
+    ActionCreator.prototype.fetchCustomListDetails = function (library, id) {
+        var url = "/" + library + "/admin/custom_list/" + id;
+        return this.fetchOPDS(ActionCreator.CUSTOM_LIST_DETAILS, url).bind(this);
+    };
+    ActionCreator.prototype.fetchMoreCustomListEntries = function (url) {
+        return this.fetchOPDS(ActionCreator.CUSTOM_LIST_DETAILS_MORE, url).bind(this);
+    };
+    ActionCreator.prototype.editCustomList = function (library, data, id) {
+        var url = "/" + library + "/admin/custom_lists";
+        if (id) {
+            url = "/" + library + "/admin/custom_list/" + id;
+        }
+        return this.postForm(ActionCreator.EDIT_CUSTOM_LIST, url, data).bind(this);
+    };
+    ActionCreator.prototype.deleteCustomList = function (library, listId) {
+        var url = "/" + library + "/admin/custom_list/" + listId;
+        return this.postForm(ActionCreator.DELETE_CUSTOM_LIST, url, null, "DELETE").bind(this);
+    };
+    ActionCreator.prototype.fetchLanes = function (library) {
+        var url = "/" + library + "/admin/lanes";
+        return this.fetchJSON(ActionCreator.LANES, url).bind(this);
+    };
+    ActionCreator.prototype.editLane = function (library, data) {
+        var url = "/" + library + "/admin/lanes";
+        return this.postForm(ActionCreator.EDIT_LANE, url, data).bind(this);
+    };
+    ActionCreator.prototype.deleteLane = function (library, identifier) {
+        var url = "/" + library + "/admin/lane/" + identifier;
+        return this.postForm(ActionCreator.DELETE_LANE, url, null, "DELETE").bind(this);
+    };
+    ActionCreator.prototype.showLane = function (library, identifier) {
+        var url = "/" + library + "/admin/lane/" + identifier + "/show";
+        return this.postForm(ActionCreator.CHANGE_LANE_VISIBILITY, url, null).bind(this);
+    };
+    ActionCreator.prototype.hideLane = function (library, identifier) {
+        var url = "/" + library + "/admin/lane/" + identifier + "/hide";
+        return this.postForm(ActionCreator.CHANGE_LANE_VISIBILITY, url, null).bind(this);
+    };
+    ActionCreator.prototype.resetLanes = function (library) {
+        var url = "/" + library + "/admin/lanes/reset";
+        return this.postForm(ActionCreator.RESET_LANES, url, null).bind(this);
+    };
+    ActionCreator.prototype.changeLaneOrder = function (library, lanes) {
+        var url = "/" + library + "/admin/lanes/change_order";
+        return this.postJSON(ActionCreator.CHANGE_LANE_ORDER, url, lanes).bind(this);
+    };
+    ActionCreator.prototype.changePassword = function (data) {
+        var url = "/admin/change_password";
+        return this.postForm(ActionCreator.CHANGE_PASSWORD, url, data).bind(this);
+    };
+    ActionCreator.prototype.getSelfTests = function (url) {
+        return this.fetchJSON(ActionCreator.GET_SELF_TESTS, url).bind(this);
+    };
+    ActionCreator.prototype.runSelfTests = function (url) {
+        return this.postForm(ActionCreator.RUN_SELF_TESTS, url, null).bind(this);
+    };
+    ActionCreator.prototype.patronLookup = function (data, library) {
+        var url = "/" + library + "/admin/manage_patrons";
+        return this.postForm(ActionCreator.PATRON_LOOKUP, url, data, "POST", "", "JSON").bind(this);
+    };
+    ActionCreator.prototype.resetAdobeId = function (data, library) {
+        var url = "/" + library + "/admin/manage_patrons/reset_adobe_id";
+        return this.postForm(ActionCreator.RESET_ADOBE_ID, url, data).bind(this);
+    };
+    ActionCreator.prototype.clearPatronData = function () {
+        var _this = this;
+        return function (dispatch) { return dispatch(_this.load(ActionCreator.CLEAR_PATRON_DATA, null)); };
+    };
+    ActionCreator.prototype.fetchDiagnostics = function () {
+        var url = "/admin/diagnostics";
+        return this.fetchJSON(ActionCreator.DIAGNOSTICS, url).bind(this);
+    };
+    /** @property EDITBOOK */
+    ActionCreator.EDIT_BOOK = "EDIT_BOOK";
+    ActionCreator.BOOK_ADMIN = "BOOK_ADMIN";
+    ActionCreator.ROLES = "ROLES";
+    ActionCreator.MEDIA = "MEDIA";
+    ActionCreator.LANGUAGES = "LANGUAGES";
+    ActionCreator.RIGHTS_STATUSES = "RIGHTS_STATUSES";
+    ActionCreator.COMPLAINTS = "COMPLAINTS";
+    ActionCreator.POST_COMPLAINT = "POST_COMPLAINT";
+    ActionCreator.RESOLVE_COMPLAINTS = "RESOLVE_COMPLAINTS";
+    ActionCreator.GENRE_TREE = "GENRE_TREE";
+    ActionCreator.CLASSIFICATIONS = "CLASSIFICATIONS";
+    ActionCreator.EDIT_CLASSIFICATIONS = "EDIT_CLASSIFICATIONS";
+    ActionCreator.BOOK_COVER = "BOOK_COVER";
+    ActionCreator.EDIT_BOOK_COVER = "EDIT_BOOK_COVER";
+    ActionCreator.PREVIEW_BOOK_COVER = "PREVIEW_BOOK_COVER";
+    ActionCreator.CUSTOM_LISTS_FOR_BOOK = "CUSTOM_LISTS_FOR_BOOK";
+    ActionCreator.EDIT_CUSTOM_LISTS_FOR_BOOK = "EDIT_CUSTOM_LISTS_FOR_BOOK";
+    ActionCreator.CIRCULATION_EVENTS = "CIRCULATION_EVENTS";
+    ActionCreator.STATS = "STATS";
+    ActionCreator.LIBRARIES = "LIBRARIES";
+    ActionCreator.EDIT_LIBRARY = "EDIT_LIBRARY";
+    ActionCreator.DELETE_LIBRARY = "DELETE_LIBRARY";
+    ActionCreator.COLLECTIONS = "COLLECTIONS";
+    ActionCreator.EDIT_COLLECTION = "EDIT_COLLECTION";
+    ActionCreator.DELETE_COLLECTION = "DELETE_COLLECTION";
+    ActionCreator.ADMIN_AUTH_SERVICES = "ADMIN_AUTH_SERVICES";
+    ActionCreator.EDIT_ADMIN_AUTH_SERVICE = "EDIT_ADMIN_AUTH_SERVICE";
+    ActionCreator.DELETE_ADMIN_AUTH_SERVICE = "DELETE_ADMIN_AUTH_SERVICE";
+    ActionCreator.INDIVIDUAL_ADMINS = "INDIVIDUAL_ADMINS";
+    ActionCreator.EDIT_INDIVIDUAL_ADMIN = "EDIT_INDIVIDUAL_ADMIN";
+    ActionCreator.DELETE_INDIVIDUAL_ADMIN = "DELETE_INDIVIDUAL_ADMIN";
+    ActionCreator.PATRON_AUTH_SERVICES = "PATRON_AUTH_SERVICES";
+    ActionCreator.EDIT_PATRON_AUTH_SERVICE = "EDIT_PATRON_AUTH_SERVICE";
+    ActionCreator.DELETE_PATRON_AUTH_SERVICE = "DELETE_PATRON_AUTH_SERVICE";
+    ActionCreator.SITEWIDE_SETTINGS = "SITEWIDE_SETTINGS";
+    ActionCreator.EDIT_SITEWIDE_SETTING = "EDIT_SITEWIDE_SETTING";
+    ActionCreator.DELETE_SITEWIDE_SETTING = "DELETE_SITEWIDE_SETTING";
+    ActionCreator.LOGGING_SERVICES = "LOGGING_SERVICES";
+    ActionCreator.EDIT_LOGGING_SERVICE = "EDIT_LOGGING_SERVICE";
+    ActionCreator.DELETE_LOGGING_SERVICE = "DELETE_LOGGING_SERVICE";
+    ActionCreator.METADATA_SERVICES = "METADATA_SERVICES";
+    ActionCreator.EDIT_METADATA_SERVICE = "EDIT_METADATA_SERVICE";
+    ActionCreator.DELETE_METADATA_SERVICE = "DELETE_METADATA_SERVICE";
+    ActionCreator.ANALYTICS_SERVICES = "ANALYTICS_SERVICES";
+    ActionCreator.EDIT_ANALYTICS_SERVICE = "EDIT_ANALYTICS_SERVICE";
+    ActionCreator.DELETE_ANALYTICS_SERVICE = "DELETE_ANALYTICS_SERVICE";
+    ActionCreator.CDN_SERVICES = "CDN_SERVICES";
+    ActionCreator.EDIT_CDN_SERVICE = "EDIT_CDN_SERVICE";
+    ActionCreator.DELETE_CDN_SERVICE = "DELETE_CDN_SERVICE";
+    ActionCreator.SEARCH_SERVICES = "SEARCH_SERVICES";
+    ActionCreator.EDIT_SEARCH_SERVICE = "EDIT_SEARCH_SERVICE";
+    ActionCreator.DELETE_SEARCH_SERVICE = "DELETE_SEARCH_SERVICE";
+    ActionCreator.STORAGE_SERVICES = "STORAGE_SERVICES";
+    ActionCreator.EDIT_STORAGE_SERVICE = "EDIT_STORAGE_SERVICE";
+    ActionCreator.DELETE_STORAGE_SERVICE = "DELETE_STORAGE_SERVICE";
+    ActionCreator.CATALOG_SERVICES = "CATALOG_SERVICES";
+    ActionCreator.EDIT_CATALOG_SERVICE = "EDIT_CATALOG_SERVICE";
+    ActionCreator.DELETE_CATALOG_SERVICE = "DELETE_CATALOG_SERVICE";
+    ActionCreator.DISCOVERY_SERVICES = "DISCOVERY_SERVICES";
+    ActionCreator.EDIT_DISCOVERY_SERVICE = "EDIT_DISCOVERY_SERVICE";
+    ActionCreator.DELETE_DISCOVERY_SERVICE = "DELETE_DISCOVERY_SERVICE";
+    ActionCreator.REGISTER_LIBRARY_WITH_DISCOVERY_SERVICE = "REGISTER_LIBRARY_WITH_DISCOVERY_SERVICE";
+    ActionCreator.DISCOVERY_SERVICE_LIBRARY_REGISTRATIONS = "DISCOVERY_SERVICE_LIBRARY_REGISTRATIONS";
+    ActionCreator.REGISTER_LIBRARY_WITH_COLLECTION = "REGISTER_LIBRARY_WITH_COLLECTION";
+    ActionCreator.COLLECTION_LIBRARY_REGISTRATIONS = "COLLECTION_LIBRARY_REGISTRATIONS";
+    ActionCreator.CUSTOM_LISTS = "CUSTOM_LISTS";
+    ActionCreator.CUSTOM_LIST_DETAILS = "CUSTOM_LIST_DETAILS";
+    ActionCreator.CUSTOM_LIST_DETAILS_MORE = "CUSTOM_LIST_DETAILS_MORE";
+    ActionCreator.EDIT_CUSTOM_LIST = "EDIT_CUSTOM_LIST";
+    ActionCreator.DELETE_CUSTOM_LIST = "DELETE_CUSTOM_LIST";
+    ActionCreator.LANES = "LANES";
+    ActionCreator.EDIT_LANE = "EDIT_LANE";
+    ActionCreator.DELETE_LANE = "DELETE_LANE";
+    ActionCreator.CHANGE_LANE_VISIBILITY = "CHANGE_LANE_VISIBILITY";
+    ActionCreator.RESET_LANES = "RESET_LANES";
+    ActionCreator.CHANGE_LANE_ORDER = "CHANGE_LANE_ORDER";
+    ActionCreator.EDIT_BOOK_REQUEST = "EDIT_BOOK_REQUEST";
+    ActionCreator.EDIT_BOOK_SUCCESS = "EDIT_BOOK_SUCCESS";
+    ActionCreator.EDIT_BOOK_FAILURE = "EDIT_BOOK_FAILURE";
+    ActionCreator.BOOK_ADMIN_REQUEST = "BOOK_ADMIN_REQUEST";
+    ActionCreator.BOOK_ADMIN_SUCCESS = "BOOK_ADMIN_SUCCESS";
+    ActionCreator.BOOK_ADMIN_FAILURE = "BOOK_ADMIN_FAILURE";
+    ActionCreator.BOOK_ADMIN_LOAD = "BOOK_ADMIN_LOAD";
+    ActionCreator.COMPLAINTS_REQUEST = "COMPLAINTS_REQUEST";
+    ActionCreator.COMPLAINTS_SUCCESS = "COMPLAINTS_SUCCESS";
+    ActionCreator.COMPLAINTS_FAILURE = "COMPLAINTS_FAILURE";
+    ActionCreator.COMPLAINTS_LOAD = "COMPLAINTS_LOAD";
+    ActionCreator.POST_COMPLAINT_REQUEST = "POST_COMPLAINT_REQUEST";
+    ActionCreator.POST_COMPLAINT_SUCCESS = "POST_COMPLAINT_SUCCESS";
+    ActionCreator.POST_COMPLAINT_FAILURE = "POST_COMPLAINT_FAILURE";
+    ActionCreator.RESOLVE_COMPLAINTS_REQUEST = "RESOLVE_COMPLAINTS_REQUEST";
+    ActionCreator.RESOLVE_COMPLAINTS_SUCCESS = "RESOLVE_COMPLAINTS_SUCCESS";
+    ActionCreator.RESOLVE_COMPLAINTS_FAILURE = "RESOLVE_COMPLAINTS_FAILURE";
+    ActionCreator.GENRE_TREE_REQUEST = "GENRE_TREE_REQUEST";
+    ActionCreator.GENRE_TREE_SUCCESS = "GENRE_TREE_SUCCESS";
+    ActionCreator.GENRE_TREE_FAILURE = "GENRE_TREE_FAILURE";
+    ActionCreator.GENRE_TREE_LOAD = "GENRE_TREE_LOAD";
+    ActionCreator.CLASSIFICATIONS_REQUEST = "CLASSIFICATIONS_REQUEST";
+    ActionCreator.CLASSIFICATIONS_SUCCESS = "CLASSIFICATIONS_SUCCESS";
+    ActionCreator.CLASSIFICATIONS_FAILURE = "CLASSIFICATIONS_FAILURE";
+    ActionCreator.CLASSIFICATIONS_LOAD = "CLASSIFICATIONS_LOAD";
+    ActionCreator.EDIT_CLASSIFICATIONS_REQUEST = "EDIT_CLASSIFICATIONS_REQUEST";
+    ActionCreator.EDIT_CLASSIFICATIONS_SUCCESS = "EDIT_CLASSIFICATIONS_SUCCESS";
+    ActionCreator.EDIT_CLASSIFICATIONS_FAILURE = "EDIT_CLASSIFICATIONS_FAILURE";
+    ActionCreator.CIRCULATION_EVENTS_REQUEST = "CIRCULATION_EVENTS_REQUEST";
+    ActionCreator.CIRCULATION_EVENTS_SUCCESS = "CIRCULATION_EVENTS_SUCCESS";
+    ActionCreator.CIRCULATION_EVENTS_FAILURE = "CIRCULATION_EVENTS_FAILURE";
+    ActionCreator.CIRCULATION_EVENTS_LOAD = "CIRCULATION_EVENTS_LOAD";
+    ActionCreator.STATS_REQUEST = "STATS_REQUEST";
+    ActionCreator.STATS_SUCCESS = "STATS_SUCCESS";
+    ActionCreator.STATS_FAILURE = "STATS_FAILURE";
+    ActionCreator.STATS_LOAD = "STATS_LOAD";
+    ActionCreator.CHANGE_PASSWORD = "CHANGE_PASSWORD";
+    ActionCreator.GET_SELF_TESTS = "GET_SELF_TESTS";
+    ActionCreator.RUN_SELF_TESTS = "RUN_SELF_TESTS";
+    ActionCreator.PATRON_LOOKUP = "PATRON_LOOKUP";
+    ActionCreator.CLEAR_PATRON_DATA = "CLEAR_PATRON_DATA";
+    ActionCreator.RESET_ADOBE_ID = "RESET_ADOBE_ID";
+    ActionCreator.DIAGNOSTICS = "DIAGNOSTICS";
+    return ActionCreator;
+}(actions_1.default));
+exports.default = ActionCreator;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Thu Aug 08 2019 12:59:53 GMT-0400 (EDT) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

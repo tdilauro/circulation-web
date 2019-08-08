@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>components/Lanes.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#AccountPage">AccountPage</a></li><li><a href="global.html#ActionCreator">ActionCreator</a></li><li><a href="global.html#adapter">adapter</a></li><li><a href="global.html#AdminAuthServices">AdminAuthServices</a></li><li><a href="global.html#AnalyticsServices">AnalyticsServices</a></li><li><a href="global.html#BookCoverEditor">BookCoverEditor</a></li><li><a href="global.html#BookDetailsContainer">BookDetailsContainer</a></li><li><a href="global.html#BookDetailsEditor">BookDetailsEditor</a></li><li><a href="global.html#BookDetailsTabContainer">BookDetailsTabContainer</a></li><li><a href="global.html#BookEditForm">BookEditForm</a></li><li><a href="global.html#buildStore">buildStore</a></li><li><a href="global.html#CatalogPage">CatalogPage</a></li><li><a href="global.html#CatalogServices">CatalogServices</a></li><li><a href="global.html#CDNServices">CDNServices</a></li><li><a href="global.html#CirculationEvents">CirculationEvents</a></li><li><a href="global.html#CirculationEventsDownloadForm">CirculationEventsDownloadForm</a></li><li><a href="global.html#CirculationWeb">CirculationWeb</a></li><li><a href="global.html#Classifications">Classifications</a></li><li><a href="global.html#ClassificationsForm">ClassificationsForm</a></li><li><a href="global.html#ClassificationsTable">ClassificationsTable</a></li><li><a href="global.html#Collections">Collections</a></li><li><a href="global.html#ComplaintForm">ComplaintForm</a></li><li><a href="global.html#Complaints">Complaints</a></li><li><a href="global.html#ConfigPage">ConfigPage</a></li><li><a href="global.html#ConfigTabContainer">ConfigTabContainer</a></li><li><a href="global.html#ContextProvider">ContextProvider</a></li><li><a href="global.html#CustomListEditor">CustomListEditor</a></li><li><a href="global.html#CustomListEntriesEditor">CustomListEntriesEditor</a></li><li><a href="global.html#CustomListPage">CustomListPage</a></li><li><a href="global.html#CustomLists">CustomLists</a></li><li><a href="global.html#CustomListsForBook">CustomListsForBook</a></li><li><a href="global.html#DashboardPage">DashboardPage</a></li><li><a href="global.html#default">default</a></li><li><a href="global.html#DiscoveryServices">DiscoveryServices</a></li><li><a href="global.html#doc">doc</a></li><li><a href="global.html#EditableInput">EditableInput</a></li><li><a href="global.html#EntryPointsContainer">EntryPointsContainer</a></li><li><a href="global.html#EntryPointsTabs">EntryPointsTabs</a></li><li><a href="global.html#ErrorMessage">ErrorMessage</a></li><li><a href="global.html#GenericEditableConfigList">GenericEditableConfigList</a></li><li><a href="global.html#GenreForm">GenreForm</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#HeaderWithStore">HeaderWithStore</a></li><li><a href="global.html#IndividualAdminEditForm">IndividualAdminEditForm</a></li><li><a href="global.html#IndividualAdmins">IndividualAdmins</a></li><li><a href="global.html#isProblemDetail">isProblemDetail</a></li><li><a href="global.html#LaneCustomListsEditor">LaneCustomListsEditor</a></li><li><a href="global.html#LaneEditor">LaneEditor</a></li><li><a href="global.html#Lanes">Lanes</a></li><li><a href="global.html#LibraryEditForm">LibraryEditForm</a></li><li><a href="global.html#LibraryStats">LibraryStats</a></li><li><a href="global.html#LoggingServices">LoggingServices</a></li><li><a href="global.html#ManagePatronsTabContainer">ManagePatronsTabContainer</a></li><li><a href="global.html#MetadataServices">MetadataServices</a></li><li><a href="global.html#PatronAuthServices">PatronAuthServices</a></li><li><a href="global.html#ProtocolFormField">ProtocolFormField</a></li><li><a href="global.html#SearchServices">SearchServices</a></li><li><a href="global.html#ServiceEditForm">ServiceEditForm</a></li><li><a href="global.html#ServiceWithRegistrationsEditForm">ServiceWithRegistrationsEditForm</a></li><li><a href="global.html#SetupPage">SetupPage</a></li><li><a href="global.html#SitewideSettingEditForm">SitewideSettingEditForm</a></li><li><a href="global.html#SitewideSettings">SitewideSettings</a></li><li><a href="global.html#Stats">Stats</a></li><li><a href="global.html#StorageServices">StorageServices</a></li><li><a href="global.html#TabContainer">TabContainer</a></li><li><a href="global.html#TextWithEditMode">TextWithEditMode</a></li><li><a href="global.html#WithEditButton">WithEditButton</a></li><li><a href="global.html#WithRemoveButton">WithRemoveButton</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">components/Lanes.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>"use strict";
+var __extends = (this &amp;&amp; this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array &amp;&amp; function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __assign = (this &amp;&amp; this.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i &lt; n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
+var __awaiter = (this &amp;&amp; this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this &amp;&amp; this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] &amp; 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" &amp;&amp; (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y &amp;&amp; (t = y[op[0] &amp; 2 ? "return" : op[0] ? "throw" : "next"]) &amp;&amp; !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 &amp;&amp; t[t.length - 1]) &amp;&amp; (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 &amp;&amp; (!t || (op[1] > t[0] &amp;&amp; op[1] &lt; t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 &amp;&amp; _.label &lt; t[1]) { _.label = t[1]; t = op; break; }
+                    if (t &amp;&amp; _.label &lt; t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] &amp; 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = require("react");
+var react_router_1 = require("react-router");
+var react_redux_1 = require("react-redux");
+var actions_1 = require("../actions");
+var DataFetcher_1 = require("opds-web-client/lib/DataFetcher");
+var LaneEditor_1 = require("./LaneEditor");
+var LanesSidebar_1 = require("./LanesSidebar");
+var LoadingIndicator_1 = require("opds-web-client/lib/components/LoadingIndicator");
+var ErrorMessage_1 = require("./ErrorMessage");
+var EditableInput_1 = require("./EditableInput");
+var library_simplified_reusable_components_1 = require("library-simplified-reusable-components");
+var ResetIcon_1 = require("./icons/ResetIcon");
+/** Body of the lanes page, with all a library's lanes shown in a left sidebar and
+    a lane editor on the right. */
+var Lanes = /** @class */ (function (_super) {
+    __extends(Lanes, _super);
+    function Lanes(props) {
+        var _this = _super.call(this, props) || this;
+        _this.editLane = _this.editLane.bind(_this);
+        _this.deleteLane = _this.deleteLane.bind(_this);
+        _this.resetLanes = _this.resetLanes.bind(_this);
+        _this.resetOrder = _this.resetOrder.bind(_this);
+        _this.drag = _this.drag.bind(_this);
+        _this.saveOrder = _this.saveOrder.bind(_this);
+        _this.orderChanged = _this.orderChanged.bind(_this);
+        _this.findLaneForIdentifier = _this.findLaneForIdentifier.bind(_this);
+        _this.getLane = _this.getLane.bind(_this);
+        _this.findParentOfLane = _this.findParentOfLane.bind(_this);
+        _this.toggleLaneVisibility = _this.toggleLaneVisibility.bind(_this);
+        _this.checkReset = _this.checkReset.bind(_this);
+        _this.state = {
+            draggableId: null,
+            draggingFrom: null,
+            lanes: _this.copyLanes(_this.props.lanes || []),
+            orderChanged: false,
+            canReset: false
+        };
+        return _this;
+    }
+    Lanes.prototype.copyLanes = function (lanes) {
+        var copy = function (lane) {
+            return Object.assign({}, lane, {
+                sublanes: lane.sublanes.map(copy)
+            });
+        };
+        return lanes.map(copy);
+    };
+    Lanes.prototype.render = function () {
+        var errorMessage = this.props.formError || this.props.fetchError;
+        return (React.createElement("div", { className: "lanes-container" },
+            errorMessage &amp;&amp; React.createElement(ErrorMessage_1.default, { error: errorMessage }),
+            this.props.isFetching &amp;&amp; React.createElement(LoadingIndicator_1.default, null),
+            React.createElement("div", { className: "lanes" },
+                React.createElement(LanesSidebar_1.default, { orderChanged: this.state.orderChanged, library: this.props.library, drag: this.drag, lanes: this.state.lanes &amp;&amp; this.state.lanes.length > 0 &amp;&amp; this.state.lanes, findLaneForIdentifier: this.findLaneForIdentifier, findParentOfLane: this.findParentOfLane, identifier: this.props.identifier, toggleLaneVisibility: this.toggleLaneVisibility }),
+                this.renderMainContent())));
+    };
+    Lanes.prototype.renderMainContent = function () {
+        if (this.state.orderChanged) {
+            return this.orderChanged();
+        }
+        else if (this.props.editOrCreate === "reset") {
+            return this.renderReset();
+        }
+        else if (this.props.editOrCreate) {
+            return this.renderEditor(this.props.editOrCreate);
+        }
+    };
+    Lanes.prototype.orderChanged = function () {
+        return (React.createElement("div", { className: "order-change-info" },
+            React.createElement("h2", null, "Change Lane Order"),
+            React.createElement(library_simplified_reusable_components_1.Button, { callback: this.saveOrder, className: "left-align inline save-lane-order-changes", disabled: this.props.isFetching, content: "Save Order Changes" }),
+            React.createElement(library_simplified_reusable_components_1.Button, { className: "inverted inline cancel-lane-order-changes", callback: this.resetOrder, content: "Cancel" }),
+            React.createElement("hr", null),
+            React.createElement("p", null, "Save or cancel your changes to the lane order before making additional changes.")));
+    };
+    Lanes.prototype.renderEditor = function (editOrCreate) {
+        var props = {
+            library: this.props.library,
+            customLists: this.props.customLists,
+            editLane: this.editLane
+        };
+        var extraProps = {
+            "create": {
+                findParentOfLane: this.getLane,
+                responseBody: this.props.responseBody
+            },
+            "edit": {
+                lane: this.getLane(),
+                findParentOfLane: this.findParentOfLane,
+                deleteLane: this.deleteLane,
+                toggleLaneVisibility: this.toggleLaneVisibility
+            }
+        };
+        return React.createElement(LaneEditor_1.default, __assign({}, props, extraProps[editOrCreate]));
+    };
+    Lanes.prototype.checkReset = function () {
+        var inputValue = this.refs["reset"] &amp;&amp; this.refs["reset"].getValue();
+        this.setState(__assign({}, this.state, { canReset: (inputValue === "RESET") }));
+    };
+    Lanes.prototype.renderReset = function () {
+        return (React.createElement("div", { className: "reset" },
+            React.createElement("h2", null, "Reset all lanes"),
+            React.createElement("p", null, "This will delete all lanes for the library and automatically generate new lanes based on the library's language configuration or the languages in the library's collection."),
+            React.createElement("p", null, "Any lanes based on lists will be removed and will need to be created again (the lists will be preserved.)"),
+            React.createElement("hr", null),
+            React.createElement("p", null, "This cannot be undone."),
+            React.createElement("p", null, "If you're sure you want to reset the lanes, type \"RESET\" below and click Reset."),
+            React.createElement(EditableInput_1.default, { type: "text", ref: "reset", required: true, onChange: this.checkReset }),
+            React.createElement(library_simplified_reusable_components_1.Button, { className: "reset-button left-align danger", callback: this.resetLanes, disabled: !this.state.canReset, content: React.createElement("span", null,
+                    "Reset ",
+                    React.createElement(ResetIcon_1.default, null)) }),
+            React.createElement(react_router_1.Link, { className: "btn inverted cancel-button", to: "/admin/web/lanes/" + this.props.library + "/" }, "Cancel")));
+    };
+    Lanes.prototype.componentWillReceiveProps = function (nextProps) {
+        if (nextProps.lanes &amp;&amp; !this.props.lanes) {
+            var lanes = this.copyLanes(nextProps.lanes);
+            this.setState({
+                lanes: lanes,
+                draggingFrom: null,
+                draggableId: null,
+                orderChanged: false
+            });
+        }
+    };
+    Lanes.prototype.componentWillMount = function () {
+        if (this.props.fetchLanes) {
+            this.props.fetchLanes();
+        }
+        if (this.props.fetchCustomLists) {
+            this.props.fetchCustomLists();
+        }
+    };
+    Lanes.prototype.resetOrder = function () {
+        this.setState(__assign({}, this.state, { lanes: this.props.lanes, orderChanged: false }));
+    };
+    Lanes.prototype.saveOrder = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.props.changeLaneOrder(this.state.lanes)];
+                    case 1:
+                        _a.sent();
+                        this.props.fetchLanes();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    Lanes.prototype.editLane = function (data) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.props.editLane(data)];
+                    case 1:
+                        _a.sent();
+                        this.props.fetchLanes();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    Lanes.prototype.deleteLane = function (lane) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        if (!window.confirm("Delete lane \"" + lane.display_name + "\" and its sublanes?")) return [3 /*break*/, 2];
+                        return [4 /*yield*/, this.props.deleteLane(String(lane.id))];
+                    case 1:
+                        _a.sent();
+                        this.props.fetchLanes();
+                        _a.label = 2;
+                    case 2: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    Lanes.prototype.toggleLaneVisibility = function (lane, shouldBeVisible) {
+        return __awaiter(this, void 0, void 0, function () {
+            var callback;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        callback = shouldBeVisible ? this.props.showLane : this.props.hideLane;
+                        return [4 /*yield*/, callback(String(lane.id))];
+                    case 1:
+                        _a.sent();
+                        this.props.fetchLanes();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    Lanes.prototype.resetLanes = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.props.resetLanes()];
+                    case 1:
+                        _a.sent();
+                        this.props.fetchLanes();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    Lanes.prototype.findLaneForIdentifier = function (lanes, identifier) {
+        if (!lanes) {
+            lanes = this.state.lanes;
+        }
+        if (!identifier) {
+            identifier = this.state.draggableId;
+        }
+        for (var _i = 0, lanes_1 = lanes; _i &lt; lanes_1.length; _i++) {
+            var lane = lanes_1[_i];
+            if (String(lane.id) === String(identifier)) {
+                return lane;
+            }
+            var sublaneMatch = this.findLaneForIdentifier(lane.sublanes, identifier);
+            if (sublaneMatch) {
+                return sublaneMatch;
+            }
+        }
+        return null;
+    };
+    Lanes.prototype.getLane = function () {
+        if (this.props.lanes) {
+            return this.findLaneForIdentifier(this.props.lanes, this.props.identifier);
+        }
+        return null;
+    };
+    Lanes.prototype.findParentOfLane = function (lane, lanes) {
+        if (!lanes) {
+            lanes = this.state.lanes || [];
+        }
+        for (var _i = 0, lanes_2 = lanes; _i &lt; lanes_2.length; _i++) {
+            var possibleParent = lanes_2[_i];
+            if (lane &amp;&amp; possibleParent.sublanes.find(function (child) { return child["id"] === lane.id; })) {
+                return possibleParent;
+            }
+            // If we didn't find the parent in this level of lanes, then go one level down and look again.
+            var sublaneParent = this.findParentOfLane(lane, possibleParent.sublanes);
+            if (sublaneParent) {
+                return sublaneParent;
+            }
+        }
+        return null;
+    };
+    Lanes.prototype.drag = function (newState) {
+        this.setState(__assign({}, this.state, newState));
+    };
+    Lanes.defaultProps = {
+        editOrCreate: "create"
+    };
+    return Lanes;
+}(React.Component));
+exports.Lanes = Lanes;
+function mapStateToProps(state, ownProps) {
+    return {
+        lanes: state.editor.lanes &amp;&amp; state.editor.lanes.data &amp;&amp; state.editor.lanes.data.lanes,
+        responseBody: state.editor.lanes &amp;&amp; state.editor.lanes.successMessage,
+        customLists: state.editor.customLists &amp;&amp; state.editor.customLists.data &amp;&amp; state.editor.customLists.data.custom_lists,
+        fetchError: state.editor.lanes.fetchError || state.editor.laneVisibility.fetchError || state.editor.laneOrder.fetchError,
+        formError: state.editor.lanes.formError || state.editor.laneVisibility.formError,
+        isFetching: state.editor.lanes.isFetching || state.editor.lanes.isEditing || state.editor.laneVisibility.isFetching || state.editor.customLists.isFetching || state.editor.resetLanes.isFetching || state.editor.laneOrder.isFetching
+    };
+}
+function mapDispatchToProps(dispatch, ownProps) {
+    var fetcher = new DataFetcher_1.default();
+    var actions = new actions_1.default(fetcher, ownProps.csrfToken);
+    return {
+        fetchLanes: function () { return dispatch(actions.fetchLanes(ownProps.library)); },
+        fetchCustomLists: function () { return dispatch(actions.fetchCustomLists(ownProps.library)); },
+        editLane: function (data) { return dispatch(actions.editLane(ownProps.library, data)); },
+        deleteLane: function (identifier) { return dispatch(actions.deleteLane(ownProps.library, identifier)); },
+        showLane: function (identifier) { return dispatch(actions.showLane(ownProps.library, identifier)); },
+        hideLane: function (identifier) { return dispatch(actions.hideLane(ownProps.library, identifier)); },
+        resetLanes: function () { return dispatch(actions.resetLanes(ownProps.library)); },
+        changeLaneOrder: function (lanes) { return dispatch(actions.changeLaneOrder(ownProps.library, lanes)); }
+    };
+}
+var ConnectedLanes = react_redux_1.connect(mapStateToProps, mapDispatchToProps)(Lanes);
+exports.default = ConnectedLanes;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Thu Aug 08 2019 12:59:53 GMT-0400 (EDT) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

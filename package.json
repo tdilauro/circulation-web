@@ -22,7 +22,8 @@
     "test-chrome": "node_modules/.bin/selenium-standalone install && nightwatch -e chrome",
     "test-firefox": "node_modules/.bin/selenium-standalone install && nightwatch -e firefox",
     "dev": "webpack --watch --progress --display-modules --config webpack.dev.config",
-    "prod": "webpack -p --progress --display-modules --config webpack.prod.config"
+    "prod": "webpack -p --progress --display-modules --config webpack.prod.config",
+    "generate-docs": "npm run lint && tsc && node_modules/.bin/jsdoc -c jsdoc.json"
   },
   "dependencies": {
     "@nypl/dgx-svg-icons": "0.3.4",
@@ -56,11 +57,13 @@
     "chai": "^3.5.0",
     "clean-webpack-plugin": "^2.0.1",
     "css-loader": "^2.1.1",
+    "docdash": "^1.1.1",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.12.1",
     "fetch-mock": "^7.3.1",
     "file-loader": "^3.0.1",
     "follow-redirects": "^1.7.0",
+    "jsdoc": "^3.6.3",
     "jsdom": "^9.5.0",
     "json-loader": "^0.5.4",
     "mini-css-extract-plugin": "^0.5.0",

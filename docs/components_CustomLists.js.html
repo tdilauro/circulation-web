@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>components/CustomLists.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#AccountPage">AccountPage</a></li><li><a href="global.html#ActionCreator">ActionCreator</a></li><li><a href="global.html#adapter">adapter</a></li><li><a href="global.html#AdminAuthServices">AdminAuthServices</a></li><li><a href="global.html#AnalyticsServices">AnalyticsServices</a></li><li><a href="global.html#BookCoverEditor">BookCoverEditor</a></li><li><a href="global.html#BookDetailsContainer">BookDetailsContainer</a></li><li><a href="global.html#BookDetailsEditor">BookDetailsEditor</a></li><li><a href="global.html#BookDetailsTabContainer">BookDetailsTabContainer</a></li><li><a href="global.html#BookEditForm">BookEditForm</a></li><li><a href="global.html#buildStore">buildStore</a></li><li><a href="global.html#CatalogPage">CatalogPage</a></li><li><a href="global.html#CatalogServices">CatalogServices</a></li><li><a href="global.html#CDNServices">CDNServices</a></li><li><a href="global.html#CirculationEvents">CirculationEvents</a></li><li><a href="global.html#CirculationEventsDownloadForm">CirculationEventsDownloadForm</a></li><li><a href="global.html#CirculationWeb">CirculationWeb</a></li><li><a href="global.html#Classifications">Classifications</a></li><li><a href="global.html#ClassificationsForm">ClassificationsForm</a></li><li><a href="global.html#ClassificationsTable">ClassificationsTable</a></li><li><a href="global.html#Collections">Collections</a></li><li><a href="global.html#ComplaintForm">ComplaintForm</a></li><li><a href="global.html#Complaints">Complaints</a></li><li><a href="global.html#ConfigPage">ConfigPage</a></li><li><a href="global.html#ConfigTabContainer">ConfigTabContainer</a></li><li><a href="global.html#ContextProvider">ContextProvider</a></li><li><a href="global.html#CustomListEditor">CustomListEditor</a></li><li><a href="global.html#CustomListEntriesEditor">CustomListEntriesEditor</a></li><li><a href="global.html#CustomListPage">CustomListPage</a></li><li><a href="global.html#CustomLists">CustomLists</a></li><li><a href="global.html#CustomListsForBook">CustomListsForBook</a></li><li><a href="global.html#DashboardPage">DashboardPage</a></li><li><a href="global.html#default">default</a></li><li><a href="global.html#DiscoveryServices">DiscoveryServices</a></li><li><a href="global.html#doc">doc</a></li><li><a href="global.html#EditableInput">EditableInput</a></li><li><a href="global.html#EntryPointsContainer">EntryPointsContainer</a></li><li><a href="global.html#EntryPointsTabs">EntryPointsTabs</a></li><li><a href="global.html#ErrorMessage">ErrorMessage</a></li><li><a href="global.html#GenericEditableConfigList">GenericEditableConfigList</a></li><li><a href="global.html#GenreForm">GenreForm</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#HeaderWithStore">HeaderWithStore</a></li><li><a href="global.html#IndividualAdminEditForm">IndividualAdminEditForm</a></li><li><a href="global.html#IndividualAdmins">IndividualAdmins</a></li><li><a href="global.html#isProblemDetail">isProblemDetail</a></li><li><a href="global.html#LaneCustomListsEditor">LaneCustomListsEditor</a></li><li><a href="global.html#LaneEditor">LaneEditor</a></li><li><a href="global.html#Lanes">Lanes</a></li><li><a href="global.html#LibraryEditForm">LibraryEditForm</a></li><li><a href="global.html#LibraryStats">LibraryStats</a></li><li><a href="global.html#LoggingServices">LoggingServices</a></li><li><a href="global.html#ManagePatronsTabContainer">ManagePatronsTabContainer</a></li><li><a href="global.html#MetadataServices">MetadataServices</a></li><li><a href="global.html#PatronAuthServices">PatronAuthServices</a></li><li><a href="global.html#ProtocolFormField">ProtocolFormField</a></li><li><a href="global.html#SearchServices">SearchServices</a></li><li><a href="global.html#ServiceEditForm">ServiceEditForm</a></li><li><a href="global.html#ServiceWithRegistrationsEditForm">ServiceWithRegistrationsEditForm</a></li><li><a href="global.html#SetupPage">SetupPage</a></li><li><a href="global.html#SitewideSettingEditForm">SitewideSettingEditForm</a></li><li><a href="global.html#SitewideSettings">SitewideSettings</a></li><li><a href="global.html#Stats">Stats</a></li><li><a href="global.html#StorageServices">StorageServices</a></li><li><a href="global.html#TabContainer">TabContainer</a></li><li><a href="global.html#TextWithEditMode">TextWithEditMode</a></li><li><a href="global.html#WithEditButton">WithEditButton</a></li><li><a href="global.html#WithRemoveButton">WithRemoveButton</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">components/CustomLists.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>"use strict";
+var __extends = (this &amp;&amp; this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array &amp;&amp; function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __assign = (this &amp;&amp; this.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i &lt; n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
+var __awaiter = (this &amp;&amp; this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this &amp;&amp; this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] &amp; 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" &amp;&amp; (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y &amp;&amp; (t = y[op[0] &amp; 2 ? "return" : op[0] ? "throw" : "next"]) &amp;&amp; !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 &amp;&amp; t[t.length - 1]) &amp;&amp; (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 &amp;&amp; (!t || (op[1] > t[0] &amp;&amp; op[1] &lt; t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 &amp;&amp; _.label &lt; t[1]) { _.label = t[1]; t = op; break; }
+                    if (t &amp;&amp; _.label &lt; t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] &amp; 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = require("react");
+var react_redux_1 = require("react-redux");
+var PropTypes = require("prop-types");
+var actions_1 = require("../actions");
+var DataFetcher_1 = require("opds-web-client/lib/DataFetcher");
+var OPDSDataAdapter_1 = require("opds-web-client/lib/OPDSDataAdapter");
+var CustomListEditor_1 = require("./CustomListEditor");
+var LoadingIndicator_1 = require("opds-web-client/lib/components/LoadingIndicator");
+var ErrorMessage_1 = require("./ErrorMessage");
+var CustomListsSidebar_1 = require("./CustomListsSidebar");
+/** Body of the custom lists page, with all a library's lists shown in a left sidebar and
+    a list editor on the right. */
+var CustomLists = /** @class */ (function (_super) {
+    __extends(CustomLists, _super);
+    function CustomLists(props) {
+        var _this = _super.call(this, props) || this;
+        _this.editCustomList = _this.editCustomList.bind(_this);
+        _this.deleteCustomList = _this.deleteCustomList.bind(_this);
+        _this.changeSort = _this.changeSort.bind(_this);
+        _this.getEnabledEntryPoints = _this.getEnabledEntryPoints.bind(_this);
+        _this.state = {
+            sort: "asc"
+        };
+        return _this;
+    }
+    CustomLists.prototype.render = function () {
+        var _this = this;
+        var listCollections = [];
+        var entryCount;
+        if (this.props.lists) {
+            this.props.lists.forEach(function (list) {
+                if (list.id === parseInt(_this.props.identifier, 10)) {
+                    entryCount = list.entry_count;
+                    listCollections = list.collections;
+                }
+            });
+        }
+        return (React.createElement("div", { className: "custom-lists-container" },
+            this.props.fetchError &amp;&amp;
+                React.createElement(ErrorMessage_1.default, { error: this.props.fetchError }),
+            this.props.isFetching &amp;&amp;
+                React.createElement(LoadingIndicator_1.default, null),
+            React.createElement("div", { className: "custom-lists" },
+                this.renderSidebar(),
+                this.props.editOrCreate &amp;&amp; this.renderEditor(entryCount, listCollections))));
+    };
+    CustomLists.prototype.renderSidebar = function () {
+        var sidebar = (React.createElement(CustomListsSidebar_1.default, { lists: this.sortedLists(), library: this.props.library, identifier: this.props.identifier, isLibraryManager: this.context.admin.isLibraryManager(this.props.library), deleteCustomList: this.deleteCustomList, changeSort: this.changeSort, sortOrder: this.state.sort }));
+        return sidebar;
+    };
+    CustomLists.prototype.renderEditor = function (entryCount, listCollections) {
+        var editorProps = {
+            collections: this.collectionsForLibrary(),
+            editCustomList: this.editCustomList,
+            entryPoints: this.getEnabledEntryPoints(this.props.libraries),
+            isFetchingMoreCustomListEntries: this.props.isFetchingMoreCustomListEntries,
+            isFetchingMoreSearchResults: this.props.isFetchingMoreSearchResults,
+            library: this.props.library,
+            loadMoreEntries: this.props.loadMoreEntries,
+            loadMoreSearchResults: this.props.loadMoreSearchResults,
+            search: this.props.search,
+            searchResults: this.props.searchResults
+        };
+        var extraProps = this.props.editOrCreate === "create" ?
+            { responseBody: this.props.responseBody } :
+            { entryCount: entryCount,
+                list: this.props.listDetails,
+                listCollections: listCollections,
+                listId: this.props.identifier
+            };
+        return (React.createElement(CustomListEditor_1.default, __assign({}, __assign({}, editorProps, extraProps))));
+    };
+    CustomLists.prototype.componentWillMount = function () {
+        if (this.props.fetchCustomLists) {
+            this.props.fetchCustomLists();
+        }
+        if (this.props.editOrCreate === "edit" &amp;&amp; this.props.fetchCustomListDetails) {
+            this.props.fetchCustomListDetails(this.props.identifier);
+        }
+        if (this.props.fetchCollections) {
+            this.props.fetchCollections();
+        }
+        this.props.fetchLibraries();
+    };
+    CustomLists.prototype.componentWillReceiveProps = function (nextProps) {
+        // If we've fetched lists but we're not on the edit or create page,
+        // redirect to the edit page for the first list, or the create page
+        // if there are no lists.
+        if (!nextProps.editOrCreate &amp;&amp; nextProps.lists &amp;&amp; !nextProps.fetchError) {
+            if (nextProps.lists.length === 0) {
+                window.location.href += "/create";
+            }
+            else {
+                var firstList = this.sortedLists(nextProps.lists)[0];
+                window.location.href += "/edit/" + firstList.id;
+            }
+        }
+        // If we switched lists, fetch the details for the new list.
+        if (nextProps.identifier &amp;&amp; nextProps.fetchCustomListDetails &amp;&amp; nextProps.identifier !== this.props.identifier) {
+            nextProps.fetchCustomListDetails(nextProps.identifier);
+        }
+    };
+    CustomLists.prototype.changeSort = function () {
+        var oldSort = this.state.sort;
+        if (oldSort === "asc") {
+            this.setState({ sort: "desc" });
+        }
+        else {
+            this.setState({ sort: "asc" });
+        }
+    };
+    CustomLists.prototype.sortedLists = function (lists) {
+        var _this = this;
+        lists = lists || this.props.lists || [];
+        return (lists).sort(function (a, b) {
+            var first = a;
+            var second = b;
+            if (_this.state.sort === "desc") {
+                first = b;
+                second = a;
+            }
+            if (first.name &lt; second.name) {
+                return -1;
+            }
+            else if (first.name === second.name) {
+                return 0;
+            }
+            else {
+                return 1;
+            }
+        });
+    };
+    CustomLists.prototype.getEnabledEntryPoints = function (libraries) {
+        var _this = this;
+        if (!libraries) {
+            return [];
+        }
+        var library;
+        libraries.forEach(function (lib) {
+            if (lib.short_name === _this.props.library) {
+                library = lib;
+            }
+        });
+        return library.settings.enabled_entry_points || [];
+    };
+    CustomLists.prototype.editCustomList = function (data, listId) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.props.editCustomList(data, listId)];
+                    case 1:
+                        _a.sent();
+                        this.props.fetchCustomLists();
+                        if (listId) {
+                            this.props.fetchCustomListDetails(listId);
+                        }
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    CustomLists.prototype.deleteCustomList = function (list) {
+        return __awaiter(this, void 0, void 0, function () {
+            var lanes, deletedLanesText, confirmationText;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.getDeletedLanes(list.id)];
+                    case 1:
+                        lanes = _a.sent();
+                        deletedLanesText = "";
+                        if (lanes &amp;&amp; lanes.length) {
+                            deletedLanesText = this.deletedLaneNames(lanes);
+                        }
+                        confirmationText = "Delete list \"" + list.name + "\"? " + deletedLanesText;
+                        if (!window.confirm(confirmationText)) return [3 /*break*/, 3];
+                        return [4 /*yield*/, this.props.deleteCustomList(String(list.id))];
+                    case 2:
+                        _a.sent();
+                        this.props.fetchCustomLists();
+                        _a.label = 3;
+                    case 3: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * getDeletedLanes
+     * For any list id, fetch all the lanes where this list is the _only_ custom
+     * list in that lane. The server will deal with deleting those lanes. Only fetch
+     * the lanes data here since they are not needed for the page until a list
+     * is going to be deleted.
+     * @param {string | number} listId The id of the list to get associated lanes.
+     */
+    CustomLists.prototype.getDeletedLanes = function (listId) {
+        return __awaiter(this, void 0, void 0, function () {
+            var deletedLanes, lanes;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        deletedLanes = [];
+                        lanes = this.props.lanes;
+                        if (!!lanes) return [3 /*break*/, 2];
+                        return [4 /*yield*/, this.props.fetchLanes()];
+                    case 1:
+                        _a.sent();
+                        lanes = this.props.lanes;
+                        _a.label = 2;
+                    case 2:
+                        if (lanes &amp;&amp; lanes.length) {
+                            lanes.forEach(function (lane) {
+                                var customListId = lane.custom_list_ids;
+                                if (customListId.length === 1 &amp;&amp; customListId[0] === listId) {
+                                    deletedLanes.push(lane);
+                                }
+                            });
+                        }
+                        return [2 /*return*/, deletedLanes];
+                }
+            });
+        });
+    };
+    /**
+     * deletedLaneNames
+     * Display text that lists what lanes will be deleted. Currently used
+     * to warn users when a list is deleted that those lanes will be deleted.
+     * @param {LaneData[]} lanes Array of lanes that will be deleted.
+     */
+    CustomLists.prototype.deletedLaneNames = function (lanes) {
+        var deleteText = "Deleting this list will delete the following lanes:\n";
+        lanes.forEach(function (lane) { return deleteText += "\nLane name: " + lane.display_name; });
+        return deleteText;
+    };
+    CustomLists.prototype.collectionsForLibrary = function () {
+        var collections = [];
+        for (var _i = 0, _a = this.props.collections || []; _i &lt; _a.length; _i++) {
+            var collection = _a[_i];
+            for (var _b = 0, _c = collection.libraries || []; _b &lt; _c.length; _b++) {
+                var library = _c[_b];
+                if (library.short_name === this.props.library) {
+                    collections.push(collection);
+                    break;
+                }
+            }
+        }
+        return collections;
+    };
+    CustomLists.contextTypes = {
+        admin: PropTypes.object.isRequired
+    };
+    return CustomLists;
+}(React.Component));
+exports.CustomLists = CustomLists;
+function mapStateToProps(state, ownProps) {
+    return {
+        lists: state.editor.customLists &amp;&amp; state.editor.customLists.data &amp;&amp; state.editor.customLists.data.custom_lists,
+        listDetails: state.editor.customListDetails &amp;&amp; state.editor.customListDetails.data,
+        isFetchingMoreCustomListEntries: state.editor.customListDetails &amp;&amp; state.editor.customListDetails.isFetchingMoreEntries,
+        responseBody: state.editor.customLists &amp;&amp; state.editor.customLists.successMessage,
+        fetchError: state.editor.customLists.fetchError || state.editor.collections.fetchError,
+        isFetching: state.editor.customLists.isFetching || state.editor.customLists.isEditing || state.editor.customListDetails.isFetching || state.editor.customListDetails.isEditing || !ownProps.editOrCreate || (state.editor.collection &amp;&amp; state.editor.collection.isFetching) || state.editor.collections.isFetching,
+        searchResults: state.editor.collection &amp;&amp; state.editor.collection.data,
+        isFetchingMoreSearchResults: state.editor.collection &amp;&amp; state.editor.collection.isFetchingPage,
+        collections: state.editor.collections &amp;&amp; state.editor.collections.data &amp;&amp; state.editor.collections.data.collections,
+        libraries: state.editor.libraries.data &amp;&amp; state.editor.libraries.data.libraries,
+        lanes: state.editor.lanes.data &amp;&amp; state.editor.lanes.data.lanes,
+    };
+}
+function mapDispatchToProps(dispatch, ownProps) {
+    var fetcher = new DataFetcher_1.default({ adapter: OPDSDataAdapter_1.adapter });
+    var actions = new actions_1.default(fetcher, ownProps.csrfToken);
+    return {
+        fetchCustomLists: function () { return dispatch(actions.fetchCustomLists(ownProps.library)); },
+        fetchCustomListDetails: function (listId) { return dispatch(actions.fetchCustomListDetails(ownProps.library, listId)); },
+        editCustomList: function (data, listId) { return dispatch(actions.editCustomList(ownProps.library, data, listId)); },
+        deleteCustomList: function (listId) { return dispatch(actions.deleteCustomList(ownProps.library, listId)); },
+        search: function (url) { return dispatch(actions.fetchCollection(url)); },
+        loadMoreSearchResults: function (url) { return dispatch(actions.fetchPage(url)); },
+        loadMoreEntries: function (url) { return dispatch(actions.fetchMoreCustomListEntries(url)); },
+        fetchCollections: function () { return dispatch(actions.fetchCollections()); },
+        fetchLibraries: function () { return dispatch(actions.fetchLibraries()); },
+        fetchLanes: function () { return dispatch(actions.fetchLanes(ownProps.library)); },
+    };
+}
+var ConnectedCustomLists = react_redux_1.connect(mapStateToProps, mapDispatchToProps)(CustomLists);
+exports.default = ConnectedCustomLists;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Thu Aug 08 2019 12:59:53 GMT-0400 (EDT) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

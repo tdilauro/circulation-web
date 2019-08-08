@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>components/CustomListEditor.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#AccountPage">AccountPage</a></li><li><a href="global.html#ActionCreator">ActionCreator</a></li><li><a href="global.html#adapter">adapter</a></li><li><a href="global.html#AdminAuthServices">AdminAuthServices</a></li><li><a href="global.html#AnalyticsServices">AnalyticsServices</a></li><li><a href="global.html#BookCoverEditor">BookCoverEditor</a></li><li><a href="global.html#BookDetailsContainer">BookDetailsContainer</a></li><li><a href="global.html#BookDetailsEditor">BookDetailsEditor</a></li><li><a href="global.html#BookDetailsTabContainer">BookDetailsTabContainer</a></li><li><a href="global.html#BookEditForm">BookEditForm</a></li><li><a href="global.html#buildStore">buildStore</a></li><li><a href="global.html#CatalogPage">CatalogPage</a></li><li><a href="global.html#CatalogServices">CatalogServices</a></li><li><a href="global.html#CDNServices">CDNServices</a></li><li><a href="global.html#CirculationEvents">CirculationEvents</a></li><li><a href="global.html#CirculationEventsDownloadForm">CirculationEventsDownloadForm</a></li><li><a href="global.html#CirculationWeb">CirculationWeb</a></li><li><a href="global.html#Classifications">Classifications</a></li><li><a href="global.html#ClassificationsForm">ClassificationsForm</a></li><li><a href="global.html#ClassificationsTable">ClassificationsTable</a></li><li><a href="global.html#Collections">Collections</a></li><li><a href="global.html#ComplaintForm">ComplaintForm</a></li><li><a href="global.html#Complaints">Complaints</a></li><li><a href="global.html#ConfigPage">ConfigPage</a></li><li><a href="global.html#ConfigTabContainer">ConfigTabContainer</a></li><li><a href="global.html#ContextProvider">ContextProvider</a></li><li><a href="global.html#CustomListEditor">CustomListEditor</a></li><li><a href="global.html#CustomListEntriesEditor">CustomListEntriesEditor</a></li><li><a href="global.html#CustomListPage">CustomListPage</a></li><li><a href="global.html#CustomLists">CustomLists</a></li><li><a href="global.html#CustomListsForBook">CustomListsForBook</a></li><li><a href="global.html#DashboardPage">DashboardPage</a></li><li><a href="global.html#default">default</a></li><li><a href="global.html#DiscoveryServices">DiscoveryServices</a></li><li><a href="global.html#doc">doc</a></li><li><a href="global.html#EditableInput">EditableInput</a></li><li><a href="global.html#EntryPointsContainer">EntryPointsContainer</a></li><li><a href="global.html#EntryPointsTabs">EntryPointsTabs</a></li><li><a href="global.html#ErrorMessage">ErrorMessage</a></li><li><a href="global.html#GenericEditableConfigList">GenericEditableConfigList</a></li><li><a href="global.html#GenreForm">GenreForm</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#HeaderWithStore">HeaderWithStore</a></li><li><a href="global.html#IndividualAdminEditForm">IndividualAdminEditForm</a></li><li><a href="global.html#IndividualAdmins">IndividualAdmins</a></li><li><a href="global.html#isProblemDetail">isProblemDetail</a></li><li><a href="global.html#LaneCustomListsEditor">LaneCustomListsEditor</a></li><li><a href="global.html#LaneEditor">LaneEditor</a></li><li><a href="global.html#Lanes">Lanes</a></li><li><a href="global.html#LibraryEditForm">LibraryEditForm</a></li><li><a href="global.html#LibraryStats">LibraryStats</a></li><li><a href="global.html#LoggingServices">LoggingServices</a></li><li><a href="global.html#ManagePatronsTabContainer">ManagePatronsTabContainer</a></li><li><a href="global.html#MetadataServices">MetadataServices</a></li><li><a href="global.html#PatronAuthServices">PatronAuthServices</a></li><li><a href="global.html#ProtocolFormField">ProtocolFormField</a></li><li><a href="global.html#SearchServices">SearchServices</a></li><li><a href="global.html#ServiceEditForm">ServiceEditForm</a></li><li><a href="global.html#ServiceWithRegistrationsEditForm">ServiceWithRegistrationsEditForm</a></li><li><a href="global.html#SetupPage">SetupPage</a></li><li><a href="global.html#SitewideSettingEditForm">SitewideSettingEditForm</a></li><li><a href="global.html#SitewideSettings">SitewideSettings</a></li><li><a href="global.html#Stats">Stats</a></li><li><a href="global.html#StorageServices">StorageServices</a></li><li><a href="global.html#TabContainer">TabContainer</a></li><li><a href="global.html#TextWithEditMode">TextWithEditMode</a></li><li><a href="global.html#WithEditButton">WithEditButton</a></li><li><a href="global.html#WithRemoveButton">WithRemoveButton</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">components/CustomListEditor.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>"use strict";
+var __extends = (this &amp;&amp; this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array &amp;&amp; function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = require("react");
+var TextWithEditMode_1 = require("./TextWithEditMode");
+var EditableInput_1 = require("./EditableInput");
+var CustomListEntriesEditor_1 = require("./CustomListEntriesEditor");
+var SearchIcon_1 = require("./icons/SearchIcon");
+var library_simplified_reusable_components_1 = require("library-simplified-reusable-components");
+/** Right panel of the lists page for editing a single list. */
+var CustomListEditor = /** @class */ (function (_super) {
+    __extends(CustomListEditor, _super);
+    function CustomListEditor(props) {
+        var _this = _super.call(this, props) || this;
+        _this.state = {
+            title: _this.props.list &amp;&amp; _this.props.list.title,
+            entries: (_this.props.list &amp;&amp; _this.props.list.books) || [],
+            collections: _this.props.listCollections || [],
+            entryPointSelected: "all",
+        };
+        _this.changeTitle = _this.changeTitle.bind(_this);
+        _this.changeEntries = _this.changeEntries.bind(_this);
+        _this.save = _this.save.bind(_this);
+        _this.reset = _this.reset.bind(_this);
+        _this.search = _this.search.bind(_this);
+        _this.changeEntryPoint = _this.changeEntryPoint.bind(_this);
+        _this.getEntryPointsElms = _this.getEntryPointsElms.bind(_this);
+        return _this;
+    }
+    CustomListEditor.prototype.render = function () {
+        var _this = this;
+        var listId = this.props.listId;
+        var listTitle = this.props.list &amp;&amp; this.props.list.title ? this.props.list.title : "";
+        var nextPageUrl = this.props.list &amp;&amp; this.props.list.nextPageUrl;
+        var opdsFeedUrl = this.props.library + "/lists/" + listTitle + "/crawlable";
+        var hasChanges = this.hasChanges();
+        // The "save this list" button should be disabled if there are no changes
+        // or if the list's title is empty.
+        var disableSave = this.isTitleEmpty() || !hasChanges;
+        var searchForm = (React.createElement(library_simplified_reusable_components_1.Form, { onSubmit: this.search, className: "form-inline", content: React.createElement("fieldset", { key: "search" },
+                React.createElement("legend", { className: "visuallyHidden" }, "Search for titles"),
+                this.props.entryPoints.length ? (React.createElement("div", { className: "entry-points" },
+                    React.createElement("span", null, "Select the entry point to search for:"),
+                    React.createElement("div", { className: "entry-points-selection" }, this.getEntryPointsElms(this.props.entryPoints)))) : null,
+                React.createElement("input", { className: "form-control", ref: "searchTerms", type: "text" })), buttonClass: "bottom-align inline", buttonContent: React.createElement("span", null,
+                "Search",
+                React.createElement(SearchIcon_1.default, null)) }));
+        return (React.createElement("div", { className: "custom-list-editor" },
+            React.createElement("div", { className: "custom-list-editor-header" },
+                React.createElement("div", { className: "edit-custom-list-title" },
+                    React.createElement("fieldset", { className: "save-or-edit" },
+                        React.createElement("legend", { className: "visuallyHidden" }, "List name"),
+                        React.createElement(TextWithEditMode_1.default, { text: listTitle, placeholder: "list title", onUpdate: this.changeTitle, ref: "listTitle" })),
+                    listId &amp;&amp;
+                        React.createElement("h4", null,
+                            "ID-",
+                            listId)),
+                React.createElement("div", { className: "save-or-cancel-list" },
+                    React.createElement(library_simplified_reusable_components_1.Button, { callback: this.save, disabled: disableSave, content: "Save this list" }),
+                    hasChanges &amp;&amp;
+                        React.createElement(library_simplified_reusable_components_1.Button, { className: "inverted", callback: this.reset, content: "Cancel Changes" }))),
+            React.createElement("div", { className: "custom-list-editor-body" },
+                this.props.collections &amp;&amp; this.props.collections.length > 0 &amp;&amp;
+                    React.createElement("div", { className: "custom-list-filters" },
+                        React.createElement(library_simplified_reusable_components_1.Panel, { headerText: "Add from collections", content: React.createElement("div", { className: "collections" },
+                                React.createElement("div", null, "Automatically add new books from these collections to this list:"),
+                                this.props.collections.map(function (collection) {
+                                    return React.createElement(EditableInput_1.default, { key: collection.id, type: "checkbox", name: "collection", checked: _this.hasCollection(collection), label: collection.name, value: String(collection.id), onChange: function () { _this.changeCollection(collection); } });
+                                })) })),
+                React.createElement(library_simplified_reusable_components_1.Panel, { headerText: "Search for titles", openByDefault: true, onEnter: this.search, content: searchForm }),
+                React.createElement(CustomListEntriesEditor_1.default, { searchResults: this.props.searchResults, entries: this.props.list &amp;&amp; this.props.list.books, nextPageUrl: nextPageUrl, loadMoreSearchResults: this.props.loadMoreSearchResults, loadMoreEntries: this.props.loadMoreEntries, onUpdate: this.changeEntries, isFetchingMoreSearchResults: this.props.isFetchingMoreSearchResults, isFetchingMoreCustomListEntries: this.props.isFetchingMoreCustomListEntries, ref: "listEntries", opdsFeedUrl: opdsFeedUrl, entryCount: this.props.entryCount, listId: this.props.listId }))));
+    };
+    CustomListEditor.prototype.componentWillReceiveProps = function (nextProps) {
+        // Note: This gets called after performing a search, at which point the
+        // state of the component can already have updates that need to be taken
+        // into account.
+        if (!nextProps.list &amp;&amp; !this.props.list) {
+            // This is no current or previous list, so this is a new list.
+            this.setState({ title: "", entries: [], collections: [] });
+        }
+        else if (nextProps.list &amp;&amp; (nextProps.listId !== this.props.listId)) {
+            // Update the state with the next list to edit.
+            this.setState({
+                title: nextProps.list &amp;&amp; nextProps.list.title,
+                entries: (nextProps.list &amp;&amp; nextProps.list.books) || [],
+                collections: (nextProps.list &amp;&amp; nextProps.listCollections) || []
+            });
+        }
+        else if (nextProps.list &amp;&amp; nextProps.list.books &amp;&amp; nextProps.list.books.length !== this.state.entries.length) {
+            var collections = this.state.collections;
+            if ((!this.props.list || !this.props.listCollections) &amp;&amp; nextProps.list &amp;&amp; nextProps.listCollections) {
+                collections = nextProps.listCollections;
+            }
+            var title = this.state.title ? this.state.title : nextProps.list.title;
+            this.setState({
+                title: title,
+                entries: nextProps.list.books,
+                collections: collections,
+            });
+        }
+        else if ((!this.props.list || !this.props.listCollections) &amp;&amp; nextProps.list &amp;&amp; nextProps.listCollections) {
+            this.setState({
+                title: this.state.title,
+                entries: this.state.entries,
+                collections: nextProps.listCollections,
+            });
+        }
+    };
+    CustomListEditor.prototype.isTitleEmpty = function () {
+        return this.state.title === "";
+    };
+    CustomListEditor.prototype.hasChanges = function () {
+        var titleChanged = (this.props.list &amp;&amp; this.props.list.title !== this.state.title);
+        var entriesChanged = this.props.list &amp;&amp; !!this.props.list.books &amp;&amp;
+            (this.props.list.books.length !== this.state.entries.length);
+        // If the current list is new then this.props.list will be undefined, but
+        // the state for the entries or title can be populated so there's a need to check.
+        if (!this.props.list) {
+            titleChanged = this.state.title &amp;&amp; this.state.title !== "";
+            entriesChanged = this.state.entries.length > 0;
+        }
+        if (!entriesChanged) {
+            var propsIds = ((this.props.list &amp;&amp; this.props.list.books) || []).map(function (entry) { return entry.id; }).sort();
+            var stateIds = this.state.entries.map(function (entry) { return entry.id; }).sort();
+            for (var i = 0; i &lt; propsIds.length; i++) {
+                if (propsIds[i] !== stateIds[i]) {
+                    entriesChanged = true;
+                    break;
+                }
+            }
+        }
+        var collectionsChanged = false;
+        if (this.props.listCollections &amp;&amp; this.props.listCollections.length !== this.state.collections.length) {
+            collectionsChanged = true;
+        }
+        else {
+            var propsIds = (this.props.listCollections || []).map(function (collection) { return collection.id; }).sort();
+            var stateIds = this.state.collections.map(function (collection) { return collection.id; }).sort();
+            for (var i = 0; i &lt; propsIds.length; i++) {
+                if (propsIds[i] !== stateIds[i]) {
+                    collectionsChanged = true;
+                    break;
+                }
+            }
+        }
+        return titleChanged || entriesChanged || collectionsChanged;
+    };
+    CustomListEditor.prototype.changeTitle = function (title) {
+        this.setState({ title: title, entries: this.state.entries, collections: this.state.collections });
+    };
+    CustomListEditor.prototype.changeEntries = function (entries) {
+        this.setState({ entries: entries, title: this.state.title, collections: this.state.collections });
+    };
+    CustomListEditor.prototype.hasCollection = function (collection) {
+        for (var _i = 0, _a = this.state.collections; _i &lt; _a.length; _i++) {
+            var stateCollection = _a[_i];
+            if (stateCollection.id === collection.id) {
+                return true;
+            }
+        }
+        return false;
+    };
+    CustomListEditor.prototype.changeCollection = function (collection) {
+        var hasCollection = this.hasCollection(collection);
+        var newCollections;
+        if (hasCollection) {
+            newCollections = this.state.collections.filter(function (stateCollection) { return stateCollection.id !== collection.id; });
+        }
+        else {
+            newCollections = this.state.collections.slice(0);
+            newCollections.push(collection);
+        }
+        this.setState({ title: this.state.title, entries: this.state.entries, collections: newCollections });
+    };
+    CustomListEditor.prototype.changeEntryPoint = function (entryPointSelected) {
+        this.setState({
+            title: this.state.title,
+            entries: this.state.entries,
+            collections: this.state.collections,
+            entryPointSelected: entryPointSelected,
+        });
+    };
+    CustomListEditor.prototype.save = function () {
+        var _this = this;
+        var data = new window.FormData();
+        if (this.props.list) {
+            data.append("id", this.props.listId);
+        }
+        var title = this.refs["listTitle"].getText();
+        data.append("name", title);
+        var entries = this.refs["listEntries"].getEntries();
+        data.append("entries", JSON.stringify(entries));
+        var deletedEntries = this.refs["listEntries"].getDeleted();
+        data.append("deletedEntries", JSON.stringify(deletedEntries));
+        var collections = this.state.collections.map(function (collection) { return collection.id; });
+        data.append("collections", JSON.stringify(collections));
+        this.props.editCustomList(data, this.props.listId &amp;&amp; String(this.props.listId)).then(function () {
+            _this.refs["listEntries"].clearState();
+            _this.setState({ title: _this.state.title, entries: entries });
+            // If a new list was created, go to the new list's edit page.
+            if (!_this.props.list &amp;&amp; _this.props.responseBody) {
+                window.location.href = "/admin/web/lists/" + _this.props.library + "/edit/" + _this.props.responseBody;
+            }
+        });
+    };
+    CustomListEditor.prototype.reset = function () {
+        var _this = this;
+        this.refs["listTitle"].reset();
+        this.refs["listEntries"].reset();
+        setTimeout(function () {
+            _this.setState({
+                title: _this.refs["listTitle"].getText(),
+                entries: _this.state.entries,
+                collections: (_this.props.listCollections) || [],
+                entryPointSelected: "all",
+            });
+        }, 200);
+    };
+    CustomListEditor.prototype.getEntryPointQuery = function () {
+        var entryPointSelected = this.state.entryPointSelected;
+        var query = "";
+        if (entryPointSelected &amp;&amp; entryPointSelected !== "all") {
+            query = "&amp;entrypoint=" + encodeURIComponent(entryPointSelected);
+        }
+        return query;
+    };
+    CustomListEditor.prototype.getEntryPointsElms = function (entryPoints) {
+        var _this = this;
+        var entryPointsElms = [];
+        entryPointsElms.push(React.createElement(EditableInput_1.default, { key: "all", type: "radio", name: "entry-points-selection", checked: "all" === this.state.entryPointSelected, label: "All", value: "all", onChange: function () { return _this.changeEntryPoint("all"); } }));
+        entryPoints.forEach(function (entryPoint) {
+            return entryPointsElms.push(React.createElement(EditableInput_1.default, { key: entryPoint, type: "radio", name: "entry-points-selection", checked: entryPoint === _this.state.entryPointSelected, label: entryPoint, value: entryPoint, onChange: function () { return _this.changeEntryPoint(entryPoint); } }));
+        });
+        return entryPointsElms;
+    };
+    ;
+    CustomListEditor.prototype.search = function () {
+        var searchTerms = encodeURIComponent(this.refs["searchTerms"].value);
+        var entryPointQuery = this.getEntryPointQuery();
+        var url = "/" + this.props.library + "/search?q=" + searchTerms + entryPointQuery;
+        this.props.search(url);
+    };
+    return CustomListEditor;
+}(React.Component));
+exports.default = CustomListEditor;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Thu Aug 08 2019 12:59:53 GMT-0400 (EDT) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

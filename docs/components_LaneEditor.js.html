@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>components/LaneEditor.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#AccountPage">AccountPage</a></li><li><a href="global.html#ActionCreator">ActionCreator</a></li><li><a href="global.html#adapter">adapter</a></li><li><a href="global.html#AdminAuthServices">AdminAuthServices</a></li><li><a href="global.html#AnalyticsServices">AnalyticsServices</a></li><li><a href="global.html#BookCoverEditor">BookCoverEditor</a></li><li><a href="global.html#BookDetailsContainer">BookDetailsContainer</a></li><li><a href="global.html#BookDetailsEditor">BookDetailsEditor</a></li><li><a href="global.html#BookDetailsTabContainer">BookDetailsTabContainer</a></li><li><a href="global.html#BookEditForm">BookEditForm</a></li><li><a href="global.html#buildStore">buildStore</a></li><li><a href="global.html#CatalogPage">CatalogPage</a></li><li><a href="global.html#CatalogServices">CatalogServices</a></li><li><a href="global.html#CDNServices">CDNServices</a></li><li><a href="global.html#CirculationEvents">CirculationEvents</a></li><li><a href="global.html#CirculationEventsDownloadForm">CirculationEventsDownloadForm</a></li><li><a href="global.html#CirculationWeb">CirculationWeb</a></li><li><a href="global.html#Classifications">Classifications</a></li><li><a href="global.html#ClassificationsForm">ClassificationsForm</a></li><li><a href="global.html#ClassificationsTable">ClassificationsTable</a></li><li><a href="global.html#Collections">Collections</a></li><li><a href="global.html#ComplaintForm">ComplaintForm</a></li><li><a href="global.html#Complaints">Complaints</a></li><li><a href="global.html#ConfigPage">ConfigPage</a></li><li><a href="global.html#ConfigTabContainer">ConfigTabContainer</a></li><li><a href="global.html#ContextProvider">ContextProvider</a></li><li><a href="global.html#CustomListEditor">CustomListEditor</a></li><li><a href="global.html#CustomListEntriesEditor">CustomListEntriesEditor</a></li><li><a href="global.html#CustomListPage">CustomListPage</a></li><li><a href="global.html#CustomLists">CustomLists</a></li><li><a href="global.html#CustomListsForBook">CustomListsForBook</a></li><li><a href="global.html#DashboardPage">DashboardPage</a></li><li><a href="global.html#default">default</a></li><li><a href="global.html#DiscoveryServices">DiscoveryServices</a></li><li><a href="global.html#doc">doc</a></li><li><a href="global.html#EditableInput">EditableInput</a></li><li><a href="global.html#EntryPointsContainer">EntryPointsContainer</a></li><li><a href="global.html#EntryPointsTabs">EntryPointsTabs</a></li><li><a href="global.html#ErrorMessage">ErrorMessage</a></li><li><a href="global.html#GenericEditableConfigList">GenericEditableConfigList</a></li><li><a href="global.html#GenreForm">GenreForm</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#HeaderWithStore">HeaderWithStore</a></li><li><a href="global.html#IndividualAdminEditForm">IndividualAdminEditForm</a></li><li><a href="global.html#IndividualAdmins">IndividualAdmins</a></li><li><a href="global.html#isProblemDetail">isProblemDetail</a></li><li><a href="global.html#LaneCustomListsEditor">LaneCustomListsEditor</a></li><li><a href="global.html#LaneEditor">LaneEditor</a></li><li><a href="global.html#Lanes">Lanes</a></li><li><a href="global.html#LibraryEditForm">LibraryEditForm</a></li><li><a href="global.html#LibraryStats">LibraryStats</a></li><li><a href="global.html#LoggingServices">LoggingServices</a></li><li><a href="global.html#ManagePatronsTabContainer">ManagePatronsTabContainer</a></li><li><a href="global.html#MetadataServices">MetadataServices</a></li><li><a href="global.html#PatronAuthServices">PatronAuthServices</a></li><li><a href="global.html#ProtocolFormField">ProtocolFormField</a></li><li><a href="global.html#SearchServices">SearchServices</a></li><li><a href="global.html#ServiceEditForm">ServiceEditForm</a></li><li><a href="global.html#ServiceWithRegistrationsEditForm">ServiceWithRegistrationsEditForm</a></li><li><a href="global.html#SetupPage">SetupPage</a></li><li><a href="global.html#SitewideSettingEditForm">SitewideSettingEditForm</a></li><li><a href="global.html#SitewideSettings">SitewideSettings</a></li><li><a href="global.html#Stats">Stats</a></li><li><a href="global.html#StorageServices">StorageServices</a></li><li><a href="global.html#TabContainer">TabContainer</a></li><li><a href="global.html#TextWithEditMode">TextWithEditMode</a></li><li><a href="global.html#WithEditButton">WithEditButton</a></li><li><a href="global.html#WithRemoveButton">WithRemoveButton</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">components/LaneEditor.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>"use strict";
+var __extends = (this &amp;&amp; this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array &amp;&amp; function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = require("react");
+var library_simplified_reusable_components_1 = require("library-simplified-reusable-components");
+var TextWithEditMode_1 = require("./TextWithEditMode");
+var EditableInput_1 = require("./EditableInput");
+var LaneCustomListsEditor_1 = require("./LaneCustomListsEditor");
+var TrashIcon_1 = require("./icons/TrashIcon");
+var VisibleIcon_1 = require("./icons/VisibleIcon");
+var HiddenIcon_1 = require("./icons/HiddenIcon");
+/** Right panel of the lanes page for editing a single lane. */
+var LaneEditor = /** @class */ (function (_super) {
+    __extends(LaneEditor, _super);
+    function LaneEditor(props) {
+        var _this = _super.call(this, props) || this;
+        _this.state = {
+            name: _this.props.lane &amp;&amp; _this.props.lane.display_name,
+            customListIds: _this.props.lane &amp;&amp; _this.props.lane.custom_list_ids || [],
+            inheritParentRestrictions: _this.props.lane &amp;&amp; _this.props.lane.inherit_parent_restrictions
+        };
+        _this.changeName = _this.changeName.bind(_this);
+        _this.changeCustomLists = _this.changeCustomLists.bind(_this);
+        _this.changeInheritParentRestrictions = _this.changeInheritParentRestrictions.bind(_this);
+        _this.delete = _this.delete.bind(_this);
+        _this.save = _this.save.bind(_this);
+        _this.reset = _this.reset.bind(_this);
+        _this.visibilityToggle = _this.visibilityToggle.bind(_this);
+        _this.renderInfo = _this.renderInfo.bind(_this);
+        return _this;
+    }
+    LaneEditor.prototype.render = function () {
+        var parent = this.props.findParentOfLane(this.props.lane);
+        return (React.createElement("div", { className: "lane-editor" },
+            React.createElement("div", { className: "lane-editor-header" },
+                React.createElement("div", null,
+                    React.createElement("div", { className: "save-or-edit" },
+                        React.createElement(TextWithEditMode_1.default, { text: this.props.lane &amp;&amp; this.props.lane.display_name, placeholder: "name", onUpdate: this.changeName, ref: "laneName" }),
+                        this.props.lane &amp;&amp;
+                            React.createElement("h4", null,
+                                "ID-",
+                                this.props.lane.id)),
+                    React.createElement("span", { className: "lane-buttons" },
+                        this.props.lane &amp;&amp; this.props.deleteLane &amp;&amp;
+                            React.createElement(library_simplified_reusable_components_1.Button, { className: "danger delete-lane", callback: this.delete, content: React.createElement("span", null,
+                                    "Delete lane ",
+                                    React.createElement(TrashIcon_1.default, null)) }),
+                        this.visibilityToggle(),
+                        React.createElement(library_simplified_reusable_components_1.Button, { className: "save-lane", callback: this.save, content: "Save lane" }),
+                        this.hasChanges() &amp;&amp;
+                            React.createElement(library_simplified_reusable_components_1.Button, { className: "cancel-changes inverted", callback: this.reset, content: "Cancel changes" }))),
+                React.createElement("div", { className: "lane-details" },
+                    this.renderInfo(parent),
+                    parent &amp;&amp;
+                        React.createElement(EditableInput_1.default, { type: "checkbox", name: "inherit_parent_restrictions", checked: this.state.inheritParentRestrictions, label: "Inherit restrictions from parent lane", onChange: this.changeInheritParentRestrictions }))),
+            React.createElement("div", { className: "lane-editor-body" },
+                React.createElement(LaneCustomListsEditor_1.default, { allCustomLists: this.props.customLists, customListIds: this.state.customListIds, onUpdate: this.changeCustomLists, ref: "laneCustomLists" }))));
+    };
+    LaneEditor.prototype.renderInfo = function (parent) {
+        var isVisible = function (lane) { return lane.visible; };
+        if (this.props.lane) {
+            var visibility = void 0;
+            if (isVisible(this.props.lane)) {
+                visibility = React.createElement("div", null,
+                    "This lane is currently visible. ",
+                    React.createElement(VisibleIcon_1.default, null));
+            }
+            else if (parent &amp;&amp; !isVisible(parent)) {
+                visibility = React.createElement("div", null,
+                    "This lane's parent is currently hidden. ",
+                    React.createElement(HiddenIcon_1.default, null));
+            }
+            else {
+                visibility = React.createElement("div", null,
+                    "This lane is currently hidden. ",
+                    React.createElement(HiddenIcon_1.default, null));
+            }
+            return visibility;
+        }
+        else {
+            var laneLevel = parent ? "sublane of " + parent.display_name : "top-level lane";
+            return React.createElement("div", null,
+                "New ",
+                laneLevel);
+        }
+    };
+    LaneEditor.prototype.componentWillReceiveProps = function (nextProps) {
+        this.setState({
+            name: nextProps.lane &amp;&amp; nextProps.lane.display_name,
+            customListIds: nextProps.lane &amp;&amp; nextProps.lane.custom_list_ids || [],
+            inheritParentRestrictions: nextProps.lane &amp;&amp; nextProps.lane.inherit_parent_restrictions
+        });
+    };
+    LaneEditor.prototype.hasChanges = function () {
+        var nameChanged = (this.props.lane &amp;&amp; this.props.lane.display_name !== this.state.name);
+        var listsChanged = false;
+        if (this.props.lane &amp;&amp; this.props.lane.custom_list_ids.length !== this.state.customListIds.length) {
+            listsChanged = true;
+        }
+        else {
+            var propsListIds = this.props.lane &amp;&amp; this.props.lane.custom_list_ids.sort() || [];
+            var stateListIds = this.state.customListIds.sort();
+            for (var i = 0; i &lt; propsListIds.length; i++) {
+                if (propsListIds[i] !== stateListIds[i]) {
+                    listsChanged = true;
+                    break;
+                }
+            }
+        }
+        var inheritParentRestrictionsChanged = false;
+        if (this.props.lane &amp;&amp; this.props.lane.inherit_parent_restrictions !== this.state.inheritParentRestrictions) {
+            inheritParentRestrictionsChanged = true;
+        }
+        return nameChanged || listsChanged || inheritParentRestrictionsChanged;
+    };
+    LaneEditor.prototype.changeName = function (name) {
+        this.setState(Object.assign({}, this.state, { name: name }));
+    };
+    LaneEditor.prototype.changeCustomLists = function (customListIds) {
+        this.setState(Object.assign({}, this.state, { customListIds: customListIds }));
+    };
+    LaneEditor.prototype.changeInheritParentRestrictions = function () {
+        var inheritParentRestrictions = !this.state.inheritParentRestrictions;
+        this.setState(Object.assign({}, this.state, { inheritParentRestrictions: inheritParentRestrictions }));
+    };
+    LaneEditor.prototype.delete = function () {
+        if (this.props.deleteLane &amp;&amp; this.props.lane) {
+            this.props.deleteLane(this.props.lane);
+        }
+    };
+    LaneEditor.prototype.visibilityToggle = function () {
+        var _this = this;
+        // The lane's visibility cannot be changed if it has a hidden parent.  In all other cases--i.e.
+        // if 1) the lane does not have a parent or 2) the lane has a parent which is visible--we render
+        // the hide/show button.
+        var parent = this.props.findParentOfLane(this.props.lane);
+        var canToggle = this.props.lane &amp;&amp; (!parent || (parent &amp;&amp; parent.visible));
+        if (canToggle) {
+            return (React.createElement(library_simplified_reusable_components_1.Button, { className: this.props.lane.visible ? "hide-lane" : "show-lane", content: (this.props.lane.visible ? "Hide" : "Show") + " lane", callback: function () { return _this.props.toggleLaneVisibility(_this.props.lane, !_this.props.lane.visible); } }));
+        }
+    };
+    LaneEditor.prototype.save = function () {
+        var _this = this;
+        var parent = this.props.findParentOfLane(this.props.lane);
+        var data = new window.FormData();
+        if (this.props.lane) {
+            data.append("id", this.props.lane.id);
+        }
+        if (parent) {
+            data.append("parent_id", parent.id);
+        }
+        var name = this.refs["laneName"].getText();
+        data.append("display_name", name);
+        var listIds = this.refs["laneCustomLists"].getCustomListIds();
+        data.append("custom_list_ids", JSON.stringify(listIds));
+        data.append("inherit_parent_restrictions", this.state.inheritParentRestrictions);
+        this.props.editLane(data).then(function () {
+            // If a new lane was created, go to its edit page.
+            if (!_this.props.lane &amp;&amp; _this.props.responseBody) {
+                window.location.href = "/admin/web/lanes/" + _this.props.library + "/edit/" + _this.props.responseBody;
+            }
+        });
+    };
+    LaneEditor.prototype.reset = function () {
+        this.refs["laneName"].reset();
+        this.refs["laneCustomLists"].reset(this.props.lane.custom_list_ids);
+        var inheritParentRestrictions = this.props.lane &amp;&amp; this.props.lane.inherit_parent_restrictions;
+        this.setState(Object.assign({}, this.state, { inheritParentRestrictions: inheritParentRestrictions }));
+    };
+    return LaneEditor;
+}(React.Component));
+exports.default = LaneEditor;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Thu Aug 08 2019 12:59:53 GMT-0400 (EDT) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

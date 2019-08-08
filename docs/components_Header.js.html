@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>components/Header.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#AccountPage">AccountPage</a></li><li><a href="global.html#ActionCreator">ActionCreator</a></li><li><a href="global.html#adapter">adapter</a></li><li><a href="global.html#AdminAuthServices">AdminAuthServices</a></li><li><a href="global.html#AnalyticsServices">AnalyticsServices</a></li><li><a href="global.html#BookCoverEditor">BookCoverEditor</a></li><li><a href="global.html#BookDetailsContainer">BookDetailsContainer</a></li><li><a href="global.html#BookDetailsEditor">BookDetailsEditor</a></li><li><a href="global.html#BookDetailsTabContainer">BookDetailsTabContainer</a></li><li><a href="global.html#BookEditForm">BookEditForm</a></li><li><a href="global.html#buildStore">buildStore</a></li><li><a href="global.html#CatalogPage">CatalogPage</a></li><li><a href="global.html#CatalogServices">CatalogServices</a></li><li><a href="global.html#CDNServices">CDNServices</a></li><li><a href="global.html#CirculationEvents">CirculationEvents</a></li><li><a href="global.html#CirculationEventsDownloadForm">CirculationEventsDownloadForm</a></li><li><a href="global.html#CirculationWeb">CirculationWeb</a></li><li><a href="global.html#Classifications">Classifications</a></li><li><a href="global.html#ClassificationsForm">ClassificationsForm</a></li><li><a href="global.html#ClassificationsTable">ClassificationsTable</a></li><li><a href="global.html#Collections">Collections</a></li><li><a href="global.html#ComplaintForm">ComplaintForm</a></li><li><a href="global.html#Complaints">Complaints</a></li><li><a href="global.html#ConfigPage">ConfigPage</a></li><li><a href="global.html#ConfigTabContainer">ConfigTabContainer</a></li><li><a href="global.html#ContextProvider">ContextProvider</a></li><li><a href="global.html#CustomListEditor">CustomListEditor</a></li><li><a href="global.html#CustomListEntriesEditor">CustomListEntriesEditor</a></li><li><a href="global.html#CustomListPage">CustomListPage</a></li><li><a href="global.html#CustomLists">CustomLists</a></li><li><a href="global.html#CustomListsForBook">CustomListsForBook</a></li><li><a href="global.html#DashboardPage">DashboardPage</a></li><li><a href="global.html#default">default</a></li><li><a href="global.html#DiscoveryServices">DiscoveryServices</a></li><li><a href="global.html#doc">doc</a></li><li><a href="global.html#EditableInput">EditableInput</a></li><li><a href="global.html#EntryPointsContainer">EntryPointsContainer</a></li><li><a href="global.html#EntryPointsTabs">EntryPointsTabs</a></li><li><a href="global.html#ErrorMessage">ErrorMessage</a></li><li><a href="global.html#GenericEditableConfigList">GenericEditableConfigList</a></li><li><a href="global.html#GenreForm">GenreForm</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#HeaderWithStore">HeaderWithStore</a></li><li><a href="global.html#IndividualAdminEditForm">IndividualAdminEditForm</a></li><li><a href="global.html#IndividualAdmins">IndividualAdmins</a></li><li><a href="global.html#isProblemDetail">isProblemDetail</a></li><li><a href="global.html#LaneCustomListsEditor">LaneCustomListsEditor</a></li><li><a href="global.html#LaneEditor">LaneEditor</a></li><li><a href="global.html#Lanes">Lanes</a></li><li><a href="global.html#LibraryEditForm">LibraryEditForm</a></li><li><a href="global.html#LibraryStats">LibraryStats</a></li><li><a href="global.html#LoggingServices">LoggingServices</a></li><li><a href="global.html#ManagePatronsTabContainer">ManagePatronsTabContainer</a></li><li><a href="global.html#MetadataServices">MetadataServices</a></li><li><a href="global.html#PatronAuthServices">PatronAuthServices</a></li><li><a href="global.html#ProtocolFormField">ProtocolFormField</a></li><li><a href="global.html#SearchServices">SearchServices</a></li><li><a href="global.html#ServiceEditForm">ServiceEditForm</a></li><li><a href="global.html#ServiceWithRegistrationsEditForm">ServiceWithRegistrationsEditForm</a></li><li><a href="global.html#SetupPage">SetupPage</a></li><li><a href="global.html#SitewideSettingEditForm">SitewideSettingEditForm</a></li><li><a href="global.html#SitewideSettings">SitewideSettings</a></li><li><a href="global.html#Stats">Stats</a></li><li><a href="global.html#StorageServices">StorageServices</a></li><li><a href="global.html#TabContainer">TabContainer</a></li><li><a href="global.html#TextWithEditMode">TextWithEditMode</a></li><li><a href="global.html#WithEditButton">WithEditButton</a></li><li><a href="global.html#WithRemoveButton">WithRemoveButton</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">components/Header.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>"use strict";
+var __extends = (this &amp;&amp; this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array &amp;&amp; function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = require("react");
+var react_redux_1 = require("react-redux");
+var PropTypes = require("prop-types");
+var actions_1 = require("../actions");
+var EditableInput_1 = require("./EditableInput");
+var CatalogLink_1 = require("opds-web-client/lib/components/CatalogLink");
+var react_router_1 = require("react-router");
+var react_bootstrap_1 = require("react-bootstrap");
+var library_simplified_reusable_components_1 = require("library-simplified-reusable-components");
+var dgx_svg_icons_1 = require("@nypl/dgx-svg-icons");
+/** Header of all admin interface pages, with a dropdown for selecting a library,
+    library-specific links for the current library, and site-wide links. */
+var Header = /** @class */ (function (_super) {
+    __extends(Header, _super);
+    function Header(props) {
+        var _this = _super.call(this, props) || this;
+        _this.state = { showAccountDropdown: false };
+        _this.changeLibrary = _this.changeLibrary.bind(_this);
+        _this.toggleAccountDropdown = _this.toggleAccountDropdown.bind(_this);
+        document.body.addEventListener("click", function (event) {
+            if (_this.state.showAccountDropdown &amp;&amp;
+                (event.target.className).indexOf("account-dropdown-toggle") === -1) {
+                _this.toggleAccountDropdown();
+            }
+        });
+        return _this;
+    }
+    Header.prototype.render = function () {
+        var currentPathname = (this.context.router &amp;&amp;
+            this.context.router.getCurrentLocation() &amp;&amp;
+            this.context.router.getCurrentLocation().pathname) || "";
+        var currentLibrary = this.context.library &amp;&amp; this.context.library();
+        var isLibraryManager = this.context.admin.isLibraryManager(currentLibrary);
+        var isSystemAdmin = this.context.admin.isSystemAdmin();
+        return (React.createElement(react_bootstrap_1.Navbar, { fluid: true },
+            React.createElement(react_bootstrap_1.Navbar.Header, null,
+                React.createElement(react_bootstrap_1.Navbar.Brand, null, "Admin"),
+                this.props.libraries &amp;&amp; this.props.libraries.length > 0 &amp;&amp;
+                    React.createElement(EditableInput_1.default, { elementType: "select", ref: "library", value: currentLibrary, onChange: this.changeLibrary },
+                        (!this.context.library || !currentLibrary) &amp;&amp;
+                            React.createElement("option", { "aria-selected": false }, "Select a library"),
+                        this.props.libraries.map(function (library) {
+                            return React.createElement("option", { key: library.short_name, value: library.short_name, "aria-selected": currentLibrary === library.short_name }, library.name || library.short_name);
+                        })),
+                React.createElement(react_bootstrap_1.Navbar.Toggle, null)),
+            React.createElement(react_bootstrap_1.Navbar.Collapse, { className: "menu" },
+                currentLibrary &amp;&amp;
+                    React.createElement(react_bootstrap_1.Nav, null,
+                        React.createElement("li", { className: "header-link" },
+                            React.createElement(CatalogLink_1.default, { collectionUrl: "/" + currentLibrary + "/groups", bookUrl: null, className: currentPathname.indexOf("/admin/web/collection") !== -1 ? "active-link" : "" }, "Catalog")),
+                        React.createElement("li", { className: "header-link" },
+                            React.createElement(CatalogLink_1.default, { collectionUrl: "/" + currentLibrary + "/admin/complaints", bookUrl: null, className: currentPathname.indexOf("/admin/complaints") !== -1 ? "active-link" : "" }, "Complaints")),
+                        React.createElement("li", { className: "header-link" },
+                            React.createElement(CatalogLink_1.default, { collectionUrl: "/" + currentLibrary + "/admin/suppressed", bookUrl: null, className: currentPathname.indexOf("/admin/suppressed") !== -1 ? "active-link" : "" }, "Hidden Books")),
+                        React.createElement("li", { className: "header-link" },
+                            React.createElement(react_router_1.Link, { to: "/admin/web/lists/" + currentLibrary, className: currentPathname.indexOf("/admin/web/lists") !== -1 ? "active-link" : "" }, "Lists")),
+                        isLibraryManager &amp;&amp;
+                            React.createElement("li", { className: "header-link" },
+                                React.createElement(react_router_1.Link, { to: "/admin/web/lanes/" + currentLibrary, className: currentPathname.indexOf("/admin/web/lanes") !== -1 ? "active-link" : "" }, "Lanes")),
+                        React.createElement("li", { className: "header-link" },
+                            React.createElement(react_router_1.Link, { to: "/admin/web/dashboard/" + currentLibrary, className: (currentPathname.indexOf("/admin/web/dashboard") !== -1) &amp;&amp; currentLibrary ? "active-link" : "" }, "Dashboard")),
+                        isLibraryManager &amp;&amp;
+                            React.createElement("li", { className: "header-link" },
+                                React.createElement(react_router_1.Link, { to: "/admin/web/patrons/" + currentLibrary, className: currentPathname.indexOf("/admin/web/patrons") !== -1 ? "active-link" : "" }, "Patrons"))),
+                React.createElement(react_bootstrap_1.Nav, { className: "pull-right" },
+                    (!this.context.library || !currentLibrary) &amp;&amp;
+                        React.createElement("li", { className: "header-link" },
+                            React.createElement(react_router_1.Link, { to: "/admin/web/dashboard", className: currentPathname.indexOf("/admin/web/dashboard") !== -1 ? "active-link" : "" }, "Dashboard")),
+                    isSystemAdmin &amp;&amp;
+                        React.createElement("li", { className: "header-link" },
+                            React.createElement(react_router_1.Link, { to: "/admin/web/diagnostics", className: currentPathname.indexOf("/admin/web/diagnostics") !== -1 ? "active-link" : "" }, "Diagnostics")),
+                    this.context.admin.isLibraryManagerOfSomeLibrary() &amp;&amp;
+                        React.createElement("li", { className: "header-link" },
+                            React.createElement(react_router_1.Link, { to: "/admin/web/config", className: currentPathname.indexOf("/admin/web/config") !== -1 ? "active-link" : "" }, "System Configuration")),
+                    this.context.admin.email &amp;&amp;
+                        React.createElement("li", { className: "dropdown" },
+                            React.createElement(library_simplified_reusable_components_1.Button, { className: "account-dropdown-toggle transparent", type: "button", "aria-haspopup": "true", "aria-expanded": this.state.showAccountDropdown, callback: this.toggleAccountDropdown, content: React.createElement("span", null,
+                                    this.context.admin.email,
+                                    " ",
+                                    React.createElement(dgx_svg_icons_1.GenericWedgeIcon, null)) }),
+                            this.state.showAccountDropdown &amp;&amp;
+                                React.createElement("ul", { className: "dropdown-menu" },
+                                    React.createElement("li", null,
+                                        React.createElement(react_router_1.Link, { to: "/admin/web/account", className: currentPathname.indexOf("/admin/web/account") !== -1 ? "active-link" : "" }, "Change password")),
+                                    React.createElement("li", null,
+                                        React.createElement("a", { href: "/admin/sign_out" }, "Sign out"))))))));
+    };
+    Header.prototype.componentWillMount = function () {
+        if (this.props.fetchLibraries) {
+            this.props.fetchLibraries();
+        }
+    };
+    Header.prototype.changeLibrary = function () {
+        var library = this.refs["library"].getValue();
+        if (library) {
+            this.context.router.push("/admin/web/collection/" + library + "%2Fgroups");
+            this.forceUpdate();
+        }
+    };
+    Header.prototype.toggleAccountDropdown = function () {
+        var showAccountDropdown = !this.state.showAccountDropdown;
+        this.setState({ showAccountDropdown: showAccountDropdown });
+    };
+    Header.contextTypes = {
+        library: PropTypes.func,
+        router: PropTypes.object.isRequired,
+        admin: PropTypes.object.isRequired,
+    };
+    return Header;
+}(React.Component));
+exports.Header = Header;
+function mapStateToProps(state, ownProps) {
+    return {
+        libraries: state.editor.libraries &amp;&amp; state.editor.libraries.data &amp;&amp; state.editor.libraries.data.libraries
+    };
+}
+function mapDispatchToProps(dispatch) {
+    var actions = new actions_1.default();
+    return {
+        fetchLibraries: function () { return dispatch(actions.fetchLibraries()); }
+    };
+}
+var ConnectedHeader = react_redux_1.connect(mapStateToProps, mapDispatchToProps)(Header);
+/** HeaderWithStore is a wrapper component to pass the store as a prop to the
+    ConnectedHeader, since it's not in the regular place in the context. */
+var HeaderWithStore = /** @class */ (function (_super) {
+    __extends(HeaderWithStore, _super);
+    function HeaderWithStore() {
+        return _super !== null &amp;&amp; _super.apply(this, arguments) || this;
+    }
+    HeaderWithStore.prototype.render = function () {
+        return (React.createElement(ConnectedHeader, { store: this.context.editorStore }));
+    };
+    HeaderWithStore.contextTypes = {
+        editorStore: PropTypes.object.isRequired
+    };
+    return HeaderWithStore;
+}(React.Component));
+exports.default = HeaderWithStore;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Thu Aug 08 2019 12:59:53 GMT-0400 (EDT) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

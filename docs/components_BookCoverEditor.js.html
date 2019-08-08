@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>components/BookCoverEditor.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#AccountPage">AccountPage</a></li><li><a href="global.html#ActionCreator">ActionCreator</a></li><li><a href="global.html#adapter">adapter</a></li><li><a href="global.html#AdminAuthServices">AdminAuthServices</a></li><li><a href="global.html#AnalyticsServices">AnalyticsServices</a></li><li><a href="global.html#BookCoverEditor">BookCoverEditor</a></li><li><a href="global.html#BookDetailsContainer">BookDetailsContainer</a></li><li><a href="global.html#BookDetailsEditor">BookDetailsEditor</a></li><li><a href="global.html#BookDetailsTabContainer">BookDetailsTabContainer</a></li><li><a href="global.html#BookEditForm">BookEditForm</a></li><li><a href="global.html#buildStore">buildStore</a></li><li><a href="global.html#CatalogPage">CatalogPage</a></li><li><a href="global.html#CatalogServices">CatalogServices</a></li><li><a href="global.html#CDNServices">CDNServices</a></li><li><a href="global.html#CirculationEvents">CirculationEvents</a></li><li><a href="global.html#CirculationEventsDownloadForm">CirculationEventsDownloadForm</a></li><li><a href="global.html#CirculationWeb">CirculationWeb</a></li><li><a href="global.html#Classifications">Classifications</a></li><li><a href="global.html#ClassificationsForm">ClassificationsForm</a></li><li><a href="global.html#ClassificationsTable">ClassificationsTable</a></li><li><a href="global.html#Collections">Collections</a></li><li><a href="global.html#ComplaintForm">ComplaintForm</a></li><li><a href="global.html#Complaints">Complaints</a></li><li><a href="global.html#ConfigPage">ConfigPage</a></li><li><a href="global.html#ConfigTabContainer">ConfigTabContainer</a></li><li><a href="global.html#ContextProvider">ContextProvider</a></li><li><a href="global.html#CustomListEditor">CustomListEditor</a></li><li><a href="global.html#CustomListEntriesEditor">CustomListEntriesEditor</a></li><li><a href="global.html#CustomListPage">CustomListPage</a></li><li><a href="global.html#CustomLists">CustomLists</a></li><li><a href="global.html#CustomListsForBook">CustomListsForBook</a></li><li><a href="global.html#DashboardPage">DashboardPage</a></li><li><a href="global.html#default">default</a></li><li><a href="global.html#DiscoveryServices">DiscoveryServices</a></li><li><a href="global.html#doc">doc</a></li><li><a href="global.html#EditableInput">EditableInput</a></li><li><a href="global.html#EntryPointsContainer">EntryPointsContainer</a></li><li><a href="global.html#EntryPointsTabs">EntryPointsTabs</a></li><li><a href="global.html#ErrorMessage">ErrorMessage</a></li><li><a href="global.html#GenericEditableConfigList">GenericEditableConfigList</a></li><li><a href="global.html#GenreForm">GenreForm</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#HeaderWithStore">HeaderWithStore</a></li><li><a href="global.html#IndividualAdminEditForm">IndividualAdminEditForm</a></li><li><a href="global.html#IndividualAdmins">IndividualAdmins</a></li><li><a href="global.html#isProblemDetail">isProblemDetail</a></li><li><a href="global.html#LaneCustomListsEditor">LaneCustomListsEditor</a></li><li><a href="global.html#LaneEditor">LaneEditor</a></li><li><a href="global.html#Lanes">Lanes</a></li><li><a href="global.html#LibraryEditForm">LibraryEditForm</a></li><li><a href="global.html#LibraryStats">LibraryStats</a></li><li><a href="global.html#LoggingServices">LoggingServices</a></li><li><a href="global.html#ManagePatronsTabContainer">ManagePatronsTabContainer</a></li><li><a href="global.html#MetadataServices">MetadataServices</a></li><li><a href="global.html#PatronAuthServices">PatronAuthServices</a></li><li><a href="global.html#ProtocolFormField">ProtocolFormField</a></li><li><a href="global.html#SearchServices">SearchServices</a></li><li><a href="global.html#ServiceEditForm">ServiceEditForm</a></li><li><a href="global.html#ServiceWithRegistrationsEditForm">ServiceWithRegistrationsEditForm</a></li><li><a href="global.html#SetupPage">SetupPage</a></li><li><a href="global.html#SitewideSettingEditForm">SitewideSettingEditForm</a></li><li><a href="global.html#SitewideSettings">SitewideSettings</a></li><li><a href="global.html#Stats">Stats</a></li><li><a href="global.html#StorageServices">StorageServices</a></li><li><a href="global.html#TabContainer">TabContainer</a></li><li><a href="global.html#TextWithEditMode">TextWithEditMode</a></li><li><a href="global.html#WithEditButton">WithEditButton</a></li><li><a href="global.html#WithRemoveButton">WithRemoveButton</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">components/BookCoverEditor.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>"use strict";
+var __extends = (this &amp;&amp; this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array &amp;&amp; function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = require("react");
+var react_redux_1 = require("react-redux");
+var editorAdapter_1 = require("../editorAdapter");
+var DataFetcher_1 = require("opds-web-client/lib/DataFetcher");
+var actions_1 = require("../actions");
+var ErrorMessage_1 = require("./ErrorMessage");
+var EditableInput_1 = require("./EditableInput");
+var library_simplified_reusable_components_1 = require("library-simplified-reusable-components");
+;
+/** Tab on the book details page for uploading a new book cover. */
+var BookCoverEditor = /** @class */ (function (_super) {
+    __extends(BookCoverEditor, _super);
+    function BookCoverEditor(props) {
+        var _this = _super.call(this, props) || this;
+        _this.refresh = _this.refresh.bind(_this);
+        _this.preview = _this.preview.bind(_this);
+        _this.save = _this.save.bind(_this);
+        _this.renderCoverForm = _this.renderCoverForm.bind(_this);
+        return _this;
+    }
+    BookCoverEditor.prototype.componentWillMount = function () {
+        if (this.props.clearPreview) {
+            this.props.clearPreview();
+        }
+        if (this.props.fetchRightsStatuses) {
+            this.props.fetchRightsStatuses();
+        }
+    };
+    BookCoverEditor.prototype.render = function () {
+        return (this.props.book &amp;&amp;
+            React.createElement("div", null,
+                React.createElement("h2", null, this.props.book.title),
+                this.props.isFetching &amp;&amp;
+                    React.createElement("div", { className: "cover-fetching-container" },
+                        React.createElement("h4", null,
+                            "Updating",
+                            React.createElement("i", { className: "fa fa-spinner fa-spin" }))),
+                React.createElement("div", null,
+                    React.createElement("h3", null, "Current cover:"),
+                    React.createElement("img", { src: this.props.book.coverUrl, className: "book-cover current-cover", alt: "Current book cover" })),
+                React.createElement("div", { ref: "form-container", className: "cover-edit-form" },
+                    React.createElement("h3", null, "Change cover:"),
+                    React.createElement(library_simplified_reusable_components_1.Panel, { headerText: "Cover Metadata", openByDefault: true, content: this.renderCoverForm(), onEnter: this.save }),
+                    this.props.rightsStatuses &amp;&amp;
+                        React.createElement(library_simplified_reusable_components_1.Panel, { headerText: "Rights", openByDefault: true, onEnter: this.save, content: this.renderRightsForm() }),
+                    React.createElement(library_simplified_reusable_components_1.Button, { className: "left-align", content: "Save this cover", disabled: this.props.isFetching || !this.props.preview, callback: this.save })),
+                this.props.fetchError &amp;&amp;
+                    React.createElement(ErrorMessage_1.default, { error: this.props.fetchError })));
+    };
+    BookCoverEditor.prototype.renderCoverForm = function () {
+        var titlePositionRef = this.refs["title_position"];
+        var titlePositionValue = titlePositionRef &amp;&amp; titlePositionRef.getValue();
+        return (React.createElement("div", null,
+            React.createElement("p", null, "Cover must be at least 600px x 900px and in PNG, JPG, or GIF format."),
+            React.createElement(library_simplified_reusable_components_1.Form, { ref: "image-form", className: "edit-form", onSubmit: this.preview, buttonContent: "Preview", buttonClass: "top-align", errorText: this.props.previewFetchError &amp;&amp;
+                    React.createElement(ErrorMessage_1.default, { error: this.props.previewFetchError }), content: React.createElement("fieldset", { key: "cover-image" },
+                    React.createElement("legend", { className: "visuallyHidden" }, "Cover Image"),
+                    React.createElement(EditableInput_1.default, { elementType: "input", type: "text", disabled: this.props.isFetching, name: "cover_url", label: "URL for cover image", ref: "cover_url", optionalText: false }),
+                    React.createElement(EditableInput_1.default, { elementType: "input", type: "file", disabled: this.props.isFetching, name: "cover_file", label: "Or upload cover image", accept: "image/*", ref: "cover_file", optionalText: false }),
+                    React.createElement(EditableInput_1.default, { elementType: "select", disabled: this.props.isFetching, name: "title_position", label: "Title and Author Position", value: "none", ref: "title_position" },
+                        React.createElement("option", { value: "none", "aria-selected": titlePositionValue === "none" }, "None"),
+                        React.createElement("option", { value: "top", "aria-selected": titlePositionValue === "top" }, "Top"),
+                        React.createElement("option", { value: "center", "aria-selected": titlePositionValue === "center" }, "Center"),
+                        React.createElement("option", { value: "bottom", "aria-selected": titlePositionValue === "bottom" }, "Bottom"))) }),
+            this.props.isFetchingPreview &amp;&amp;
+                React.createElement("h5", { className: "cover-fetching-preview-container" },
+                    "Updating Preview\u00A0",
+                    React.createElement("i", { className: "fa fa-spinner fa-spin" })),
+            this.props.preview &amp;&amp;
+                React.createElement("div", null,
+                    React.createElement("h4", null, "Preview:"),
+                    React.createElement("img", { src: this.props.preview, className: "book-cover preview-cover", alt: "Preview of new cover" }))));
+    };
+    BookCoverEditor.prototype.previewUrl = function () {
+        return this.props.bookAdminUrl + "/preview_book_cover";
+    };
+    BookCoverEditor.prototype.preview = function (data) {
+        var file = this.refs["cover_file"].getValue();
+        var url = this.refs["cover_url"].getValue();
+        if (!file &amp;&amp; !url &amp;&amp; this.props.clearPreview) {
+            this.props.clearPreview();
+        }
+        if ((file || url) &amp;&amp; this.props.fetchPreview) {
+            this.props.fetchPreview(this.previewUrl(), data);
+        }
+    };
+    BookCoverEditor.prototype.renderRightsForm = function () {
+        var _this = this;
+        var copyrightStatusUri = "http://librarysimplified.org/terms/rights-status/in-copyright";
+        var unknownStatusUri = "http://librarysimplified.org/terms/rights-status/unknown";
+        var rightStatusRef = this.refs["rights_status"];
+        var rightStatusValue = rightStatusRef &amp;&amp; rightStatusRef.getValue();
+        return (React.createElement(library_simplified_reusable_components_1.Form, { ref: "rights-form", onSubmit: this.save, className: "edit-form", withoutButton: true, content: React.createElement("fieldset", { key: "rights" },
+                React.createElement("legend", { className: "visuallyHidden" }, "Rights:"),
+                React.createElement(EditableInput_1.default, { elementType: "select", disabled: this.props.isFetching, name: "rights_status", ref: "rights_status", label: "License" },
+                    Object.keys(this.props.rightsStatuses).map(function (uri) {
+                        var status = _this.props.rightsStatuses[uri];
+                        if (status.allows_derivatives) {
+                            return (React.createElement("option", { value: uri, key: uri, "aria-selected": rightStatusValue === uri }, status.name));
+                        }
+                        return null;
+                    }),
+                    React.createElement("option", { value: copyrightStatusUri, "aria-selected": rightStatusValue === copyrightStatusUri }, "In Copyright"),
+                    React.createElement("option", { value: unknownStatusUri, "aria-selected": rightStatusValue === unknownStatusUri }, "Other")),
+                React.createElement(EditableInput_1.default, { elementType: "textarea", disabled: this.props.isFetching, name: "rights_explanation", label: "Explanation of rights", optionalText: false })) }));
+    };
+    BookCoverEditor.prototype.refresh = function () {
+        this.props.fetchBook(this.props.bookAdminUrl);
+        this.props.refreshCatalog();
+    };
+    BookCoverEditor.prototype.save = function () {
+        var data = new window.FormData();
+        var editUrl = this.props.book &amp;&amp; this.props.book.changeCoverLink &amp;&amp; this.props.book.changeCoverLink.href;
+        var imageForm = this.refs["image-form"].formRef.current;
+        var imageFormData = new window.FormData(imageForm);
+        data.append("cover_file", imageFormData.get("cover_file"));
+        data.append("cover_url", imageFormData.get("cover_url"));
+        data.append("title_position", imageFormData.get("title_position"));
+        var rightsForm = this.refs["rights-form"].formRef.current;
+        var rightsFormData = new window.FormData(rightsForm);
+        data.append("rights_status", rightsFormData.get("rights_status"));
+        data.append("rights_explanation", rightsFormData.get("rights_explanation"));
+        if (editUrl &amp;&amp; this.props.preview &amp;&amp; this.props.editCover) {
+            this.props.editCover(editUrl, data).then(this.refresh);
+        }
+    };
+    return BookCoverEditor;
+}(React.Component));
+exports.BookCoverEditor = BookCoverEditor;
+function mapStateToProps(state, ownProps) {
+    return {
+        bookAdminUrl: state.editor.book.url,
+        preview: state.editor.bookCoverPreview.data,
+        rightsStatuses: state.editor.rightsStatuses.data,
+        isFetching: state.editor.book.isFetching || state.editor.bookCover.isFetching || state.editor.rightsStatuses.isFetching || state.editor.bookCover.isEditing,
+        fetchError: state.editor.book.fetchError || state.editor.bookCover.fetchError || state.editor.rightsStatuses.fetchError,
+        isFetchingPreview: state.editor.bookCoverPreview.isFetching,
+        previewFetchError: state.editor.bookCoverPreview.fetchError
+    };
+}
+function mapDispatchToProps(dispatch, ownProps) {
+    var fetcher = new DataFetcher_1.default({ adapter: editorAdapter_1.default });
+    var actions = new actions_1.default(fetcher, ownProps.csrfToken);
+    return {
+        fetchBook: function (url) { return dispatch(actions.fetchBookAdmin(url)); },
+        fetchPreview: function (url, data) { return dispatch(actions.fetchBookCoverPreview(url, data)); },
+        clearPreview: function () { return dispatch(actions.clearBookCoverPreview()); },
+        editCover: function (url, data) { return dispatch(actions.editBookCover(url, data)); },
+        fetchRightsStatuses: function () { return dispatch(actions.fetchRightsStatuses()); }
+    };
+}
+var ConnectedBookCoverEditor = react_redux_1.connect(mapStateToProps, mapDispatchToProps)(BookCoverEditor);
+exports.default = ConnectedBookCoverEditor;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Thu Aug 08 2019 12:59:53 GMT-0400 (EDT) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>
