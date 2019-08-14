@@ -22,7 +22,10 @@
     "test-chrome": "node_modules/.bin/selenium-standalone install && nightwatch -e chrome",
     "test-firefox": "node_modules/.bin/selenium-standalone install && nightwatch -e firefox",
     "dev": "webpack --watch --progress --display-modules --config webpack.dev.config",
-    "prod": "webpack -p --progress --display-modules --config webpack.prod.config"
+    "prod": "webpack -p --progress --display-modules --config webpack.prod.config",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "dependencies": {
     "@nypl/dgx-svg-icons": "0.3.4",
@@ -50,9 +53,20 @@
     "request": "^2.85.0"
   },
   "devDependencies": {
+    "@storybook/addon-a11y": "^5.1.11",
+    "@storybook/addon-actions": "^5.1.11",
+    "@storybook/addon-info": "^5.1.11",
+    "@storybook/addon-knobs": "^5.1.11",
+    "@storybook/addon-links": "^5.1.11",
+    "@storybook/addon-storysource": "^5.1.11",
+    "@storybook/addons": "^5.1.11",
+    "@storybook/react": "^5.1.11",
+    "@storybook/storybook-deployer": "^2.8.1",
+    "@storybook/theming": "^5.1.11",
     "@types/mocha": "^5.2.6",
     "@types/node": "^11.13.8",
     "@types/react": "16.4.7",
+    "babel-loader": "^8.0.5",
     "chai": "^3.5.0",
     "clean-webpack-plugin": "^2.0.1",
     "css-loader": "^2.1.1",
@@ -67,6 +81,7 @@
     "mocha": "^5.2.0",
     "nightwatch": "^1.0.19",
     "node-sass": "4.11.0",
+    "react-docgen-typescript-loader": "^3.1.1",
     "sass-lint": "^1.9.1",
     "sass-loader": "^7.1.0",
     "selenium-standalone": "^6.16.0",

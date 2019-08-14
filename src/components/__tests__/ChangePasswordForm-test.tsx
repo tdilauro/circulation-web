@@ -8,9 +8,6 @@ import { ChangePasswordForm } from "../ChangePasswordForm";
 import LoadingIndicator from "opds-web-client/lib/components/LoadingIndicator";
 import ErrorMessage from "../ErrorMessage";
 import EditableInput from "../EditableInput";
-import { Alert } from "react-bootstrap";
-import { Form } from "library-simplified-reusable-components";
-
 
 describe("ChangePasswordForm", () => {
   let wrapper;
