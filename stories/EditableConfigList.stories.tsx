@@ -24,6 +24,11 @@ const editor = {
 };
 
 storiesOf("circulation-web/EditableConfigList", module)
+  .add("Notes", () => (
+    <p>The base component is EditableConfigList and the example components
+      extend it. These are forms to add services and configure them in the admin.
+    </p>
+  ))
   .add("AdminAuthServices", () => (
     <AdminAuthServices
       store={{

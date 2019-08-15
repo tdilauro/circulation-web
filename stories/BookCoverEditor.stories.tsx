@@ -34,13 +34,17 @@ let bookData: BookData = {
 };
 
 storiesOf('circulation-web/BookCoverEditor', module)
-  .add('example', () => (
-    <BookCoverEditor
-      bookAdminUrl="/admin/book"
-      rightsStatuses={rightsStatuses}
-      bookUrl="/book"
-      book={bookData}
-      refreshCatalog={() => resolvePromise}
-      csrfToken="token"
-    />
-  ));
+  .add('example',
+    () => (
+      <BookCoverEditor
+        bookAdminUrl="/admin/book"
+        rightsStatuses={rightsStatuses}
+        bookUrl="/book"
+        book={bookData}
+        refreshCatalog={() => resolvePromise}
+        csrfToken="token"
+      />),
+    {
+      notes: "The form component to add/update a book's cover image and its rights."
+    }
+  );

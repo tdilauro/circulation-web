@@ -2,11 +2,13 @@ import * as React from "react";
 import EditableInput from "./EditableInput";
 
 export interface AutocompleteProps {
+  /** List of values that will be used. */
   autocompleteValues: string[];
   disabled: boolean;
   name: string;
   label: string;
   value?: string;
+  /** Function to call when changes are made */
   onChange?: () => void;
 }
 

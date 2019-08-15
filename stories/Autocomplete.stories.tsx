@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import Autocomplete from '../src/components/Autocomplete';
 
 const autocompleteValues = [
-  "apple", "ant", "ankle", "app", "anti-gravity", "appetizer", "anthony"
+  "apple", "ant", "apply", "ankle", "app", "anti-gravity", "appetizer", "anthony"
 ];
 
 storiesOf('circulation-web/Autocomplete', module)
@@ -12,8 +12,10 @@ storiesOf('circulation-web/Autocomplete', module)
     <Autocomplete 
       autocompleteValues={autocompleteValues}
       disabled={false}
-      name="test"
-      label="Test"
-      value="a"
-    />
-  ));
+      name="random"
+      label="Random words"
+      value="apple"
+    />), {
+      notes: "An autocomplete input field",
+    }
+  );
