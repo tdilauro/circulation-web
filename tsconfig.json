@@ -9,6 +9,9 @@
     "types": ["mocha", "node"],
     "jsx": "react"
   },
+  "include": [
+    "src"
+  ],
   "exclude": [
     "lib",
     "node_modules",
