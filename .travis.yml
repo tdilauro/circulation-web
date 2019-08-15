@@ -5,6 +5,8 @@ node_js:
 
 before_script:
 - export TZ=America/New_York
+
+script:
 - npm run build-storybook
 
 deploy:

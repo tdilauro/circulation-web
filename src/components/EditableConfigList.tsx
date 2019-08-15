@@ -85,10 +85,6 @@ export abstract class GenericEditableConfigList<T, U, V extends EditableConfigLi
   }
 
   render(): JSX.Element {
-    console.log(this.props);
-    if (this.listDataKey === "analytics_services") {
-      console.log(this.props);
-    }
     const headers = this.getHeaders();
     // If not in edit or create mode and there is data, display the list.
     const canListAllData = !this.props.isFetching && !this.props.editOrCreate &&
