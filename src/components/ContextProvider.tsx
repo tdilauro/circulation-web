@@ -5,6 +5,7 @@ import buildStore from "../store";
 import { PathFor } from "../interfaces";
 import { State } from "../reducers/index";
 import Admin from "../models/Admin";
+import PathForProvider from "opds-web-client/lib/components/context/PathForContext";
 
 export interface ContextProviderProps extends React.Props<any> {
   csrfToken: string;
@@ -19,7 +20,10 @@ export interface ContextProviderProps extends React.Props<any> {
 
 /** Provides a redux store, configuration options, and a function to create URLs
     as context to admin interface pages. */
-export default class ContextProvider extends React.Component<ContextProviderProps, {}> {
+export default class ContextProvider extends React.Component<
+  ContextProviderProps,
+  {}
+> {
   store: Store<State>;
   admin: Admin;
   pathFor: PathFor;
@@ -30,14 +34,10 @@ export default class ContextProvider extends React.Component<ContextProviderProp
     this.admin = new Admin(props.roles || [], props.email || null);
     this.pathFor = (collectionUrl: string, bookUrl: string, tab?: string) => {
       let path = "/admin/web";
-      path +=
-        collectionUrl ?
-        `/collection/${this.prepareCollectionUrl(collectionUrl)}` :
-        "";
-      path +=
-        bookUrl ?
-        `/book/${this.prepareBookUrl(bookUrl)}` :
-        "";
+      path += collectionUrl
+        ? `/collection/${this.prepareCollectionUrl(collectionUrl)}`
+        : "";
+      path += bookUrl ? `/book/${this.prepareBookUrl(bookUrl)}` : "";
       path += tab ? `/tab/${tab}` : "";
       return path;
     };
@@ -45,7 +45,10 @@ export default class ContextProvider extends React.Component<ContextProviderProp
 
   prepareCollectionUrl(url: string): string {
     return encodeURIComponent(
-      url.replace(document.location.origin + "/", "").replace(/\/$/, "").replace(/^\//, "")
+      url
+        .replace(document.location.origin + "/", "")
+        .replace(/\/$/, "")
+        .replace(/^\//, "")
     );
   }
 
@@ -55,9 +58,7 @@ export default class ContextProvider extends React.Component<ContextProviderProp
     if (match) {
       const library = match[1];
       const work = match[2];
-      return encodeURIComponent(
-        library + "/" + work
-      );
+      return encodeURIComponent(library + "/" + work);
     } else {
       return url;
     }
@@ -65,7 +66,6 @@ export default class ContextProvider extends React.Component<ContextProviderProp
 
   static childContextTypes: React.ValidationMap<any> = {
     editorStore: PropTypes.object.isRequired,
-    pathFor: PropTypes.func.isRequired,
     csrfToken: PropTypes.string.isRequired,
     showCircEventsDownload: PropTypes.bool.isRequired,
     settingUp: PropTypes.bool.isRequired,
@@ -75,7 +75,6 @@ export default class ContextProvider extends React.Component<ContextProviderProp
   getChildContext() {
     return {
       editorStore: this.store,
-      pathFor: this.pathFor,
       csrfToken: this.props.csrfToken,
       showCircEventsDownload: this.props.showCircEventsDownload || false,
       settingUp: this.props.settingUp || false,
@@ -84,6 +83,10 @@ export default class ContextProvider extends React.Component<ContextProviderProp
   }
 
   render() {
-    return React.Children.only(this.props.children) as JSX.Element;
+    return (
+      <PathForProvider pathFor={this.pathFor}>
+        {React.Children.only(this.props.children) as JSX.Element}
+      </PathForProvider>
+    );
   }
 }
