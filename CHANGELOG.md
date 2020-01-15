@@ -1,5 +1,9 @@
 ## Changelog
 
+### v0.4.4
+#### Fixed
+- Fixed a bug that blocked creation of a new local analytics service with disabled patron neighborhood analytics.
+
 ### v0.4.3
 #### Added
 - Added a Metadata Services tab to the self-tests section of the Troubleshooting page.
