@@ -1,5 +1,9 @@
 ## Changelog
 
+### v0.4.10
+#### Added
+- Enabled admins to configure the terms of service text and link displayed in the Footer.
+
 ### v0.4.9
 #### Added
 - Created a PairedMenus component to render a related InputList and dropdown menu and implemented it in the Lanes & Filters section of the Library Edit Form.
