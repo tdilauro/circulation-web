@@ -20,7 +20,9 @@ export default class LibraryStats extends React.Component<LibraryStatsProps, {}>
         label: collection,
         // The "Titles" key is displayed in the default recharts tooltip.
         "Open Access Titles": data.open_access_titles,
-        "Licensed Titles": data.licensed_titles
+        "Licensed Titles": data.licensed_titles,
+        "Enumerated License Titles": data.enumerated_license_titles,
+        "Unlimited License Titles": data.unlimited_license_titles,
       };
     }).filter(collection => {
       let open_access = collection["Open Access Titles"];
@@ -77,6 +79,23 @@ export default class LibraryStats extends React.Component<LibraryStatsProps, {}>
                   <div className="stat-value">{this.formatNumber(this.props.stats.inventory.titles)}</div>
                   <div className="stat-label">Titles</div>
                 </li>
+                <li className="single-stat">
+                  <div className="stat-value">{this.formatNumber(this.props.stats.inventory.enumerated_license_titles)}</div>
+                  <div className="stat-label">Enumerated license titles</div>
+                </li>
+                <li className="single-stat">
+                  <div className="stat-value">{this.formatNumber(this.props.stats.inventory.unlimited_license_titles)}</div>
+                  <div className="stat-label">Unlimited license titles</div>
+                </li>
+                <li className="single-stat">
+                  <div className="stat-value">{this.formatNumber(this.props.stats.inventory.open_access_titles)}</div>
+                  <div className="stat-label">Open access titles</div>
+                </li>
+              </ul>
+            </li>
+            <li className="stat-group">
+              <h3><span className="stat-grouping-label">Enumerated Licenses</span></h3>
+              <ul>
                 { this.props.stats.inventory.licenses > 0 &&
                   <li className="single-stat">
                     <div className="stat-value">{this.formatNumber(this.props.stats.inventory.licenses)}</div>
@@ -97,9 +116,12 @@ export default class LibraryStats extends React.Component<LibraryStatsProps, {}>
                 <BarChart width={collectionCounts.length * 100} height={350} data={collectionCounts}>
                   <XAxis dataKey="label" interval={0} angle={-45} textAnchor="end" padding={{ left: 50, right: 50 }} height={175} />
                   <YAxis hide={true} />
-                  <Tooltip />
-                  <Bar stackId="collections" dataKey="Licensed Titles" barSize={50} fill="#737373" />
-                  <Bar stackId="collections" dataKey="Open Access Titles" barSize={50} fill="#000000" />
+                  <Tooltip formatter={(value) => new Intl.NumberFormat('en').format(value)}
+                           labelStyle={{ 'text-decoration': 'underline' }} />
+                  {/*<Bar stackId="collections" dataKey="Licensed Titles" barSize={50} fill="#737373" />*/}
+                  <Bar stackId="collections" dataKey="Enumerated License Titles" barSize={50} fill="#404040" />
+                  <Bar stackId="collections" dataKey="Unlimited License Titles" barSize={50} fill="#808080" />
+                  <Bar stackId="collections" dataKey="Open Access Titles" barSize={50} fill="#000000"/>
                 </BarChart>
               </li>
             }
