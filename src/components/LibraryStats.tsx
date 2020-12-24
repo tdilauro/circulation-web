@@ -3,7 +3,6 @@ import { LibraryStatsData, LibraryData } from "../interfaces";
 import {
   BarChart, XAxis, YAxis, Tooltip, Bar
 } from "recharts";
-import * as numeral from "numeral";
 import SingleStat from "./SingleStat";
 
 export interface LibraryStatsProps {
@@ -43,13 +42,13 @@ export default class LibraryStats extends React.Component<LibraryStatsProps, {}>
               <li className="stat-group">
                 <h3><span className="stat-grouping-label">Patrons</span></h3>
                 <ul>
-                  <SingleStat label="Total Patrons" value={this.formatNumber(this.props.stats.patrons.total)}
+                  <SingleStat label="Total Patrons" value={this.props.stats.patrons.total}
                               tooltip="Total number of patrons." />
                   <SingleStat label="Patrons With Active Loans"
-                              value={this.formatNumber(this.props.stats.patrons.with_active_loans)}
+                              value={this.props.stats.patrons.with_active_loans}
                               tooltip="Number of patron with at least one active loan." />
                   <SingleStat label="Patrons With Active Loans or Holds"
-                              value={this.formatNumber(this.props.stats.patrons.with_active_loans_or_holds)}
+                              value={this.props.stats.patrons.with_active_loans_or_holds}
                               tooltip="Number of patrons with at least one active loan or at least one hold."  />
                 </ul>
               </li>
@@ -58,9 +57,9 @@ export default class LibraryStats extends React.Component<LibraryStatsProps, {}>
               <li className="stat-group">
                 <h3><span className="stat-grouping-label">Circulation</span></h3>
                 <ul>
-                  <SingleStat label="Active Loans" value={this.formatNumber(this.props.stats.patrons.loans)}
+                  <SingleStat label="Active Loans" value={this.props.stats.patrons.loans}
                               tooltip="Total number of active loans for all patrons." />
-                  <SingleStat label="Active Holds" value={this.formatNumber(this.props.stats.patrons.holds)}
+                  <SingleStat label="Active Holds" value={this.props.stats.patrons.holds}
                               tooltip="Total number of active holds for all patrons." />
                 </ul>
               </li>
@@ -68,32 +67,38 @@ export default class LibraryStats extends React.Component<LibraryStatsProps, {}>
             <li className="stat-group">
               <h3><span className="stat-grouping-label">Inventory</span></h3>
               <ul>
-                <SingleStat label="Titles" value={this.formatNumber(this.props.stats.inventory.titles)}
+                <SingleStat label="Titles" value={this.props.stats.inventory.titles}
                             tooltip="Total number of titles." />
                 <SingleStat label="Enumerated license titles"
-                            value={this.formatNumber(this.props.stats.inventory.enumerated_license_titles)}
+                            value={this.props.stats.inventory.enumerated_license_titles}
                             tooltip="Number of titles for which a specific number of licenses is allocated." />
                 <SingleStat label="Unlimited license titles"
-                            value={this.formatNumber(this.props.stats.inventory.unlimited_license_titles)}
+                            value={this.props.stats.inventory.unlimited_license_titles}
                             tooltip="Number of titles for which there is no limit on the number of licenses." />
                 <SingleStat label="Open access titles"
-                            value={this.formatNumber(this.props.stats.inventory.open_access_titles)}
+                            value={this.props.stats.inventory.open_access_titles}
                             tooltip="Number of titles for which there are no limits on use." />
+                <SingleStat label="Self-hosted titles"
+                            value={this.props.stats.inventory.self_hosted_titles}
+                            tooltip="Number of titles hosted locally." />
               </ul>
             </li>
             <li className="stat-group">
               <h3><span className="stat-grouping-label">Enumerated Licenses</span></h3>
               <ul>
-                { this.props.stats.inventory.licenses > 0 &&
-                  <SingleStat label="Total Licenses" value={this.formatNumber(this.props.stats.inventory.licenses)}
-                              tooltip="Total number of licenses allocated for those titles for which licenses are counted." />
-                }
-                { this.props.stats.inventory.licenses > 0 &&
-                  <SingleStat label="Available Licenses"
-                              value={this.formatNumber(this.props.stats.inventory.available_licenses)}
-                              tooltip="Total number of allocated licenses that are currently available." />
-                }
+                <SingleStat label="Enumerated license titles"
+                            value={this.props.stats.inventory.enumerated_license_titles}
+                            tooltip="Number of titles for which a specific number of licenses is allocated." />
               </ul>
+              { this.props.stats.inventory.enumerated_license_titles > 0 &&
+                <ul>
+                  <SingleStat label="Total Licenses" value={this.props.stats.inventory.licenses}
+                              tooltip="Total number of licenses allocated for those titles for which licenses are counted."/>
+                  <SingleStat label="Available Licenses"
+                              value={this.props.stats.inventory.available_licenses}
+                              tooltip="Total number of allocated licenses that are currently available."/>
+                </ul>
+              }
             </li>
             { collectionCounts.length > 0 &&
               <li className="stat-group stat-group-wide">
@@ -101,8 +106,8 @@ export default class LibraryStats extends React.Component<LibraryStatsProps, {}>
                 <BarChart width={collectionCounts.length * 100} height={350} data={collectionCounts}>
                   <XAxis dataKey="label" interval={0} angle={-45} textAnchor="end" padding={{ left: 50, right: 50 }} height={175} />
                   <YAxis hide={true} />
-                  <Tooltip formatter={(value) => new Intl.NumberFormat('en').format(value)}
-                           labelStyle={{ 'text-decoration': 'underline' }} />
+                  <Tooltip formatter={(value) => new Intl.NumberFormat("en").format(value)}
+                           labelStyle={{ "text-decoration": "underline" }} />
                   {/*<Bar stackId="collections" dataKey="Licensed Titles" barSize={50} fill="#737373" />*/}
                   <Bar stackId="collections" dataKey="Enumerated License Titles" barSize={50} fill="#404040" />
                   <Bar stackId="collections" dataKey="Unlimited License Titles" barSize={50} fill="#808080" />
@@ -114,9 +119,5 @@ export default class LibraryStats extends React.Component<LibraryStatsProps, {}>
         }
       </div>
     );
-  }
-
-  formatNumber(n) {
-    return n ? numeral(n).format("0.[0]a") : 0;
   }
 }

@@ -118,6 +118,17 @@ export interface CirculationEventData {
   };
 }
 
+export interface LibraryStatsInventory {
+  titles: number;
+  self_hosted_titles: number;
+  open_access_titles: number;
+  licensed_titles: number;
+  unlimited_license_titles: number;
+  enumerated_license_titles: number;
+  licenses: number;
+  available_licenses: number;
+}
+
 export interface LibraryStatsData {
   patrons: {
     total: number;
@@ -126,23 +137,9 @@ export interface LibraryStatsData {
     loans: number;
     holds: number;
   };
-  inventory: {
-    titles: number;
-    open_access_titles: number;
-    enumerated_license_titles: number;
-    unlimited_license_titles: number;
-    licenses: number;
-    available_licenses: number;
-  };
+  inventory: LibraryStatsInventory;
   collections: {
-    [key: string]: {
-      licensed_titles: number;
-      open_access_titles: number;
-      enumerated_license_titles: number;
-      unlimited_license_titles: number;
-      licenses: number;
-      available_licenses: number;
-    };
+    [key: string]: LibraryStatsInventory;
   };
 }
 
